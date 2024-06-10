@@ -1,0 +1,87 @@
+<Main TimeUpgradeMin="15"
+      GPIMode="4"
+      GamesType="GAMES_RNG"
+      TypeConnection="ANSI_UNICODE"
+      StartUpgrade="n"
+      AcceptTickets="y"
+      HWCONF="dualTouchScreens=N;thirdDisplay=N;showJackpots=Y;colorAdjust=2"
+      SendGamePlayDataTo="G"
+      WindowSizeW="1366"
+      WindowSizeH="768"
+      SendGetMenu="N"
+      SendGetProgressive="N">
+
+	 	
+	<PORT 
+		type="BILL"
+		port="COM3"
+		device_type="PTI"
+		bill_map="100 200 500 1000 2000 5000">	
+	</PORT>	 
+  <!-- 
+
+	<PORT type="SAS"
+        port="COM2"
+        device_type=""
+        SasTerminalId="1"
+        TicketValidationStyle="2"
+        SupportSasProgressive="n"
+        AllowPlayWhenDisconnected="n"
+        PrintHandPayBigWinReceipt="y"
+        LegacyBonusingEnable="y"
+        />
+		
+		port="COM6"
+		device_type="PTI"
+
+	<PORT 
+		type="PRINTER"
+		port="USB"
+		device_type="PayCheck">
+	</PORT>	
+
+	<PORT 
+		type="PRINTER"
+		port="NET"
+		device_type="Epson">
+	</PORT>	
+	
+	<PORT 
+		type="BILL"
+		port="COM4"
+		device_type="CashCode"
+		bill_map="100 200 500 1000 2000 5000 10000">	
+	</PORT>		
+	
+	<PORT 
+		type="PRINTER"
+		port="NET"
+		device_type="Epson">
+	</PORT>		
+	
+	<PORT 
+		type="BILL"
+		port="COM4"
+		device_type="CashCode"
+		bill_map="100 200 500 1000 2000 5000 10000">	
+	</PORT>	
+
+
+	
+	<PORT 
+		type="PRINTER"
+		port="USB"
+		device_type="PayCheck">
+	</PORT>	
+	
+
+		PrintTerminalInfo="111"
+
+The driver and manufacturer of the chip is FTDI Chip
+http://www.ftdichip.com/Drivers/VCP.htm
+
+
+		
+ -->
+
+</Main>

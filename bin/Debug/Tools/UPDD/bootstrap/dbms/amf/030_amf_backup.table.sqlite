@@ -1,0 +1,7 @@
+
+create table amf_backup
+(
+  backup_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,	
+  backup_cycle VARCHAR NOT NULL, 
+  backup_file VARCHAR NOT NULL 
+);

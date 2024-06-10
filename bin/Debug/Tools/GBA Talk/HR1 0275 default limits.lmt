@@ -1,0 +1,26 @@
+Sensor Limits File
+CalibTol = 3
+XmsThkTg = 26
+RflThkTg = 71
+OASDAMin = 6
+* SL 29/feb/08: correction to OAS D/A max. should be Hex 85 not Dec 85
+OASDAMax = 133
+* SL 29/feb/08: added in these limits explicitly
+OASADMax = 240
+OASADMin = 153
+* SL 20/aug/08: increased length tolerance from 5 to 6
+*LngthTol was 6
+* SL 20/aug/08: new maximum/minmum length limits replace LngthTol
+* increased length tolerance to 243 to 254
+HR1_LnMx = 254
+HR1_LnMn = 243
+SpctSnsr = 3
+MagTest = 0
+MagTrgt = 1350
+MagTol = 500
+* SL 07/mar/08 added new parameters for HR1, to constrain D/A settings
+* SL 20/aug/08: modified D/A minimum after resistor change on transmissive sensors
+D2A_TxMn = 20
+D2A_TxMx = 160
+D2A_RfMn = 24
+D2A_RfMx = 192

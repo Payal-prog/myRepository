@@ -1,0 +1,19 @@
+
+create table amf_report_type
+(
+  id INTEGER PRIMARY KEY AUTOINCREMENT, 
+  name VARCHAR(30) NOT NULL,
+  internal_report INT NOT NULL default 0, 
+  sql TEXT NOT NULL
+)
+/*sep*/
+
+create table amf_report_type_option
+(
+  id INTEGER PRIMARY KEY AUTOINCREMENT, 
+  id_amf_report_type int NOT NULL,
+  name VARCHAR(30) NOT NULL , 
+  data_type VARCHAR(30) NOT NULL 
+
+)
+

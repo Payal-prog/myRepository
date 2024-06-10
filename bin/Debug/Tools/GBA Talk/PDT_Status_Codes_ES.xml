@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Status_Codes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- Error descriptions for PDT status codes -->
+  <message ID="1">
+		<name>Lector OK</name>
+	</message>
+  <message ID ="75">
+    <name>escribiendo a eeprom</name>
+  </message>
+  <message ID ="76">
+    <name>Firmware incorrecto para este validador</name>
+  </message>
+  <message ID ="77">
+    <name>billete de banco que queda en la entrada</name>
+  </message>
+  <message ID ="79">
+    <name>sensores están bloqueados</name>
+  </message>
+  <message ID ="80">
+    <name>error de protección de eeprom</name>
+  </message>
+  <message ID ="81">
+    <name>Entrada cegado por la luz externa</name>
+  </message>
+  <message ID ="82">
+    <name>Salir cegado por la luz externa</name>
+  </message>
+  <message ID ="83">
+    <name>OASG cegado por la luz externa</name>
+  </message>
+  <message ID="84">
+		<name>Eeprom corrompida</name>
+	</message>
+	<message ID="85">
+		<name>Error en interfaz USB </name>
+	</message>
+	<message ID="86">
+		<name>Receptáculo Sensor Desconectado</name>
+	</message>
+	<message ID="87">
+		<name>Error en sensor de entrada izquierdo</name>
+	</message>
+	<message ID="88">
+		<name>Erro en sensor de Entrada derecho</name>
+	</message>
+	<message ID="89">
+		<name>Error en Sensor de Salida</name>
+	</message>
+	<message ID="90">
+		<name>Temperatura Baja</name>
+	</message>
+	<message ID="91">
+		<name>Temperatura Alta</name>
+	</message>
+	<message ID="92">
+		<name>Tensión de Alimentación Baja</name>
+	</message>
+	<message ID="93">
+		<name>Tensión de Alimentación Alta</name>
+	</message>
+	<message ID="94">
+		<name>Error en memoria de programa</name>
+	</message>
+	<message ID="95">
+		<name>Unidad inicializando</name>
+	</message>
+	<message ID="96">
+		<name>Error en Push Button</name>
+	</message>
+	<message ID="97">
+		<name>Dataset No cargado</name>
+	</message>
+	<message ID="98">
+		<ST2_name>Error en Sensor IR de Amplitud Izquierdo</ST2_name>
+		<ST1_name>Error en Sensor Frontal Izquierdo</ST1_name>
+	</message>
+	<message ID="99">
+		<ST2_name>Error en Sensor IR de Amplitud Derecho</ST2_name>
+		<ST1_name>Error en Sensor Frontal Derecho</ST1_name>
+	</message>
+	<message ID="100">
+		<name>Error en MASG</name>
+	</message>
+	<message ID="101">
+		<name>Calibrando</name>
+	</message>
+	<message ID="102">
+		<name>Error en Motor/Tacho</name>
+	</message>
+	<message ID="103">
+		<name>Error en Sensor de Cupón</name>
+	</message>
+	<message ID="104">
+		<name>Error en Sensor Inferior Izquierdo</name>
+	</message>
+	<message ID="105">
+		<name>Error en Sensor Superior Izquierdo</name>
+	</message>
+	<message ID="106">
+		<ST2_name>Error en Sensor Intermedio Izquierdo</ST2_name>
+		<ST1_name>Error en Sensor IR Izquierdo</ST1_name>
+	</message>
+	<message ID="107">
+		<ST2_name>Error en Sensor Intermedio Derecho</ST2_name>
+		<ST1_name>Error en sensor IR Derecho</ST1_name>
+	</message>
+	<message ID="108">
+		<name>Unidad NO Calibrada</name>
+	</message>
+	<message ID="109">
+		<ST2_name>Error en Sensor Azul Corto Izquierdo</ST2_name>
+		<ST1_name>Error en Sensor Naranja Izquierdo</ST1_name>
+	</message>
+	<message ID="110">
+		<ST2_name>Error en Sensor Azul Corto Derecho</ST2_name>
+		<ST1_name>Error en Sensor Naranja Derecho</ST1_name>
+	</message>
+	<message ID="111">
+		<name>MASG Bloqueado</name>
+	</message>
+	<message ID="112">
+		<name>Error al entrar el papel de Calibración</name>
+	</message>
+	<message ID="115">
+		<name>Error en Sensor OASG</name>
+	</message>
+	<message ID="116">
+		<name>Lector Atascado</name>
+	</message>
+	<message ID="117">
+		<name>Apilador Atascado</name>
+	</message>
+	<message ID="118">
+		<name>Apilador Lleno</name>
+	</message>
+	<message ID="119">
+		<name>Error en Sensor del Apilador</name>
+	</message>
+	<message ID="120">
+		<name>OASG Bloqueado</name>
+	</message>
+	<message ID="121">
+		<name>OASG con Cambios Rápidos</name>
+	</message>
+	<message ID="124">
+		<name>Apilador  Ausente</name>
+	</message>
+	<message ID="125">
+		<name>Cajón Ausente</name>
+	</message>
+	<message ID="126">
+		<name>Error en Sensor Inferior Derecho</name>
+	</message>
+	<message ID="127">
+		<name>Error en Sensor Superio Derecho</name>
+	</message>
+</Status_Codes>

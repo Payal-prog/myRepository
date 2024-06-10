@@ -1,0 +1,187 @@
+; upddhid.INF
+; Copyright (c) 2014 Touch-Base Ltd
+
+[SourceDisksNames]
+3426=windows cd
+
+[SourceDisksFiles]
+upddvh.sys 		= 3426
+hidkmdf.sys             = 3426
+;;--
+
+[version]
+signature="$WINDOWS NT$"
+Class=HIDClass
+ClassGuid={745a17a0-74d3-11d0-b6fe-00a0c90f57da}
+Provider=%UPDD%
+DriverVer=09/01/2014,5.1.1131.00001
+CatalogFile=upddhid.cat
+
+
+[ControlFlags]
+ExcludeFromSelect=*
+
+[DestinationDirs]
+DefaultDestDir              =11     ;LDID_SYS
+upddvhInst.NT.Copy        =12     ;LDID_DRIVERS
+upddvhInst.Win7.NT.Copy  =12     ;LDID_DRIVERS
+
+; Drivers
+;----------------------------------------------------------
+[Manufacturer]
+%UPDD%=UPDD, NTx86, NTx86.6.1, NTamd64, NTamd64.6.1
+
+ 
+;For XP and Vista
+[UPDD.NTx86]
+%upddvh\COM1.DeviceDesc%   =upddvhInst, *UPDDHID
+;%MTCollection.DeviceDesc%   =MTCollectionInst, *UPDDHID&Col01
+
+[UPDD.NTamd64]
+%upddvh\COM1.DeviceDesc%   =upddvhInst, *UPDDHID
+;%MTCollection.DeviceDesc%   =MTCollectionInst, *UPDDHID&Col01
+
+;For Windows 7
+[UPDD.NTx86.6.1]
+%upddvh\COM1.DeviceDesc%   =upddvhInst.Win7, *UPDDHID
+;%MTCollection.DeviceDesc%   =MTCollectionInst, *UPDDHID&Col01
+;%upddvh\COM1.DeviceDesc%   =upddvhInst.Win7, ACPI\PNP0501
+;%MTCollection.DeviceDesc%   =MTCollectionInst, HID\PNP0501&Col01
+
+
+[UPDD.NTamd64.6.1]
+%upddvh\COM1.DeviceDesc%   =upddvhInst.Win7, *UPDDHID
+;%MTCollection.DeviceDesc%   =MTCollectionInst, *UPDDHID&Col01
+
+
+;[MTCollectionInst.NT]
+;Include=input.inf
+;Needs=HID_Raw_Inst.NT
+
+;[MTCollectionInst.NT.HW]
+;AddReg                     =MTCollectionInst.NT.HW.AddReg
+
+;[MTCollectionInst.NT.HW.AddReg]
+;HKR,,"LinearityData",0x00000001,40,00,00,00,02,00,00,00,00,00,00,00,00,00,00,00,00,80,00,00,00,80,00,00,00,00,00,00,02,00,02,00,e0,04,80,06,28,04,d8,05,e0,7a,80,06,38,7b,00,04,e0,04,2a,79,40,04,f0,79,e0,7a,2a,79,38,7b,40,79
+
+
+;===============================================================
+;  upddvh for XP and Vista
+;===============================================================
+[upddvhInst.NT]
+CopyFiles                   =upddvhInst.NT.Copy
+
+[upddvhInst.NT.Copy]
+;upddvh.sys
+;hidkmdf.sys
+
+
+[upddvhInst.NT.HW]
+AddReg                      =SerialInst.NT.HW.AddReg
+
+[upddvhInst.NT.Services]
+;AddService                  =serial,,SerialServiceInst, SerialEventLogInst
+AddService                  =upddvh,0x00000002,upddvhServiceInst,UPDDEventLogInst
+;AddService                  =serenum,,SerenumServiceInst, SerenumEventLogInst
+AddService                  =hidkmdf,, hidkmdf_Service_Inst
+
+
+[hidkmdf_Service_Inst]
+DisplayName    = %hidkmdf.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START 
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\hidkmdf.sys
+LoadOrderGroup = PNP Filter
+
+[SerialInst.NT.HW.AddReg]
+HKR,,"UpperFilters",0x00010000,hidkmdf
+;HKR,,"LowerFilters",0x00010000,serial,serenum
+HKR,,"MultiportDevice",0x00010001,0
+HKR,,"SerialRelinquishPowerPolicy",0x00010001,1
+
+;===============================================================
+;  upddvh for Win7
+;===============================================================
+
+[upddvhInst.Win7.NT]
+CopyFiles                   =upddvhInst.Win7.NT.Copy
+
+[upddvhInst.Win7.NT.Copy]
+;upddvh.sys
+
+
+
+[upddvhInst.Win7.NT.HW]
+AddReg                      =SerialInst.Win7.NT.HW.AddReg
+
+[upddvhInst.Win7.NT.Services]
+;AddService                  =serial,,SerialServiceInst, SerialEventLogInst
+AddService                  =upddvh,0x00000002,upddvhServiceInst,UPDDEventLogInst
+;AddService                  =serenum,,SerenumServiceInst, SerenumEventLogInst
+
+[SerialInst.Win7.NT.HW.AddReg]
+HKR,,"UpperFilters",0x00010000,mshidkmdf
+;HKR,,"LowerFilters",0x00010000,serial,serenum
+;HKR,,"MultiportDevice",0x00010001,0
+;HKR,,"SerialRelinquishPowerPolicy",0x00010001,1
+
+;===============================================================
+;   Sections common to all OS versions
+;===============================================================
+
+
+[UPDDEventLogInst]
+AddReg                      =UPDDEventLogAddReg
+
+[UPDDEventLogAddReg]
+HKR,,EventMessageFile,0x00020000,"%%SystemRoot%%\System32\IoLogMsg.dll;%%SystemRoot%%\System32\drivers\upddvh.sys"
+HKR,,TypesSupported,0x00010001,7
+
+; -------------- UPDD Touch Driver install section
+[upddvhServiceInst]
+DisplayName    = %upddvh.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ;
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\upddvh.sys
+LoadOrderGroup = Extended Base
+
+
+
+
+
+;================================================================
+;--- WDF Coinstaller installation ------
+;
+[DestinationDirs]
+upddvhInst_CoInstaller_CopyFiles = 11
+
+[upddvhInst.NT.CoInstallers]
+AddReg=upddvhInst_CoInstaller_AddReg
+CopyFiles=upddvhInst_CoInstaller_CopyFiles
+
+[upddvhInst_CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "wdfcoinstaller01009.dll,WdfCoInstaller"
+
+[upddvhInst_CoInstaller_CopyFiles]
+wdfcoinstaller01009.dll
+
+[SourceDisksFiles]
+wdfcoinstaller01009.dll=3426 ; make sure the number matches with SourceDisksNames
+
+[upddvhInst.NT.Wdf]
+KmdfService = upddvh, upddvh_wdfsect
+[upddvh_wdfsect]
+KmdfLibraryVersion = 1.9
+
+
+[Strings]
+
+UPDD="Touch-Base"
+upddvh\COM1.DeviceDesc="UPDD Virtual HID"
+upddvh.SVCDESC="Touch-Base Serial Multi-touch Driver"
+Serenum.SVCDESC="Serenum Port Driver"
+Serial.SVCDESC="Serial Port Driver"
+hidkmdf.SVCDESC="HID Class Shim for KMDF"
+;MTCollection.DeviceDesc="UPDD HID MT"

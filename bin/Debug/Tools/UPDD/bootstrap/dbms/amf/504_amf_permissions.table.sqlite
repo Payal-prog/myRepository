@@ -1,0 +1,29 @@
+
+create table amf_permissions 
+(
+  name VARCHAR(30) NOT NULL, 
+  table_name VARCHAR(30) NOT NULL, 
+  field VARCHAR(30) NOT NULL, 
+  is_int INT, 
+  sequence INT
+);
+
+
+/*sep*/;
+
+update amf_user set licenced_id = user_id where licenced_id is NULL;
+
+/*sep*/;
+
+create unique index ix_amf_permissions_a on amf_permissions (name);
+
+
+/*sep*/;
+
+insert or replace into amf_permissions 
+(name,table_name,field,is_int, sequence)
+values
+('Enabled','amf_user','enabled',0,100),
+('Reports','amf_user','permit_reports',1,100),
+('System Admin','amf_user','admin',0,900);
+

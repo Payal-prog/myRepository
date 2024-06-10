@@ -1,0 +1,105 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; INF file for Renesas HmseUsb.sys
+; Copyright (C) 1996 (1996 - 2010) Renesas Electronics Corporation and
+; Renesas Solutions Corp. All rights reserved.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[Version]
+Signature="$Chicago$"
+Class=RenesasUSB
+ClassGUID={4E95F166-78F1-4c09-A93C-0EF5ACB45B4A}
+Provider=%HmseUsb.Provider%
+DriverVer=11/27/2003,1.1.8.0
+;InfFileVer=04/01/2010,1.1.8.2
+;InfFileVer is the version of HmseUsb.inf. Do not delete the comment of the above
+CatalogFile = HmseUsb.cat
+
+[Manufacturer]
+%HmseUsb.Manufacturer%=HmseUsb
+
+[HmseUsb]
+%HmseUsb.DeviceDesc%=HmseUsb.INSTALL, USB\VID_045B&PID_000A
+%HmseUsb.DeviceDesc1%=HmseUsb.INSTALL, USB\VID_045B&PID_000B
+%HmseUsb.DeviceDesc2%=HmseUsb.INSTALL, USB\VID_045B&PID_000C
+%HmseUsb.DeviceDesc3%=HmseUsb.INSTALL, USB\VID_045B&PID_000D
+%HmseUsb.DeviceDesc4%=HmseUsb.INSTALL, USB\VID_045B&PID_823F
+%HmseUsb.DeviceDesc5%=HmseUsb.INSTALL, USB\VID_045B&PID_0025
+
+[SourceDisksNames]
+1=%HmseUsb.DriverDiskName%,"",,
+
+[SourceDisksFiles]
+HmseUsb.sys=1
+
+[PreCopySection]
+HKR,,NoSetupUI,,1
+
+      
+[DestinationDirs]
+DefaultDestDir = 10,system32\drivers ; WINDOWS\SYSTEM32\DRIVERS
+HmseUsb.CopyFiles = 10,system32\drivers ; WINDOWS\SYSTEM32\DRIVERS
+      
+[HmseUsb.INSTALL]
+CopyFiles=HmseUsb.CopyFiles
+
+[HmseUsb.INSTALL.Services]
+AddService = HmseUsb,0x00000002,HmseUsb_Service_Inst,HmseUsb_EventLog_Inst
+
+[HmseUsb_Service_Inst]
+ServiceType     = 1 ;%SERVICE_KERNEL_DRIVER%
+StartType       = 3 ;%SERVICE_AUTO_START%
+ErrorControl    = 1 ;%SERVICE_ERROR_NORMAL%
+ServiceBinary   = %12%\HmseUsb.sys
+DisplayName     = %HmseUsb.DeviceDesc%
+
+[HmseUsb_EventLog_Inst]
+AddReg=HmseUsb.AddEventLogReg
+
+[HmseUsb.AddEventLogReg]
+HKR,,EventMessageFile,0x00020000,"%%SystemRoot%%\System32\IoLogMsg.dll;%%SystemRoot%%\System32\drivers\HmseUsb.sys"
+HKR,,TypesSupported,0x00010001,7
+
+[HmseUsb.CopyFiles]
+HmseUsb.sys
+
+;--------- ClassInstall/ClassInstall32 Section -------------------------------
+
+; NT Style
+[ClassInstall32]
+Addreg=Class_AddReg
+
+[Class_AddReg]
+HKR,,,,%HmseUsb.ClassName%
+HKR,,Icon,,"-20"
+HKR,,IconPath,,"%systemroot%\system32\setupapi.dll,-20"
+
+;---------------------------------------------------------------;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; String resources
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      
+[Strings]
+HmseUsb.Provider="Renesas Electronics Corporation"
+HmseUsb.Manufacturer="Renesas Electronics Corporation"
+
+HmseUsb.DeviceDesc="FDM"
+HmseUsb.DeviceDesc1="CE 2148"
+HmseUsb.DeviceDesc2="CE 3664"
+HmseUsb.DeviceDesc3="USB Direct"
+HmseUsb.DeviceDesc4="E8Direct"
+HmseUsb.DeviceDesc5="Generic Boot USB Direct"
+
+HmseUsb.ClassName="Renesas USB Development Tools"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; TODO:  If not installing from a diskette, change the following string
+;        to indicate the source location.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+HmseUsb.DriverDiskName="Renesas HmseUsb Installation Diskette" 

@@ -1,0 +1,161 @@
+-- ---
+-- Globals
+-- ---
+
+-- SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+-- SET FOREIGN_KEY_CHECKS=0;
+
+-- ---
+-- Table 'updd_controller'
+-- 
+-- ---
+
+DROP TABLE IF EXISTS `updd_controller`; /*sep*/
+		
+CREATE TABLE `updd_controller` (
+  `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  `name` VARCHAR NULL
+); /*sep*/
+
+-- ---
+-- Table 'updd_connection'
+-- 
+-- ---
+
+DROP TABLE IF EXISTS `updd_connection`; /*sep*/
+		
+CREATE TABLE `updd_connection` (
+  `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  `id_updd_controller` INTEGER NULL DEFAULT NULL,
+  `connection_key` VARCHAR NULL DEFAULT NULL
+); /*sep*/
+
+-- ---
+-- Table 'new table'
+-- 
+-- ---
+
+DROP TABLE IF EXISTS `new table`; /*sep*/
+		
+CREATE TABLE `new table` (
+  `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT
+); /*sep*/
+
+-- ---
+-- Table 'new table'
+-- 
+-- ---
+
+DROP TABLE IF EXISTS `new table`; /*sep*/
+		
+CREATE TABLE `new table` (
+  `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT
+); /*sep*/
+
+-- ---
+-- Table 'new table'
+-- 
+-- ---
+
+DROP TABLE IF EXISTS `new table`; /*sep*/
+		
+CREATE TABLE `new table` (
+  `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT
+); /*sep*/
+
+-- ---
+-- Table 'new table'
+-- 
+-- ---
+
+DROP TABLE IF EXISTS `new table`; /*sep*/
+		
+CREATE TABLE `new table` (
+  `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT
+); /*sep*/
+
+-- ---
+-- Table 'new table'
+-- 
+-- ---
+
+DROP TABLE IF EXISTS `new table`; /*sep*/
+		
+CREATE TABLE `new table` (
+  `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT
+); /*sep*/
+
+-- ---
+-- Table 'updd_setting'
+-- 
+-- ---
+
+DROP TABLE IF EXISTS `updd_setting`; /*sep*/
+		
+CREATE TABLE `updd_setting` (
+  `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  `name` VARCHAR NOT NULL,
+  `value` VARCHAR NULL,
+  `id_updd_controller` INTEGER NULL DEFAULT NULL,
+  `id_updd_connection` INTEGER NULL DEFAULT NULL,
+  `is_int` BOOLEAN NOT NULL,
+  `is_connection_specific` BOOLEAN NOT NULL DEFAULT 0, 
+  `help_text` VARCHAR NULL DEFAULT NULL
+); /*sep*/
+
+-- ---
+-- Table 'new table'
+-- 
+-- ---
+
+DROP TABLE IF EXISTS `new table`; /*sep*/
+		
+CREATE TABLE `new table` (
+  `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT
+); /*sep*/
+
+-- ---
+-- Foreign Keys 
+-- ---
+
+-- ALTER TABLE `updd_connection` ADD FOREIGN KEY (id_updd_controller) REFERENCES `updd_controller` (`id`);
+-- ALTER TABLE `updd_setting` ADD FOREIGN KEY (id_updd_controller) REFERENCES `updd_controller` (`id`);
+-- ALTER TABLE `updd_setting` ADD FOREIGN KEY (id_updd_connection) REFERENCES `updd_connection` (`id`);
+
+-- ---
+-- Table Properties
+-- ---
+
+-- -- ALTER TABLE `updd_controller` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- -- ALTER TABLE `updd_connection` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- -- ALTER TABLE `new table` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- -- ALTER TABLE `new table` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- -- ALTER TABLE `new table` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- -- ALTER TABLE `new table` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- -- ALTER TABLE `new table` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- -- ALTER TABLE `updd_setting` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+-- -- ALTER TABLE `new table` ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ---
+-- Test Data
+-- ---
+
+-- INSERT INTO `updd_controller` (`id`,`name`) VALUES
+-- ('','');
+-- INSERT INTO `updd_connection` (`id`,`id_updd_controller`,`connection_key`) VALUES
+-- ('','','');
+-- INSERT INTO `new table` (`id`) VALUES
+-- ('');
+-- INSERT INTO `new table` (`id`) VALUES
+-- ('');
+-- INSERT INTO `new table` (`id`) VALUES
+-- ('');
+-- INSERT INTO `new table` (`id`) VALUES
+-- ('');
+-- INSERT INTO `new table` (`id`) VALUES
+-- ('');
+-- INSERT INTO `updd_setting` (`id`,`name`,`id_updd_controller`,`id_updd_connection`,`value`,`is_int`,`is_connection_specific`) VALUES
+-- ('','','','','','','');
+-- INSERT INTO `new table` (`id`) VALUES
+-- ('');
+select 1

@@ -1,0 +1,685 @@
+<?xml version="1.0" standalone="yes"?>
+<Diagnostic_Data>
+  <Sensor_Data>
+    <!-- For boolean fields, 0 = false, 1 = true -->
+    <!--Sensor types are as follows:
+      0: optical sensor (Volts), 1: Supply Volts, 2: Thermistor, 3: Motor Current -->
+    <Model ID="ST1">
+      <sensor ID ="dspSTXSensor_0">
+        <visible>1</visible>
+        <name>Left Front IR</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_1">
+        <visible>1</visible>
+        <name>Right Front IR</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_2">
+        <visible>1</visible>
+        <name>Left Twin IR</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_3">
+        <visible>1</visible>
+        <name>Right Twin IR</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_4">
+        <visible>1</visible>
+        <name>Left Twin Orange</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_5">
+        <visible>1</visible>
+        <name>Right Twin Orange</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_6">
+        <visible>1</visible>
+        <name>Right Upper Refl</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_7">
+        <visible>1</visible>
+        <name>Left Upper Refl</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_8">
+        <visible>1</visible>
+        <name>Right Lower Refl</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_9">
+        <visible>1</visible>
+        <name>Left Lower Refl</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_10">
+        <visible>1</visible>
+        <name>Coupon</name>
+        <type>0</type>
+        <show_pwm>0</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_11">
+        <visible>1</visible>
+        <name>OASG</name>
+        <type>0</type>
+        <show_pwm>0</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_12">
+        <visible>1</visible>
+        <name>Magnetic Head</name>
+        <type>0</type>
+        <show_pwm>0</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_13">
+        <visible>0</visible>
+      </sensor>
+      <sensor ID ="dspSTXSensor_14">
+        <visible>0</visible>
+      </sensor>
+      <sensor ID ="dspSTXSensor_15">
+        <visible>0</visible>
+      </sensor>
+      <sensor ID ="dspSTXSensor_16">
+        <visible>1</visible>
+        <name>Cassette Present</name>
+        <type>0</type>
+        <show_pwm>0</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_17">
+        <visible>1</visible>
+        <name>Ready To Punch</name>
+        <type>0</type>
+        <show_pwm>0</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_18">
+        <visible>1</visible>
+        <name>Motor Current</name>
+        <type>3</type>
+        <show_pwm>0</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_19">
+        <visible>1</visible>
+        <name>Thermistor</name>
+        <type>2</type>
+        <show_pwm>0</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_20">
+        <visible>1</visible>
+        <name>Supply Voltage</name>
+        <type>1</type>
+        <show_pwm>0</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+    </Model>
+    <Model ID="ST2">
+      <sensor ID ="dspSTXSensor_0">
+        <visible>1</visible>
+        <name>Left Wide Orng</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_1">
+        <visible>1</visible>
+        <name>Right Wide Orng</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_2">
+        <visible>1</visible>
+        <name>Left Middle IR</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_3">
+        <visible>1</visible>
+        <name>Right Middle IR</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_4">
+        <visible>1</visible>
+        <name>Left Narrow Blue</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_5">
+        <visible>1</visible>
+        <name>Right Narrow Blue</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_6">
+        <visible>1</visible>
+        <name>Right Upper Refl</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_7">
+        <visible>1</visible>
+        <name>Left Upper Refl</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_8">
+        <visible>1</visible>
+        <name>Right Lower Refl</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_9">
+        <visible>1</visible>
+        <name>Left Lower Refl</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_10">
+        <visible>1</visible>
+        <name>Coupon</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_11">
+        <visible>1</visible>
+        <name>OASG</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_12">
+        <visible>1</visible>
+        <name>Magnetic Head</name>
+        <type>0</type>
+        <show_pwm>0</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_13">
+        <visible>1</visible>
+        <name>Note Dtct Front L</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_14">
+        <visible>1</visible>
+        <name>Note Detect Rear</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_15">
+        <visible>1</visible>
+        <name>Note Dtct Front R</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_16">
+        <visible>0</visible>
+        <name>Cassette Present</name>
+        <type>0</type>
+      </sensor>
+      <sensor ID ="dspSTXSensor_17">
+        <visible>0</visible>
+        <name>Ready To Punch</name>
+        <type>0</type>
+      </sensor>
+      <sensor ID ="dspSTXSensor_18">
+        <visible>0</visible>
+        <name>Motor Current</name>
+        <type>3</type>
+      </sensor>
+      <sensor ID ="dspSTXSensor_19">
+        <visible>1</visible>
+        <name>Thermistor</name>
+        <type>2</type>
+        <show_pwm>0</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_20">
+        <visible>1</visible>
+        <name>Supply Voltage</name>
+        <type>1</type>
+        <show_pwm>0</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+    </Model>
+    <Model ID="ST1+">
+      <sensor ID ="dspSTXSensor_0">
+        <visible>1</visible>
+        <name>Left Wide Orng</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_1">
+        <visible>1</visible>
+        <name>Right Wide Orng</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_2">
+        <visible>1</visible>
+        <name>Left Middle IR</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_3">
+        <visible>1</visible>
+        <name>Right Middle IR</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_4">
+        <visible>1</visible>
+        <name>Left Narrow Blue</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_5">
+        <visible>1</visible>
+        <name>Right Narrow Blue</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_6">
+        <visible>1</visible>
+        <name>Right Upper Refl</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_7">
+        <visible>1</visible>
+        <name>Left Upper Refl</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_8">
+        <visible>1</visible>
+        <name>Right Lower Refl</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_9">
+        <visible>1</visible>
+        <name>Left Lower Refl</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_10">
+        <visible>1</visible>
+        <name>Coupon</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_11">
+        <visible>1</visible>
+        <name>OASG</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_12">
+        <visible>1</visible>
+        <name>Magnetic Head</name>
+        <type>0</type>
+        <show_pwm>0</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_13">
+        <visible>1</visible>
+        <name>Note Dtct Front L</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_14">
+        <visible>0</visible>
+        <name>Note Detect Rear</name>
+        <type>0</type>
+      </sensor>
+      <sensor ID ="dspSTXSensor_15">
+        <visible>1</visible>
+        <name>Note Dtct Front R</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_16">
+        <visible>1</visible>
+        <name>Cassette Present</name>
+        <type>0</type>
+        <show_pwm>0</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_17">
+        <visible>1</visible>
+        <name>Ready To Punch</name>
+        <type>0</type>
+        <show_pwm>0</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_18">
+        <visible>1</visible>
+        <name>Motor Current</name>
+        <type>3</type>
+        <show_pwm>0</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_19">
+        <visible>1</visible>
+        <name>Thermistor</name>
+        <type>2</type>
+        <show_pwm>0</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_20">
+        <visible>1</visible>
+        <name>Supply Voltage</name>
+        <type>1</type>
+        <show_pwm>0</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+    </Model>
+    <Model ID="ST1C">
+      <sensor ID ="dspSTXSensor_0">
+        <visible>1</visible>
+        <name>Left Wide Orng</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_1">
+        <visible>1</visible>
+        <name>Right Wide Orng</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_2">
+        <visible>1</visible>
+        <name>Left Middle IR</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_3">
+        <visible>1</visible>
+        <name>Right Middle IR</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_4">
+        <visible>1</visible>
+        <name>Left Narrow Blue</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_5">
+        <visible>1</visible>
+        <name>Right Narrow Blue</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_6">
+        <visible>1</visible>
+        <name>Right Upper Refl</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_7">
+        <visible>1</visible>
+        <name>Left Upper Refl</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_8">
+        <visible>1</visible>
+        <name>Right Lower Refl</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_9">
+        <visible>1</visible>
+        <name>Left Lower Refl</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_10">
+        <visible>1</visible>
+        <name>Coupon</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_11">
+        <visible>1</visible>
+        <name>OASG</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_12">
+        <visible>0</visible>
+        <name>Magnetic Head</name>
+        <type>0</type>
+      </sensor>
+      <sensor ID ="dspSTXSensor_13">
+        <visible>1</visible>
+        <name>Note Dtct Front L</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_14">
+        <visible>0</visible>
+        <name>Note Detect Rear</name>
+        <type>0</type>
+      </sensor>
+      <sensor ID ="dspSTXSensor_15">
+        <visible>1</visible>
+        <name>Note Dtct Front R</name>
+        <type>0</type>
+        <show_pwm>1</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_16">
+        <visible>1</visible>
+        <name>Cassette Present</name>
+        <type>0</type>
+        <show_pwm>0</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_17">
+        <visible>1</visible>
+        <name>Ready To Punch</name>
+        <type>0</type>
+        <show_pwm>0</show_pwm>
+        <show_amb>1</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_18">
+        <visible>0</visible>
+        <name>Motor Current</name>
+        <type>3</type>
+      </sensor>
+      <sensor ID ="dspSTXSensor_19">
+        <visible>1</visible>
+        <name>Thermistor</name>
+        <type>2</type>
+        <show_pwm>0</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+      <sensor ID ="dspSTXSensor_20">
+        <visible>1</visible>
+        <name>Supply Voltage</name>
+        <type>1</type>
+        <show_pwm>0</show_pwm>
+        <show_amb>0</show_amb>
+      </sensor>
+    </Model>
+  </Sensor_Data>
+  <FNG_Test_Data>
+    <Model ID="ST2">
+      <pattern ID="0">
+        <name>Error</name>
+        <FNG_value>2</FNG_value>
+      </pattern>
+      <pattern ID="1">
+        <name>Disabled</name>
+        <FNG_value>4</FNG_value>
+      </pattern>
+      <pattern ID="2">
+        <name>Idle</name>
+        <FNG_value>6</FNG_value>
+      </pattern>
+      <pattern ID="3">
+        <name>Busy</name>
+        <FNG_value>8</FNG_value>
+      </pattern>
+      <pattern ID="4">
+        <name>Idle Spain</name>
+        <FNG_value>10</FNG_value>
+      </pattern>
+      <pattern ID="5">
+        <name>Idle Thailand</name>
+        <FNG_value>14</FNG_value>
+      </pattern>
+    </Model>
+    <Model ID="ST1C">
+      <pattern ID="0">
+        <name>Steady Off</name>
+        <FNG_value>1</FNG_value>
+      </pattern>
+      <pattern ID="2">
+        <name>Steady On</name>
+        <FNG_value>2</FNG_value>
+      </pattern>
+      <pattern ID="3">
+        <name>Blink</name>
+        <FNG_value>3</FNG_value>
+      </pattern>
+      <pattern ID="4">
+        <name>Alternate Blink</name>
+        <FNG_value>4</FNG_value>
+      </pattern>
+      <pattern ID="5">
+        <name>Top Only</name>
+        <FNG_value>5</FNG_value>
+      </pattern>
+      <pattern ID="6">
+        <name>Bottom Only</name>
+        <FNG_value>6</FNG_value>
+      </pattern>
+      <pattern ID="7">
+        <name>Occasional Blink</name>
+        <FNG_value>7</FNG_value>
+      </pattern>
+    </Model>
+  </FNG_Test_Data>
+  <DIP_Switch_Data>
+    <Model ID="ST1C">
+      <function ID ="0">
+        <name>Not Used</name>
+      </function>
+      <function ID ="1">
+        <name>Enable Channel 1</name>
+      </function>
+      <function ID ="2">
+        <name>Enable Channel 2</name>
+      </function>
+      <function ID ="3">
+        <name>Enable Channel 3</name>
+      </function>
+      <function ID ="4">
+        <name>Enable Channel 4</name>
+      </function>
+      <function ID ="5">
+        <name>Enable Channel 5</name>
+      </function>
+      <function ID ="6">
+        <name>Enable Channel 6</name>
+      </function>
+      <function ID ="7">
+        <name>Enable Channel 7</name>
+      </function>
+      <function ID ="49">
+        <name>Control MDB Address</name>
+      </function>
+      <function ID ="51">
+        <name>Set Interface to Pulse/Serial</name>
+      </function>
+      <function ID ="52">
+        <name>Dip Switch/Harness Enable</name>
+      </function>
+      <function ID ="53">
+        <name>4 Pulses Per Dollar</name>
+      </function>
+      <function ID ="54">
+        <name>Set Interface to ccTalk</name>
+      </function>
+	  <function ID ="56">
+		<name>Set Interface to BSCP</name>
+	  </function>
+	  <function ID ="55">
+        <name>Disable Escrow Capability</name>
+      </function>
+    </Model>
+  </DIP_Switch_Data>
+</Diagnostic_Data>

@@ -1,0 +1,48 @@
+
+create table if not exists amf_settings  
+(
+  ooak VARCHAR(30) NOT NULL , 
+  schema VARCHAR(4) NOT NULL , 
+  password_expiration_days numeric(4) NOT NULL, 
+  clean_install_control -- no present for luxembourg -> monaco upgrade
+)
+/*sep*/
+
+#amfpragma has_column amf_settings.clean_install_control
+
+insert into amf_settings
+( 
+  ooak,
+  schema,
+  password_expiration_days
+) 
+  values 
+  (
+    "ooak",
+    "1.0",
+    30
+  )
+
+/*sep*/
+#amfpragma has_column amf_settings.clean_install_control
+-- added in kenya schema
+create unique index amf_settings__ix__ooak on amf_settings (ooak)
+
+/*sep*/
+#amfpragma has_column amf_settings.clean_install_control
+-- added in kenya schema
+alter table amf_settings add dbid int  
+
+/*sep*/
+#amfpragma has_column amf_settings.clean_install_control
+-- added in kenya schema
+
+update amf_settings set dbid = (select strftime('%s', 'NOW'))
+
+/*sep*/
+#amfpragma has_column amf_settings.clean_install_control
+-- added in istanbul schema
+
+alter table amf_settings add client_based_login bool NOT NULL DEFAULT 0   
+
+

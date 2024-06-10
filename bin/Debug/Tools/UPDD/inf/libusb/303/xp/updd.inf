@@ -1,0 +1,259 @@
+
+;
+; Installs UPDD
+;
+
+[Version]
+Signature = "$Windows NT$"
+Class     = %ClassName%
+ClassGUID ={78a1c341-4539-11d3-b88d-00c04fad5171}
+Provider  = %ManufacturerName%
+CatalogFile = updd.cat
+DriverVer=11/13/2017,06.00.299
+
+; ========== Manufacturer/Models sections ===========
+
+[Manufacturer]
+%ManufacturerName% = Standard,NTamd64, NTx86
+
+[Standard.NTamd64]
+%DeviceName0% =USB_Install, USB\VID_0457&PID_0819
+%DeviceName1% =USB_Install, USB\VID_0457&PID_0819&MI_00
+%DeviceName2% =USB_Install, USB\VID_0457&PID_0819&MI_01
+%DeviceName3% =USB_Install, USB\VID_0457&PID_0819&MI_02
+%DeviceName4% =USB_Install, USB\VID_0457&PID_0819&MI_03
+%DeviceName5% =USB_Install, USB\VID_0483&PID_5750
+%DeviceName6% =USB_Install, USB\VID_0483&PID_5750&MI_00
+%DeviceName7% =USB_Install, USB\VID_0483&PID_5750&MI_01
+%DeviceName8% =USB_Install, USB\VID_0483&PID_5750&MI_02
+%DeviceName9% =USB_Install, USB\VID_0483&PID_5750&MI_03
+%DeviceName10% =USB_Install, USB\VID_0EEF&PID_C000
+%DeviceName11% =USB_Install, USB\VID_0EEF&PID_C000&MI_00
+%DeviceName12% =USB_Install, USB\VID_0EEF&PID_C000&MI_01
+%DeviceName13% =USB_Install, USB\VID_0EEF&PID_C000&MI_02
+%DeviceName14% =USB_Install, USB\VID_0EEF&PID_C000&MI_03
+%DeviceName15% =USB_Install, USB\VID_1130&PID_1650
+%DeviceName16% =USB_Install, USB\VID_1130&PID_1650&MI_00
+%DeviceName17% =USB_Install, USB\VID_1130&PID_1650&MI_01
+%DeviceName18% =USB_Install, USB\VID_1130&PID_1650&MI_02
+%DeviceName19% =USB_Install, USB\VID_1130&PID_1650&MI_03
+%DeviceName20% =USB_Install, USB\VID_1AAD&PID_0001
+%DeviceName21% =USB_Install, USB\VID_1AAD&PID_0001&MI_00
+%DeviceName22% =USB_Install, USB\VID_1AAD&PID_0001&MI_01
+%DeviceName23% =USB_Install, USB\VID_1AAD&PID_0001&MI_02
+%DeviceName24% =USB_Install, USB\VID_1AAD&PID_0001&MI_03
+%DeviceName25% =USB_Install, USB\VID_1AAD&PID_000F
+%DeviceName26% =USB_Install, USB\VID_1AAD&PID_000F&MI_00
+%DeviceName27% =USB_Install, USB\VID_1AAD&PID_000F&MI_01
+%DeviceName28% =USB_Install, USB\VID_1AAD&PID_000F&MI_02
+%DeviceName29% =USB_Install, USB\VID_1AAD&PID_000F&MI_03
+%DeviceName30% =USB_Install, USB\VID_1FF7&PID_0013
+%DeviceName31% =USB_Install, USB\VID_1FF7&PID_0013&MI_00
+%DeviceName32% =USB_Install, USB\VID_1FF7&PID_0013&MI_02
+%DeviceName33% =USB_Install, USB\VID_222A&PID_0001
+%DeviceName34% =USB_Install, USB\VID_222A&PID_0001&MI_00
+%DeviceName35% =USB_Install, USB\VID_222A&PID_0001&MI_01
+%DeviceName36% =USB_Install, USB\VID_222A&PID_0001&MI_02
+%DeviceName37% =USB_Install, USB\VID_222A&PID_0001&MI_03
+%DeviceName38% =USB_Install, USB\VID_29BD&PID_4101
+%DeviceName39% =USB_Install, USB\VID_29BD&PID_4101&MI_00
+%DeviceName40% =USB_Install, USB\VID_29BD&PID_4101&MI_01
+%DeviceName41% =USB_Install, USB\VID_29BD&PID_4101&MI_02
+%DeviceName42% =USB_Install, USB\VID_29BD&PID_4101&MI_03
+%DeviceName43% =USB_Install, USB\VID_3011&PID_5016
+%DeviceName44% =USB_Install, USB\VID_3011&PID_5016&MI_00
+%DeviceName45% =USB_Install, USB\VID_3011&PID_5016&MI_01
+%DeviceName46% =USB_Install, USB\VID_3011&PID_5016&MI_02
+%DeviceName47% =USB_Install, USB\VID_3011&PID_5016&MI_03
+
+
+
+[Standard.NTx86]
+
+%DeviceName0% =USB_Install, USB\VID_0457&PID_0819
+%DeviceName1% =USB_Install, USB\VID_0457&PID_0819&MI_00
+%DeviceName2% =USB_Install, USB\VID_0457&PID_0819&MI_01
+%DeviceName3% =USB_Install, USB\VID_0457&PID_0819&MI_02
+%DeviceName4% =USB_Install, USB\VID_0457&PID_0819&MI_03
+%DeviceName5% =USB_Install, USB\VID_0483&PID_5750
+%DeviceName6% =USB_Install, USB\VID_0483&PID_5750&MI_00
+%DeviceName7% =USB_Install, USB\VID_0483&PID_5750&MI_01
+%DeviceName8% =USB_Install, USB\VID_0483&PID_5750&MI_02
+%DeviceName9% =USB_Install, USB\VID_0483&PID_5750&MI_03
+%DeviceName10% =USB_Install, USB\VID_0EEF&PID_C000
+%DeviceName11% =USB_Install, USB\VID_0EEF&PID_C000&MI_00
+%DeviceName12% =USB_Install, USB\VID_0EEF&PID_C000&MI_01
+%DeviceName13% =USB_Install, USB\VID_0EEF&PID_C000&MI_02
+%DeviceName14% =USB_Install, USB\VID_0EEF&PID_C000&MI_03
+%DeviceName15% =USB_Install, USB\VID_1130&PID_1650
+%DeviceName16% =USB_Install, USB\VID_1130&PID_1650&MI_00
+%DeviceName17% =USB_Install, USB\VID_1130&PID_1650&MI_01
+%DeviceName18% =USB_Install, USB\VID_1130&PID_1650&MI_02
+%DeviceName19% =USB_Install, USB\VID_1130&PID_1650&MI_03
+%DeviceName20% =USB_Install, USB\VID_1AAD&PID_0001
+%DeviceName21% =USB_Install, USB\VID_1AAD&PID_0001&MI_00
+%DeviceName22% =USB_Install, USB\VID_1AAD&PID_0001&MI_01
+%DeviceName23% =USB_Install, USB\VID_1AAD&PID_0001&MI_02
+%DeviceName24% =USB_Install, USB\VID_1AAD&PID_0001&MI_03
+%DeviceName25% =USB_Install, USB\VID_1AAD&PID_000F
+%DeviceName26% =USB_Install, USB\VID_1AAD&PID_000F&MI_00
+%DeviceName27% =USB_Install, USB\VID_1AAD&PID_000F&MI_01
+%DeviceName28% =USB_Install, USB\VID_1AAD&PID_000F&MI_02
+%DeviceName29% =USB_Install, USB\VID_1AAD&PID_000F&MI_03
+%DeviceName30% =USB_Install, USB\VID_1FF7&PID_0013
+%DeviceName31% =USB_Install, USB\VID_1FF7&PID_0013&MI_00
+%DeviceName32% =USB_Install, USB\VID_1FF7&PID_0013&MI_02
+%DeviceName33% =USB_Install, USB\VID_222A&PID_0001
+%DeviceName34% =USB_Install, USB\VID_222A&PID_0001&MI_00
+%DeviceName35% =USB_Install, USB\VID_222A&PID_0001&MI_01
+%DeviceName36% =USB_Install, USB\VID_222A&PID_0001&MI_02
+%DeviceName37% =USB_Install, USB\VID_222A&PID_0001&MI_03
+%DeviceName38% =USB_Install, USB\VID_29BD&PID_4101
+%DeviceName39% =USB_Install, USB\VID_29BD&PID_4101&MI_00
+%DeviceName40% =USB_Install, USB\VID_29BD&PID_4101&MI_01
+%DeviceName41% =USB_Install, USB\VID_29BD&PID_4101&MI_02
+%DeviceName42% =USB_Install, USB\VID_29BD&PID_4101&MI_03
+%DeviceName43% =USB_Install, USB\VID_3011&PID_5016
+%DeviceName44% =USB_Install, USB\VID_3011&PID_5016&MI_00
+%DeviceName45% =USB_Install, USB\VID_3011&PID_5016&MI_01
+%DeviceName46% =USB_Install, USB\VID_3011&PID_5016&MI_02
+%DeviceName47% =USB_Install, USB\VID_3011&PID_5016&MI_03
+
+
+
+
+; ========== Class definition ===========
+
+[ClassInstall32]
+AddReg = ClassInstall_AddReg
+
+[ClassInstall_AddReg]
+HKR,,,,%ClassName%
+HKR,,Icon,"%systemroot%\inf\updd.ico"
+
+
+
+; =================== Installation ===================
+
+[USB_Install]
+Include = winusb.inf
+Needs   = WINUSB.NT
+
+[USB_Install.Services]
+Include =winusb.inf
+Needs   = WINUSB.NT.Services
+AddService=WinUSB,0x00000002,WinUSB_ServiceInstall
+
+
+
+[WinUSB_ServiceInstall]
+DisplayName     = %WinUSB_SvcDesc%
+ServiceType     = 1
+StartType       = 3
+ErrorControl    = 1
+ServiceBinary   = %12%\WinUSB.sys
+
+; The KmdfService directive installs WinUsb.sys as a kernel-mode service. The 
+; referenced WinUSB_Install section specifies the KMDF library version. 
+; Usually, the version can be derived from the WdfCoInstallerxxyyy.dll with 
+; xx = major, yyy = minor
+[USB_Install.Wdf]
+KmdfService=WINUSB, WinUsb_Install
+
+[WinUSB_Install]
+KmdfLibraryVersion=1.9
+
+
+
+
+[USB_Install.HW]
+AddReg=Dev_AddReg
+
+[Dev_AddReg]
+HKR,,DeviceInterfaceGUIDs,0x10000,"{9f543223-cede-4fa3-b376-a25ce9a30e74}"
+
+[USB_Install.CoInstallers]
+AddReg=CoInstallers_AddReg
+CopyFiles=CoInstallers_CopyFiles
+
+[CoInstallers_AddReg]
+HKR,,CoInstallers32,0x00010000,"WdfCoInstaller01009.dll,WdfCoInstaller","WinUSBCoInstaller2.dll"
+
+[CoInstallers_CopyFiles]
+WinUSBCoInstaller2.dll
+WdfCoInstaller01009.dll
+
+
+[SourceDisksNames]
+1 = UPDD,,,
+
+
+; [DestinationDirs]
+
+[SourceDisksFiles.x86]
+WinUSBCoInstaller2.dll=1
+WdfCoInstaller01009.dll=1
+
+
+; [DestinationDirs]
+
+; =================== Strings ===================
+
+[Strings]
+ManufacturerName="Touch-Base Ltd"
+ClassName="UPDD Devices"
+
+DeviceName0="UPDD Goldfinger, PCAP_SIS, USB"
+DeviceName1="Goldfinger, PCAP_SIS, USB"
+DeviceName2="Goldfinger, PCAP_SIS, USB"
+DeviceName3="Goldfinger, PCAP_SIS, USB"
+DeviceName4="Goldfinger, PCAP_SIS, USB"
+DeviceName5="UPDD Goldfinger, IR_STm, USB"
+DeviceName6="Goldfinger, IR_STm, USB"
+DeviceName7="Goldfinger, IR_STm, USB"
+DeviceName8="Goldfinger, IR_STm, USB"
+DeviceName9="Goldfinger, IR_STm, USB"
+DeviceName10="UPDD Goldfinger, PCAP EGALAX, USB"
+DeviceName11="Goldfinger, PCAP EGALAX, USB"
+DeviceName12="Goldfinger, PCAP EGALAX, USB"
+DeviceName13="Goldfinger, PCAP EGALAX, USB"
+DeviceName14="Goldfinger, PCAP EGALAX, USB"
+DeviceName15="UPDD Goldfinger, IR, USB"
+DeviceName16="Goldfinger, IR, USB"
+DeviceName17="Goldfinger, IR, USB"
+DeviceName18="Goldfinger, IR, USB"
+DeviceName19="Goldfinger, IR, USB"
+DeviceName20="UPDD Goldfinger, IR_ST, USB"
+DeviceName21="Goldfinger, IR_ST, USB"
+DeviceName22="Goldfinger, IR_ST, USB"
+DeviceName23="Goldfinger, IR_ST, USB"
+DeviceName24="Goldfinger, IR_ST, USB"
+DeviceName25="UPDD Goldfinger, IR_MT, USB"
+DeviceName26="Goldfinger, IR_MT, USB"
+DeviceName27="Goldfinger, IR_MT, USB"
+DeviceName28="Goldfinger, IR_MT, USB"
+DeviceName29="Goldfinger, IR_MT, USB"
+DeviceName30="UPDD Goldfinger, AIO IR Touch, USB"
+DeviceName31="Goldfinger, AIO IR Touch, USB"
+DeviceName32="Goldfinger, AIO IR Touch, USB"
+DeviceName33="UPDD Goldfinger, PCAP ILITEK, USB"
+DeviceName34="Goldfinger, PCAP ILITEK, USB"
+DeviceName35="Goldfinger, PCAP ILITEK, USB"
+DeviceName36="Goldfinger, PCAP ILITEK, USB"
+DeviceName37="Goldfinger, PCAP ILITEK, USB"
+DeviceName38="UPDD Goldfinger, PCAP SW, USB"
+DeviceName39="Goldfinger, PCAP SW, USB"
+DeviceName40="Goldfinger, PCAP SW, USB"
+DeviceName41="Goldfinger, PCAP SW, USB"
+DeviceName42="Goldfinger, PCAP SW, USB"
+DeviceName43="UPDD Goldfinger, IRTouch V2, USB"
+DeviceName44="Goldfinger, IRTouch V2, USB"
+DeviceName45="Goldfinger, IRTouch V2, USB"
+DeviceName46="Goldfinger, IRTouch V2, USB"
+DeviceName47="Goldfinger, IRTouch V2, USB"
+
+
+
+
+REG_MULTI_SZ = 0x00010000
+

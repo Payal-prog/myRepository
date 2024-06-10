@@ -1,0 +1,98 @@
+;
+; upddhk.inf
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=HIDClass
+ClassGuid={745a17a0-74d3-11d0-b6fe-00a0c90f57da}
+Provider=%ManufacturerName%
+CatalogFile=upddhk.cat
+DriverVer = 10/21/2021,11.48.54.193
+
+[DestinationDirs]
+DefaultDestDir = 12
+upddhk_Device_CoInstaller_CopyFiles = 11
+
+; ================= Class section =====================
+
+;[ClassInstall32]
+;Addreg=SampleClassReg
+
+;[SampleClassReg]
+;HKR,,,0,%ClassName%
+;HKR,,Icon,,-5
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+upddhk.sys  = 1,,
+WdfCoInstaller01009.dll=1 ; make sure the number matches with SourceDisksNames
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName%=Standard,NTamd64
+
+[Standard.NTamd64]
+%upddhk.DeviceDesc%=upddhk_Device,*UPDDHK 
+
+[upddhk_Device.NT]
+CopyFiles=Drivers_Dir
+
+
+
+
+[Drivers_Dir]
+upddhk.sys
+
+;-------------- Service installation
+[upddhk_Device.NT.Services]
+AddService = upddhk,%SPSVCINST_ASSOCSERVICE%, upddhk_Service_Inst
+
+; -------------- upddhk driver install sections
+[upddhk_Service_Inst]
+DisplayName    = %upddhk.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\upddhk.sys
+;AddService                  =upddhk,0x00000002,upddhkServiceInst,UPDDEventLogInst
+
+;
+;--- upddhk_Device Coinstaller installation ------
+;
+
+
+[upddhk_Device.NT.HW]
+AddReg                      =upddhk_Device.NT.HW.AddReg
+
+[upddhk_Device.NT.HW.AddReg]
+HKR,,"UpperFilters",0x00010000,mshidkmdf
+
+
+[upddhk_Device.NT.CoInstallers]
+AddReg=upddhk_Device_CoInstaller_AddReg
+CopyFiles=upddhk_Device_CoInstaller_CopyFiles
+
+[upddhk_Device_CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "WdfCoInstaller01009.dll,WdfCoInstaller"
+
+[upddhk_Device_CoInstaller_CopyFiles]
+WdfCoInstaller01009.dll
+
+[upddhk_Device.NT.Wdf]
+KmdfService =  upddhk, upddhk_wdfsect
+[upddhk_wdfsect]
+KmdfLibraryVersion = 1.9
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+ManufacturerName="TouchBase Ltd" 
+ClassName="HIDClass" 
+DiskName = "upddhk Installation Disk"
+upddhk.DeviceDesc = "UPDD HID Keyboard"
+upddhk.SVCDESC = "upddhk Service"

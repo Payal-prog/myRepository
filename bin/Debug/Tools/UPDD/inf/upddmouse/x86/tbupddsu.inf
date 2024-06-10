@@ -1,0 +1,62 @@
+;
+; tbupddsu.inf
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=Mouse
+ClassGUID={4D36E96F-E325-11CE-BFC1-08002BE10318}
+Provider  = %ManufacturerName%
+DriverVer=06/18/2019,17.39.43.546
+CatalogFile=tbupddsu.cat
+
+[ControlFlags]
+ExcludeFromSelect=*UPDDPNP
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+
+
+[Manufacturer]
+%ManufacturerName%=CONTROLLERS,NTx86
+
+[CONTROLLERS.NTx86]
+%UPDDNAME%=UPDD,*UPDDPNP
+
+[UPDD]
+include=msmouse.inf
+needs=MouClass.Services
+include=input.inf
+needs=MouClass.Services
+
+[UPDD.Services]
+AddService = tbupddsu, 0x0000000A, tbupdd_Service_Inst 
+
+include=msmouse.inf
+needs=MouClass.Services
+
+
+[tbupdd_Service_Inst]
+DisplayName    = %UPDDNAME%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_SYSTEM_MANUAL
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+AddReg=UPDD.AddRegDevice,UPDD.AddRegCommon
+ServiceBinary  = %12%\tbupddsu.sys
+
+[UPDD.AddRegDevice]
+
+[UPDD.AddRegCommon]
+
+[Strings]
+DiskName="UPDD Mouse Source Disk"
+ManufacturerName="Touch-base Ltd"
+ClassName="UPDD Devices"
+UPDDNAME=UPDD Mouse V6
+

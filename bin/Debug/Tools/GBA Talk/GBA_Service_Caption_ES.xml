@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Control_Captions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<caption ID="10">
+		<name>Herramientas de diagnóstico de fábrica GBA: versión</name>
+	</caption>
+	<caption ID="11">
+		<name>Herramientas de servicio GBA: versión</name>
+	</caption>
+	<caption ID="12">
+		<name>Herramientas GBA Talk: versión</name>
+	</caption>
+	<caption ID="13">
+		<name>Herramientas de diagnóstico de fábrica GBA: versión</name>
+	</caption>
+	<caption ID="101">
+		<name>&amp;Archivo</name>
+	</caption>
+	<caption ID="102">
+		<name>&amp;Herramientas</name>
+	</caption>
+	<caption ID="103">
+		<name>A&amp;yuda</name>
+	</caption>
+	<caption ID="104">
+		<name>&amp;Abierto datos de EEPROM</name>
+	</caption>
+	<caption ID="105">
+		<name>&amp;Guardar datos EEPROM</name>
+	</caption>
+	<caption ID="106">
+		<name>A&amp;bra el archivo de configuración</name>
+	</caption>
+	<caption ID="107">
+		<name>Crear y G&amp;uardar en el archivo de configuración</name>
+	</caption>
+	<caption ID="108">
+		<name>&amp;Comparar con configuración</name>
+	</caption>
+	<caption ID="109">
+		<name>&amp;Salida</name>
+	</caption>
+	<caption ID="110">
+		<name>&amp;Opciones</name>
+	</caption>
+	<caption ID="111">
+		<name>Encienda &amp;Comunicaciones</name>
+	</caption>
+	<caption ID="112">
+		<name>Apague &amp;Comunicaciones</name>
+	</caption>
+	<caption ID="113">
+		<name>Y Regenerar la Lista de &amp;Puertos</name>
+	</caption>
+	<caption ID="114">
+		<name>&amp;Estado de validador de lectura</name>
+	</caption>
+	<caption ID="115">
+		<name>Visualización de &amp;Barra de herramientas</name>
+	</caption>
+	<caption ID="116">
+		<name>&amp;Guía del usuario</name>
+	</caption>
+	<caption ID="117">
+		<name>&amp;Buscar actualizaciones</name>
+	</caption>
+	<caption ID="118">
+		<name>&amp;Acerca de</name>
+	</caption>
+	<caption ID="119">
+		<name>&amp;Imprimir archivo de configuración</name>
+	</caption>
+	<caption ID="120">
+		<name>Importación archivo del &amp;Límites de Calibración</name>
+	</caption>
+	<caption ID="121">
+		<name>&amp;Registrar mi copia</name>
+	</caption>
+	<caption ID="122">
+		<name>Configurar y dispositivo de memoria &amp;USB</name>
+	</caption>
+	<caption ID="123">
+		<name>&amp;Visualización y copia de seguridad</name>
+	</caption>
+	<caption ID="124">
+		<name>&amp;Comunicaciones</name>
+	</caption>
+	<caption ID="125">
+		<name>&amp;Y Actualizar lista de puertos</name>
+	</caption>
+	<caption ID="126">
+		<name>&amp;Buscar actualizaciones</name>
+	</caption>
+	<caption ID="127"/>
+	<caption ID="128"/>
+	<caption ID="129"/>
+	<caption ID="130">
+		<name>Cargar todo</name>
+	</caption>
+	<caption ID="131">
+		<name>Establecer todo</name>
+	</caption>
+	<caption ID="132">
+		<name>Estb &gt;</name>
+	</caption>
+	<caption ID="133">
+		<name>Establecer stacker</name>
+	</caption>
+	<caption ID="134">
+		<name>Establecer seguridad</name>
+	</caption>
+	<caption ID="135">
+		<name>Establecer interfaz</name>
+	</caption>
+	<caption ID="136">
+		<name>Calibrar</name>
+	</caption>
+	<caption ID="137">
+		<name>Cierre</name>
+	</caption>
+	<caption ID="138">
+		<name>Abra el nuevo archivo de conjunto de datos</name>
+	</caption>
+	<caption ID="139">
+		<name>Descargar el conjunto de datos</name>
+	</caption>
+	<caption ID="140">
+		<name>Abrir el archivo de firmware nuevo</name>
+	</caption>
+	<caption ID="141">
+		<name>Descargar firmware</name>
+	</caption>
+	<caption ID="142">
+		<name>Leer nota datos</name>
+	</caption>
+	<caption ID="143">
+		<name>Clara contadores de nota</name>
+	</caption>
+	<caption ID="144">
+		<name>Clara de por vida contadores</name>
+	</caption>
+	<caption ID="145">
+		<name>Estado de E/S de lectura</name>
+	</caption>
+	<caption ID="146">
+		<name>Sensores de lectura</name>
+	</caption>
+	<caption ID="147">
+		<name>Leer PWM</name>
+	</caption>
+	<caption ID="148">
+		<name>Set PWM</name>
+	</caption>
+	<caption ID="149">
+		<name>Invertir</name>
+	</caption>
+	<caption ID="150">
+		<name>Parada</name>
+	</caption>
+	<caption ID="151">
+		<name>Adelante</name>
+	</caption>
+	<caption ID="152">
+		<name>Cerrar</name>
+	</caption>
+	<caption ID="153">
+		<name>Abierto</name>
+	</caption>
+	<caption ID="154">
+		<name>Información de MASG</name>
+	</caption>
+	<caption ID="155">
+		<name>Información de USB</name>
+	</caption>
+	<caption ID="156">
+		<name>Información de disco de cinturón</name>
+	</caption>
+	<caption ID="157">
+		<name>Ciclo Stacker</name>
+	</caption>
+	<caption ID="158">
+		<name>Información de Stacker</name>
+	</caption>
+	<caption ID="159">
+		<name>Salidas de ciclo</name>
+	</caption>
+	<caption ID="160"/>
+	<caption ID="C001">
+		<name>Por favor, inserte papel blanco\nPara GBA ST1/ST1C/ST2 esto tiene 2 esquinas de los extremos biselados.</name>
+	</caption>
+	<caption ID="C002">
+		<name>Por favor, inserte el papel de calibración negro.</name>
+	</caption>
+	<caption ID="C003">
+		<name>Por favor, introduzca papel fino\nPara GBA C2E/HR1 esto tiene 1 chaflán.</name>
+	</caption>
+	<caption ID="C004">
+		<name>Calibración del papel fino completa.\nPor favor, inserte el papel grueso. (Tenga en cuenta que hay un pequeño retraso después de que el papel se devuelve, mientras que los resultados se guardan.)</name>
+	</caption>
+	<caption ID="C005">
+		<name>Calibración del papel blanco completar.</name>
+	</caption>
+	<caption ID="C006">
+		<name>Calibración del papel negro completar.</name>
+	</caption>
+	<caption ID="C007">
+		<name>Calibración del papel grueso completar.</name>
+	</caption>
+	<caption ID="C008">
+		<name>Por favor, introduzca un 5 USD nota, izquierda arriba, en el centro de la guía de nota.</name>
+	</caption>
+	<caption ID="C009">
+		<name>Por favor, inserte bien a 5 la nota del euro o 5 USD nota, izquierda arriba, en el centro de la guía de nota.</name>
+	</caption>
+	<caption ID="C010">
+		<name>Calibración completa.</name>
+	</caption>
+	<caption ID="C011">
+		<name>Nota: Uno o más sensores muestran signos de suciedad o deterioro, que pueden llegar a afectar la nota de aceptación.</name>
+	</caption>
+	<caption ID="C012">
+		<name>Uno o más sensores fallaron.</name>
+	</caption>
+	<caption ID="C013">
+		<name>Comprobar la longitud ha fallado.</name>
+	</caption>
+	<caption ID="C014">
+		<name>MASG ha fallado.</name>
+	</caption>
+	<caption ID="C015">
+		<name>Motor ha fallado.</name>
+	</caption>
+	<caption ID="C016">
+		<name>Desconocido Código de error.</name>
+	</caption>
+  <caption ID="C017">
+    <name>El validador no ha respondido. Por favor, compruebe que está conectado correctamente.</name>
+  </caption>
+  <caption ID="C018">
+    <name>El comando de calibración no ha sido reconocido por el validador. Por favor, intente calibrar de nuevo.</name>
+  </caption>
+  <caption ID="C019">
+    <name>La calibración ha fallado!</name>
+  </caption>
+  <caption ID="C020">
+    <name>El papel de calibración no escanear de manera uniforme - puede ser marcado o sucio. Sensor:</name>
+  </caption>
+  <caption ID="C021">
+    <name>Problema de alimentación de papel - el papel de calibración puede haber sido introducido antes de tiempo.</name>
+  </caption>
+  <caption ID="C022">
+    <name>El papel de calibración no entró directamente.</name>
+  </caption>
+  <caption ID="C023">
+    <name>La carcasa del sensor no está conectado!</name>
+  </caption>
+  <caption ID="C024">
+    <name>La Puerta Mecánica no ha funcionado correctamente.</name>
+  </caption>
+  <caption ID="C025">
+    <name>El papel de calibración confundido con una tarjeta de programa!</name>
+  </caption>
+  <caption ID="C026">
+    <name>Tacómetro falla del sensor (o papel de calibración se ha interrumpido)</name>
+  </caption>
+  <caption ID="C027">
+    <name>El papel de calibración no escanear de manera uniforme - Reflective Sensor:</name>
+  </caption>
+</Control_Captions>

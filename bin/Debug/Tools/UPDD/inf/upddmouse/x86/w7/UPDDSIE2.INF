@@ -1,0 +1,243 @@
+;
+; UPDDMOV3.INF
+;
+; Universal Pointer Device Driver
+; Mouse class controllers & non-PNP
+;
+; Copyright (c) Touch-Base Ltd
+;
+
+[Version]
+Signature=$CHICAGO$
+Class=Mouse
+ClassGUID={4D36E96F-E325-11CE-BFC1-08002BE10318}
+Provider=%COMPANYNAME%
+DriverVer=10/25/2015,05.01.1445.0
+CatalogFile=upddsie2.cat
+
+
+;
+[ControlFlags]
+ExcludeFromSelect=*UPDDPNP
+;
+[Manufacturer]
+%COMPANYKEY%=CONTROLLERS,NTx86
+;
+
+
+
+[UPDD]
+include=msmouse.inf
+needs=MouClass.Services
+include=input.inf
+needs=MouClass.Services
+
+;
+[UPDD.Services]
+AddService = tbupddsu, 0x0000000A, tbupdd_Service_Inst 
+;
+;	
+
+[CONTROLLERS.NTx86]
+%UPDDNAME%=UPDD,*UPDDPNP
+"Atmel, maXTouch Digitizer, USB (UPDD)"=UPDD0,USB\VID_03EB&PID_2F02
+"Atmel, maXTouch Digitizer, USB (UPDD - 1)"=UPDD0,USB\VID_03EB&PID_2F02&MI_00
+"Atmel, maXTouch Mouse, USB (UPDD - 2)"=UPDD1,USB\VID_03EB&PID_2F04
+"Atmel, maXTouch Mouse, USB (UPDD - 3)"=UPDD1,USB\VID_03EB&PID_2F04&MI_00
+"EELY-ECW, ET-Rn, USB (UPDD - 4)"=UPDD2,USB\VID_00C8&PID_0003
+"EELY-ECW, ET-Rn, USB (UPDD - 5)"=UPDD2,USB\VID_00C8&PID_0003&MI_00
+"Elo, Smartset, USB (UPDD - 6)"=UPDD3,USB\VID_04E7&PID_0001
+"Elo, Smartset, USB (UPDD - 7)"=UPDD3,USB\VID_04E7&PID_0001&MI_00
+"Elo, Smartset, USB (UPDD - 8)"=UPDD3,USB\VID_04E7&PID_0007
+"Elo, Smartset, USB (UPDD - 9)"=UPDD3,USB\VID_04E7&PID_0007&MI_00
+"Elo, Smartset, USB (UPDD - 10)"=UPDD3,USB\VID_04E7&PID_0008
+"Elo, Smartset, USB (UPDD - 11)"=UPDD3,USB\VID_04E7&PID_0008&MI_00
+"Elo, Smartset, USB (UPDD - 12)"=UPDD3,USB\VID_04E7&PID_0009
+"Elo, Smartset, USB (UPDD - 13)"=UPDD3,USB\VID_04E7&PID_0009&MI_00
+"Elo, Smartset, USB (UPDD - 14)"=UPDD3,USB\VID_04E7&PID_0020
+"Elo, Smartset, USB (UPDD - 15)"=UPDD3,USB\VID_04E7&PID_0020&MI_00
+"Elo, Smartset, USB (UPDD - 16)"=UPDD3,USB\VID_04E7&PID_0030
+"Elo, Smartset, USB (UPDD - 17)"=UPDD3,USB\VID_04E7&PID_0030&MI_00
+"Elo, Smartset, USB (UPDD - 18)"=UPDD3,USB\VID_04E7&PID_0041
+"Elo, Smartset, USB (UPDD - 19)"=UPDD3,USB\VID_04E7&PID_0041&MI_00
+"Elo, Smartset, USB (UPDD - 20)"=UPDD3,USB\VID_04E7&PID_0042
+"Elo, Smartset, USB (UPDD - 21)"=UPDD3,USB\VID_04E7&PID_0042&MI_00
+"Elo, Smartset, USB (UPDD - 22)"=UPDD3,USB\VID_04E7&PID_0050
+"Elo, Smartset, USB (UPDD - 23)"=UPDD3,USB\VID_04E7&PID_0050&MI_00
+"Elo, Smartset, USB (UPDD - 24)"=UPDD3,USB\VID_04E7&PID_007A
+"Elo, Smartset, USB (UPDD - 25)"=UPDD3,USB\VID_04E7&PID_007A&MI_00
+"Pixcir, Tango C44, USB (UPDD - 26)"=UPDD5,USB\VID_040B&PID_2230
+"Pixcir, Tango C44, USB (UPDD - 27)"=UPDD5,USB\VID_040B&PID_2230&MI_00
+"RAFI, Glasscape Touch, USB (UPDD - 28)"=UPDD6,USB\VID_05BD&PID_0107
+"RAFI, Glasscape Touch, USB (UPDD - 29)"=UPDD6,USB\VID_05BD&PID_0107&MI_00
+"Semtech, ScreenCoder, USB (UPDD - 30)"=UPDD7,USB\VID_047A&PID_0004
+"Semtech, ScreenCoder, USB (UPDD - 31)"=UPDD7,USB\VID_047A&PID_0004&MI_00
+
+
+	  
+
+[UPDD0]
+
+
+include=msmouse.inf
+needs=MouClass.Services
+
+[UPDD0.Services]
+AddService = tbupddsu, 0x0000000A, tbupdd_Service_Inst 
+
+;[UPDD0.CoInstallers]   
+;AddReg = CoInstallers_AddReg
+;CopyFiles = UPDDCopyFilesSection
+
+
+[UPDD1]
+
+
+include=msmouse.inf
+needs=MouClass.Services
+
+[UPDD1.Services]
+AddService = tbupddsu, 0x0000000A, tbupdd_Service_Inst 
+
+;[UPDD1.CoInstallers]   
+;AddReg = CoInstallers_AddReg
+;CopyFiles = UPDDCopyFilesSection
+
+
+[UPDD2]
+
+
+include=msmouse.inf
+needs=MouClass.Services
+
+[UPDD2.Services]
+AddService = tbupddsu, 0x0000000A, tbupdd_Service_Inst 
+
+;[UPDD2.CoInstallers]   
+;AddReg = CoInstallers_AddReg
+;CopyFiles = UPDDCopyFilesSection
+
+
+[UPDD3]
+
+
+include=msmouse.inf
+needs=MouClass.Services
+
+[UPDD3.Services]
+AddService = tbupddsu, 0x0000000A, tbupdd_Service_Inst 
+
+;[UPDD3.CoInstallers]   
+;AddReg = CoInstallers_AddReg
+;CopyFiles = UPDDCopyFilesSection
+
+
+[UPDD4]
+
+
+include=msmouse.inf
+needs=MouClass.Services
+
+[UPDD4.Services]
+AddService = tbupddsu, 0x0000000A, tbupdd_Service_Inst 
+
+;[UPDD4.CoInstallers]   
+;AddReg = CoInstallers_AddReg
+;CopyFiles = UPDDCopyFilesSection
+
+
+[UPDD5]
+
+
+include=msmouse.inf
+needs=MouClass.Services
+
+[UPDD5.Services]
+AddService = tbupddsu, 0x0000000A, tbupdd_Service_Inst 
+
+;[UPDD5.CoInstallers]   
+;AddReg = CoInstallers_AddReg
+;CopyFiles = UPDDCopyFilesSection
+
+
+[UPDD6]
+
+
+include=msmouse.inf
+needs=MouClass.Services
+
+[UPDD6.Services]
+AddService = tbupddsu, 0x0000000A, tbupdd_Service_Inst 
+
+;[UPDD6.CoInstallers]   
+;AddReg = CoInstallers_AddReg
+;CopyFiles = UPDDCopyFilesSection
+
+
+[UPDD7]
+
+
+include=msmouse.inf
+needs=MouClass.Services
+
+[UPDD7.Services]
+AddService = tbupddsu, 0x0000000A, tbupdd_Service_Inst 
+
+;[UPDD7.CoInstallers]   
+;AddReg = CoInstallers_AddReg
+;CopyFiles = UPDDCopyFilesSection
+
+
+;
+[tbupdd_Service_Inst]
+DisplayName    = %UPDDNAME%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_SYSTEM_MANUAL
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+AddReg=UPDD.AddRegDevice,UPDD.AddRegCommon
+ServiceBinary  = %12%\tbupddsu.sys
+;
+
+[UPDD.AddRegDevice]
+;
+[UPDD.AddRegCommon]
+
+
+
+;
+;
+[Strings]
+COMPANYKEY="Touch-Base"
+COMPANYNAME="Touch-Base Ltd"
+SharedDriverMsg = "Universal Pointer Device Driver"
+APPDIR="Program Files\UPDD"
+UPDDNAME="Universal Pointer Device Driver"
+DiskName1="UPDD Driver Disk 1"
+
+[DestinationDirs]
+UPDDCopyFilesSection = 11                
+;UPDDCopyDriversSection = 12              
+ 
+;[UPDDCopyDriversSection]
+;tbupddsu.sys
+ 
+[CoInstallers_AddReg]
+;HKR,,CoInstallers32,0x00010000, "upddcoin.dll,UPDDCoInstaller"
+
+ 
+[UPDDCopyFilesSection]
+;upddcoin.dll,,0x00000010                                                  
+
+[SourceDisksNames]
+1="updd media",,,""
+
+
+[SourceDisksFiles]
+;upddcoin.dll=1
+;tbupddsu.sys=1
+
+
+
+
+
+

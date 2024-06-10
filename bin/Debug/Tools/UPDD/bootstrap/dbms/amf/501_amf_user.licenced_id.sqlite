@@ -1,0 +1,72 @@
+              
+DROP TABLE if exists amf_user_;
+       
+/*sep*/ 
+              
+CREATE TABLE amf_user_ AS select * from amf_user;
+       
+       
+/*sep*/ 
+              
+DROP TABLE amf_user;
+       
+       
+/*sep*/ 
+
+CREATE TABLE amf_user 
+(
+  user_id INTEGER PRIMARY KEY AUTOINCREMENT, 
+  name VARCHAR(30) NOT NULL , 
+  full_name VARCHAR(30) NOT NULL, 
+  password VARCHAR(40) NOT NULL,	
+  password_expires DATE NOT NULL,	
+  admin char(1) ,  
+  enabled char(1) NOT NULL 
+  );
+
+       
+/*sep*/ 
+
+INSERT into amf_user
+(
+name ,
+full_name ,
+password ,
+password_expires ,
+admin ,
+enabled 
+
+)
+SELECT 
+name ,
+full_name ,
+password ,
+password_expires ,
+admin ,
+enabled 
+from amf_user_;
+       
+       
+/*sep*/ 
+              
+DROP TABLE amf_user_;
+
+/*sep*/
+
+CREATE UNIQUE INDEX amf_user__ix__name on amf_user (name);        
+
+
+/*sep*/
+
+
+alter table amf_user add licenced_id INTEGER NULL;
+
+/*sep*/
+
+update amf_user set licenced_id = user_id;
+
+/*sep*/
+
+#amfpragma no_column amf_user.sam_name
+alter table amf_user add sam_name VARCHAR(256) collate nocase NULL;
+

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Control_Captions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<caption ID="10">
+		<name>GBA Factory Diagnostics Tools: version</name>
+	</caption>
+	<caption ID="11">
+		<name>GBA Service Tools: version</name>
+	</caption>
+	<caption ID="12">
+		<name>GBA Talk Tools: version</name>
+	</caption>
+	<caption ID="13">
+		<name>GBA Office Diagnostics Tools: version</name>
+	</caption>
+	<caption ID="101">
+		<name>&amp;File</name>
+	</caption>
+	<caption ID="102">
+		<name>&amp;Tools</name>
+	</caption>
+	<caption ID="103">
+		<name>&amp;Help</name>
+	</caption>
+	<caption ID="104">
+		<name>&amp;Open EEPROM Data</name>
+	</caption>
+	<caption ID="105">
+		<name>&amp;Save EEPROM Data</name>
+	</caption>
+	<caption ID="106">
+		<name>Open &amp;Config File</name>
+	</caption>
+	<caption ID="107">
+		<name>Create and Save Config &amp;File</name>
+	</caption>
+	<caption ID="108">
+		<name>Compare &amp;with Config</name>
+	</caption>
+	<caption ID="109">
+		<name>E&amp;xit</name>
+	</caption>
+	<caption ID="110">
+		<name>&amp;Options</name>
+	</caption>
+	<caption ID="111">
+		<name>Open &amp;Comms Port</name>
+	</caption>
+	<caption ID="112">
+		<name>Close &amp;Comms Port</name>
+	</caption>
+	<caption ID="113">
+		<name>Scan &amp;All COM Ports</name>
+	</caption>
+	<caption ID="114">
+		<name>&amp;Read Validator Status</name>
+	</caption>
+	<caption ID="115">
+		<name>Display &amp;Toolbar</name>
+	</caption>
+	<caption ID="116">
+		<name>&amp;User Guide</name>
+	</caption>
+	<caption ID="117">
+		<name>&amp;Check for Updates</name>
+	</caption>
+	<caption ID="118">
+		<name>&amp;About</name>
+	</caption>
+	<caption ID="119">
+		<name>&amp;Print Config File</name>
+	</caption>
+	<caption ID="120">
+		<name>&amp;Import Calibration Limits File</name>
+	</caption>
+	<caption ID="121">
+		<name>&amp;Register</name>
+	</caption>
+	<caption ID="122">
+		<name>Set up &amp;USB memory device</name>
+	</caption>
+	<caption ID="123">
+		<name>Display &amp;Backup</name>
+	</caption>
+	<caption ID="124">
+		<name>&amp;Comms</name>
+	</caption>
+	<caption ID="125">
+		<name>&amp;Refresh Ports List</name>
+	</caption>
+	<caption ID="126"/>
+	<caption ID="127"/>
+	<caption ID="128"/>
+	<caption ID="129"/>
+	<caption ID="130">
+		<name>Upload All</name>
+	</caption>
+	<caption ID="131">
+		<name>Set All</name>
+	</caption>
+	<caption ID="132">
+		<name>Set &gt;&gt;</name>
+	</caption>
+	<caption ID="133">
+		<name>Set Stacker</name>
+	</caption>
+	<caption ID="134">
+		<name>Set Security</name>
+	</caption>
+	<caption ID="135">
+		<name>Set Interface</name>
+	</caption>
+	<caption ID="136">
+		<name>Calibrate</name>
+	</caption>
+	<caption ID="137">
+		<name>Quit</name>
+	</caption>
+	<caption ID="138">
+		<name>Open New Dataset File</name>
+	</caption>
+	<caption ID="139">
+		<name>Download Dataset</name>
+	</caption>
+	<caption ID="140">
+		<name>Open New Firmware File</name>
+	</caption>
+	<caption ID="141">
+		<name>Download Firmware</name>
+	</caption>
+	<caption ID="142">
+		<name>Read Note Data</name>
+	</caption>
+	<caption ID="143">
+		<name>Clear Note Counters</name>
+	</caption>
+	<caption ID="144">
+		<name>Clear Lifetime Totals</name>
+	</caption>
+	<caption ID="145">
+		<name>Read I/O State</name>
+	</caption>
+	<caption ID="146">
+		<name>Read Sensors</name>
+	</caption>
+	<caption ID="147">
+		<name>Read PWM</name>
+	</caption>
+	<caption ID="148">
+		<name>Set PWM</name>
+	</caption>
+	<caption ID="149">
+		<name>Reverse</name>
+	</caption>
+	<caption ID="150">
+		<name>Stop</name>
+	</caption>
+	<caption ID="151">
+		<name>Forward</name>
+	</caption>
+	<caption ID="152">
+		<name>Close</name>
+	</caption>
+	<caption ID="153">
+		<name>Open</name>
+	</caption>
+	<caption ID="154">
+		<name>MASG Data</name>
+	</caption>
+	<caption ID="155">
+		<name>USB Interface</name>
+	</caption>
+	<caption ID="156">
+		<name>Belt Drive Info</name>
+	</caption>
+	<caption ID="157">
+		<name>Cycle Stacker</name>
+	</caption>
+	<caption ID="158">
+		<name>Stacker Information</name>
+	</caption>
+	<caption ID="159">
+		<name>Cycle Outputs</name>
+	</caption>
+	<caption ID="160"/>
+	<caption ID="C001">
+		<name>Please insert WHITE paper\nFor GBA ST1/ST1C/ST2 this has 2 end corners chamfered.</name>
+	</caption>
+	<caption ID="C002">
+		<name>Please insert black calibration paper.</name>
+	</caption>
+	<caption ID="C003">
+		<name>Please insert THIN paper\nFor GBA C2E/HR1 this has 1 corner chamfered.</name>
+	</caption>
+	<caption ID="C004">
+		<name>Thin paper calibration complete.\nPlease insert THICK paper. (Note there is a short delay after the paper is returned, while results are saved.)</name>
+	</caption>
+	<caption ID="C005">
+		<name>White paper calibration complete.</name>
+	</caption>
+	<caption ID="C006">
+		<name>Black paper calibration complete.</name>
+	</caption>
+	<caption ID="C007">
+		<name>Thick paper calibration complete.</name>
+	</caption>
+	<caption ID="C008">
+		<name>Please insert a 5 USD note, Left Up, in the centre of the note guide.</name>
+	</caption>
+	<caption ID="C009">
+		<name>Please insert either a 5 euro note or 5 USD note, Left Up, in the centre of the note guide.</name>
+	</caption>
+	<caption ID="C010">
+		<name>Calibration complete.</name>
+	</caption>
+	<caption ID="C011">
+		<name>Note: One or more sensors show signs of dirt or degradation, which may eventually affect note acceptance.</name>
+	</caption>
+	<caption ID="C012">
+		<name>One or more sensors failed.</name>
+	</caption>
+	<caption ID="C013">
+		<name>Length check failed.</name>
+	</caption>
+	<caption ID="C014">
+		<name>MASG failed.</name>
+	</caption>
+	<caption ID="C015">
+		<name>Motor failed.</name>
+	</caption>
+	<caption ID="C016">
+		<name>Unknown Error Code</name>
+	</caption>
+  <caption ID="C017">
+    <name>The validator has not responded. Please check that it is connected properly.</name>
+  </caption>
+  <caption ID="C018">
+    <name>The calibration command has not been acknowledged by the validator. Please try calibrating again.</name>
+  </caption>
+  <caption ID="C019">
+    <name>Calibration has Failed!</name>
+  </caption>
+  <caption ID="C020">
+    <name>Paper did not scan evenly - it may be marked or dirty. Sensor: </name>
+  </caption>
+  <caption ID="C021">
+    <name>Paper feed problem - the calibration paper may have been inserted too soon.</name>
+  </caption>
+  <caption ID="C022">
+    <name>The calibration paper did not go in straight.</name>
+  </caption>
+  <caption ID="C023">
+    <name>Sensor housing is not connected!</name>
+  </caption>
+  <caption ID="C024">
+    <name>Mechanical Gate has not operated correctly.</name>
+  </caption>
+  <caption ID="C025">
+    <name>Calibration paper mistaken for a program card!</name>
+  </caption>
+  <caption ID="C026">
+    <name>Tacho sensor fault (or calibration paper has been cut short)</name>
+  </caption>
+  <caption ID="C027">
+    <name>Paper did not scan evenly, try again - Reflective Sensor: </name>
+  </caption>
+</Control_Captions>

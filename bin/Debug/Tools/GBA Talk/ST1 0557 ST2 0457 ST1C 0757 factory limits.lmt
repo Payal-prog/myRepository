@@ -1,0 +1,77 @@
+Sensor Limits File
+* remember - do not have a equals sign in a comment
+MagTest = 0
+DarkClbn = 1
+* LngthTol was 3. SL/PS 26/oct/09
+LngthTol = 2
+*ST1_PWMx was 240
+* SL_ST2 10/aug/09. PWM min was 48 - reduced for ST2
+*ST1_PWMn was 32
+* SL_ST1+/ST2/ST1 17/aug/09. Individual PWM limits for each sensor type
+* ST1 Settings *
+S1_pTxMx = 200
+S1_pTxMn = 48
+S1_pRfMx = 200
+S1_pRfMn = 48
+* ST1 Specific limits
+* ST1 sensor free air reading limits added 13/nov/2009
+ST1_irfa = 22272
+ST1_vsfa = 13056
+ST1_CpnL = 49152
+ST1_OGMx = 49152
+ST1_OGMn = 11264
+*
+* ST2/ST1+ Settings *
+* SL 18/dec/12: these have been modified based on analysis of service return units
+* from Forth. The upper PWM limit has been reduced.
+S2_pTxMx = 160
+* Change requested by Matthew 15/mar/11: limit was 48, R71 will be changed
+S2_pTxMn = 42
+S2_pUVMx = 160
+S2_pUVMn = 32
+S2_pIRMx = 160
+S2_pIRMn = 48
+S2_pCPMx = 200
+S2_pCPMn = 48
+S2_pOGMx = 200
+S2_pOGMn = 32
+*
+ST1_ADXm = 1024
+ST1_ADRf = 1024
+ST1_DCal = 1
+ST1_EscL = 16384
+ST1_CttL = 51200
+* SL 18/dec/12: reduced the upper PWM limit based on analysis of service return units
+ST2_NDMx = 160
+ST2_NDMn = 16
+ST1_MagL = 24576
+* SL 16/dec/08: Added separate limits for Magnetic Head
+STx_MgTg = 1400
+STx_MgTl = 500
+* SL_ST2 16/apr/09 - add limit for OASG reading with LED off: 4.2V
+* SL_ST2 03/jun/2011 - Change limit for OASG reading with LED off: 4.8V
+ST2_OGDk = 62912
+* SL_ST2 27/jul/09 - add separate limit for OASG reading against target
+ST2_OGTg = 2048
+* ST2 max/min length limits added 11/nov/2009
+* ST2 max length was 280 16/dec/2010
+ST2_LnMn = 276
+ST2_LnMx = 282
+* SL 10/jul/2010: Alter ST1+ length limits
+ST1_LnMn = 259
+ST1_LnMx = 262
+* SL 04/mar/2013: Add ST1C length limits
+* SL 06/jun/13: Modified ST1C length limits for pilot run
+ST1CLnMn = 256
+ST1CLnMx = 261
+* ST2 MASG limits added 28/oct/09
+S2_m_opn = 50
+S2_m_cls = 150
+* SL_ST2 15/dec/2010 - added new opto-MASG (F-Build pcb)
+* & motor PWM limits
+S2_mfopn = 60
+S2_mfcls = 120
+S2_mtr_x = 190
+S2_mtr_n = 80
+* SL_ST2 08/oct/2013: added alternative limit for new motor control circuit
+S2_mtr_i = 250

@@ -1,0 +1,4 @@
+
+alter table amf_settings add last_update_time VARCHAR(32) NULL 
+
+

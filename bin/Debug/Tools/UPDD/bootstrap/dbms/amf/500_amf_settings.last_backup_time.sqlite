@@ -1,0 +1,5 @@
+
+
+alter table amf_settings add last_backup_time VARCHAR(32) NULL 
+
+

@@ -1,0 +1,3 @@
+
+
+alter table amf_user add permit_reports INTEGER NOT NULL default 0;

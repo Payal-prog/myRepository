@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Status_Codes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- Error descriptions for PDT status codes -->
+  <message ID="1">
+    <name>Validator OK</name>
+  </message>
+  <message ID ="75">
+    <name>Writing to eeprom</name>
+  </message>
+  <message ID ="76">
+    <name>Wrong firmware for this validator</name>
+  </message>
+  <message ID ="77">
+    <name>Note at front</name>
+  </message>
+  <message ID ="79">
+    <name>Sensor(s) blocked at power up</name>
+  </message>
+  <message ID ="80">
+    <name>eeprom protection fault</name>
+  </message>
+  <message ID ="81">
+    <name>Entry blinded by external light</name>
+  </message>
+  <message ID ="82">
+    <name>Exit blinded by external light</name>
+  </message>
+  <message ID ="83">
+    <name>OASG blinded by external light</name>
+  </message>
+  <message ID ="84">
+    <name>eeprom corrupted</name>
+  </message>
+  <message ID ="85">
+    <name>USB Interface fault</name>
+  </message>
+  <message ID ="86">
+    <name>Sensor Housing not connected</name>
+  </message>
+  <message ID ="87">
+    <ST2_name>L Entry Sensor fault</ST2_name>
+  </message>
+  <message ID ="88">
+    <ST2_name>R Entry Sensor fault</ST2_name>
+  </message>
+  <message ID ="89">
+    <ST2_name>Exit Sensor fault</ST2_name>
+  </message>
+  <message ID ="90">
+    <name>Temperature Low</name>
+  </message>
+  <message ID ="91">
+    <name>Temperature High</name>
+  </message>
+  <message ID ="92">
+    <name>Supply Volts Low</name>
+  </message>
+  <message ID ="93">
+    <name>Supply Volts High</name>
+  </message>
+  <message ID ="94">
+    <name>Error in program memory</name>
+  </message>
+  <message ID ="95">
+    <name>Unit Powering Up</name>
+  </message>
+  <message ID ="96">
+    <name>Push Button fault</name>
+  </message>
+  <message ID ="97">
+    <name>No dataset loaded</name>
+  </message>
+  <message ID ="98">
+    <ST1_name>Left Front Sensor warning</ST1_name>
+    <ST2_name>Left Wide Snsr warning</ST2_name>
+ </message>
+  <message ID ="99">
+    <ST1_name>Right Front Sensor warning</ST1_name>
+    <ST2_name>Right Wide Snsr warning</ST2_name>
+  </message>
+  <message ID ="100">
+    <name>MASG Failed</name>
+  </message>
+  <message ID ="101">
+    <name>Calibrating</name>
+  </message>
+  <message ID ="102">
+    <name>Motor/Tacho fault</name>
+  </message>
+  <message ID ="103">
+    <name>Coupon Sensor fault</name>
+  </message>
+  <message ID ="104">
+    <name>Lower Left Sensor warning</name>
+  </message>
+  <message ID ="105">
+    <name>Upper Left Sensor warning</name>
+  </message>
+  <message ID ="106">
+    <ST1_name>Left IR Sensor warning</ST1_name>
+    <ST2_name>Left Middle Snsr warning</ST2_name>
+  </message>
+  <message ID ="107">
+    <ST1_name>Right IR Sensor warning</ST1_name>
+    <ST2_name>Right Middle Snsr warning</ST2_name>
+  </message>
+  <message ID ="108">
+    <name>Unit Not Calibrated</name>
+  </message>
+  <message ID ="109">
+    <ST1_name>Left Orange Sensor warning</ST1_name>
+    <ST2_name>Left Narrow Snsr warning</ST2_name>
+  </message>
+  <message ID ="110">
+    <ST1_name>Right Orange Sensor warning</ST1_name>
+    <ST2_name>Right Narrow Snsr warning</ST2_name>
+  </message>
+  <message ID ="111">
+    <name>MASG Lock Up</name>
+  </message>
+  <message ID ="112">
+    <name>Calibration paper feed fault</name>
+  </message>
+  <message ID ="115">
+    <name>OAS Gate Sensor fault</name>
+  </message>
+  <message ID ="116">
+    <name>Validator Jam</name>
+  </message>
+  <message ID ="117">
+    <name>Stacker Jam</name>
+  </message>
+  <message ID ="118">
+    <name>Stacker Full</name>
+  </message>
+  <message ID ="119">
+    <name>Escrow Sensor fault</name>
+  </message>
+  <message ID ="120">
+    <name>OASG Lock Up</name>
+  </message>
+  <message ID ="121">
+    <name>OASG Rapid Change</name>
+  </message>
+  <message ID ="124">
+    <name>No Stacker Fitted</name>
+  </message>
+  <message ID ="125">
+    <name>Cash Box Missing</name>
+  </message>
+  <message ID ="126">
+    <name>Lower Right Sensor warning</name>
+  </message>
+  <message ID ="127">
+    <name>Upper Right Sensor warning</name>
+  </message>
+</Status_Codes>

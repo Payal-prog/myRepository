@@ -1,0 +1,5 @@
+
+-- mistakenly added in monaco as index_mode should have been in AMF, now relocated
+
+alter table amf_report_type add index_mode VARCHAR NULL;
+

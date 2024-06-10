@@ -1,0 +1,5 @@
+
+#amfpragma no_column amf_user.sam_name
+alter table amf_user add sam_name VARCHAR(256) collate nocase NULL;
+
+

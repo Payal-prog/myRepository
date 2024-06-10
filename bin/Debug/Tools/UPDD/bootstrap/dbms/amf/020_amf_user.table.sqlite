@@ -1,0 +1,99 @@
+#amfpragma has_column amf_settings.clean_install_control
+
+create table amf_user 
+(
+  user_id INTEGER PRIMARY KEY AUTOINCREMENT, 
+  name VARCHAR(30) NOT NULL , 
+  full_name VARCHAR(30) NOT NULL, 
+  password VARCHAR(40) NOT NULL,	
+  password_expires DATE NOT NULL,	
+  admin char(1) ,  
+  enabled char(1) NOT NULL 
+)
+/*sep*/
+#amfpragma has_column amf_settings.clean_install_control
+-- added in kenya schema
+alter table amf_user add email VARCHAR(256) 
+/*sep*/
+#amfpragma has_column amf_settings.clean_install_control
+
+-- no longer unique, xxx_user provides uniqueness
+create index amf_user__ix__name on amf_user (name)
+/*sep*/
+#amfpragma has_column amf_settings.clean_install_control
+
+insert into amf_user 
+( 
+  user_id,
+  name,
+  full_name,
+  admin,
+  password,
+  password_expires,
+  enabled
+) 
+  values 
+  (
+	1,
+    "admin",
+	"built in admin account",
+	"y",
+        "bba951238500848b06be1082663949de3b695c36",
+        DATE('NOW'),
+        "y"
+  )
+/*sep*/
+
+#amfpragma has_column amf_settings.clean_install_control
+insert into amf_user 
+( 
+  rowid,
+  name,
+  full_name,
+  admin,
+  password,
+  password_expires,
+  enabled
+) 
+  values 
+  (
+	2,
+    "local",
+	"local",
+	"y",
+        "01a371f10d83724aca4446d0c70052364e749265",
+        "2050-12-31",
+        "y"
+  )
+/*sep*/
+#amfpragma has_column amf_settings.clean_install_control
+
+insert into amf_user 
+( 
+  name,
+  full_name,
+  admin,
+  password,
+  password_expires,
+  enabled
+) 
+  values 
+  (
+    "default",
+	"default",
+	"n",
+        "",
+        DATE('NOW'),
+        "y"
+  )
+
+/*sep*/
+#amfpragma has_column amf_settings.clean_install_control
+
+update amf_user set password = '933a9ff9d3fc0ab2523db43f992ce651cf7d59cc' where name = 'admin'
+
+/*sep*/
+#amfpragma no_column amf_user.sam_name
+alter table amf_user add sam_name VARCHAR(256) collate nocase NULL;
+
+

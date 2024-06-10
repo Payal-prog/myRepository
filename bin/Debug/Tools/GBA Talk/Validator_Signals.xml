@@ -1,0 +1,1570 @@
+<?xml version="1.0" standalone="yes"?>
+<Signal_Data>
+<!--Signal Types are as follows:
+  0: Internal Input
+  1: External Input
+  2: Internal Ouput
+  3: External Ouput-->
+  <Model ID="HR1">
+    <signal ID ="01">
+      <name>Alarm</name>
+      <type>3</type>
+      <portID>VL</portID>
+      <pinID>0</pinID>
+    </signal>
+    <signal ID ="02">
+      <name>Pulse / Relay</name>
+      <type>3</type>
+      <portID>VL</portID>
+      <pinID>2</pinID>
+    </signal>
+    <signal ID ="03">
+      <name>Vend 1 / Serial Int</name>
+      <type>3</type>
+      <portID>VL</portID>
+      <pinID>3</pinID>
+    </signal>
+    <signal ID ="04">
+      <name>Vend 2</name>
+      <type>3</type>
+      <portID>VL</portID>
+      <pinID>1</pinID>
+    </signal>
+    <signal ID ="05">
+      <name>Vend 3</name>
+      <type>3</type>
+      <portID>VL</portID>
+      <pinID>7</pinID>
+    </signal>
+    <signal ID ="06">
+      <name>Vend 4</name>
+      <type>3</type>
+      <portID>VL</portID>
+      <pinID>6</pinID>
+    </signal>
+    <signal ID ="07">
+      <name>Vend 5 (Parallel)</name>
+      <type>3</type>
+      <portID>PD</portID>
+      <pinID>1</pinID>
+    </signal>
+    <signal ID ="08">
+      <name>Vend 6 / Busy</name>
+      <type>3</type>
+      <portID>PD</portID>
+      <pinID>5</pinID>
+    </signal>
+    <signal ID ="09">
+      <name>Diagnostic Green</name>
+      <type>2</type>
+      <portID>MA</portID>
+      <pinID>7</pinID>
+    </signal>
+    <signal ID ="10">
+      <name>Diagnostic Red</name>
+      <type>2</type>
+      <portID>MA</portID>
+      <pinID>6</pinID>
+    </signal>
+    <signal ID ="22">
+      <name>Belt Fwd/Rev</name>
+      <type>2</type>
+      <portID>MA</portID>
+      <pinID>4</pinID>
+    </signal>
+    <signal ID ="23">
+      <name>Belt On/Off</name>
+      <type>2</type>
+      <portID>MA</portID>
+      <pinID>3</pinID>
+    </signal>
+    <signal ID ="24">
+      <name>Stacker Fwd/Rev</name>
+      <type>2</type>
+      <portID>MA</portID>
+      <pinID>1</pinID>
+    </signal>
+    <signal ID ="25">
+      <name>Stacker On/Off</name>
+      <type>2</type>
+      <portID>MA</portID>
+      <pinID>2</pinID>
+    </signal>
+    <signal ID ="11">
+      <name>PDT Connected</name>
+      <type>1</type>
+      <portID>SM</portID>
+      <pinID>3</pinID>
+      <pin_high>OFF</pin_high>
+      <pin_low>ON</pin_low>
+    </signal>
+    <signal ID ="12">
+      <name>Note Escrow</name>
+      <type>1</type>
+      <portID>SM</portID>
+      <pinID>6</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="13">
+      <name>Unit Disabled</name>
+      <type>1</type>
+      <portID>PA</portID>
+      <pinID>1</pinID>
+      <pin_high>DIS</pin_high>
+      <pin_low>EN</pin_low>
+    </signal>
+    <signal ID ="14">
+      <name>Pulse / Serial</name>
+      <type>1</type>
+      <portID>SM</portID>
+      <pinID>5</pinID>
+      <pin_high>PULSE</pin_high>
+      <pin_low>SERIAL</pin_low>
+    </signal>
+    <signal ID ="15">
+      <name>Serial Send</name>
+      <type>1</type>
+      <portID>SM</portID>
+      <pinID>4</pinID>
+      <pin_high>OFF</pin_high>
+      <pin_low>ON</pin_low>
+    </signal>
+    <signal ID ="16">
+      <name>DIP Switch</name>
+      <type>0</type>
+      <portID>SM</portID>
+      <pinID>7</pinID>
+      <pin_high>OFF</pin_high>
+      <pin_low>ON</pin_low>
+    </signal>
+    <signal ID ="17">
+      <name>Tacho</name>
+      <type>0</type>
+      <portID>PA</portID>
+      <pinID>0</pinID>
+      <pin_high>ON</pin_high>
+      <pin_low>OFF</pin_low>
+    </signal>
+    <signal ID ="18">
+      <name>Cash Box</name>
+      <type>0</type>
+      <portID>SM</portID>
+      <pinID>0</pinID>
+      <pin_high>OUT</pin_high>
+      <pin_low>IN</pin_low>
+    </signal>
+    <signal ID ="19">
+      <name>Stacker Lever</name>
+      <type>0</type>
+      <portID>SM</portID>
+      <pinID>1</pinID>
+      <pin_high>NOTE</pin_high>
+      <pin_low>OFF</pin_low>
+    </signal>
+    <signal ID ="20">
+      <name>Stacker Home</name>
+      <type>0</type>
+      <portID>SM</portID>
+      <pinID>2</pinID>
+      <pin_high>HOME</pin_high>
+      <pin_low>OPEN</pin_low>
+    </signal>
+    <signal ID ="21">
+      <name>Flash Supported</name>
+      <type>0</type>
+      <portID>PA</portID>
+      <pinID>2</pinID>
+      <pin_high>NO</pin_high>
+      <pin_low>YES</pin_low>
+    </signal>
+  </Model>
+  <Model ID="ST1">
+    <signal ID ="01">
+      <name>Alarm</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>1</pinID>
+    </signal>
+    <signal ID ="02">
+      <name>Pulse / Relay</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>2</pinID>
+    </signal>
+    <signal ID ="03">
+      <name>Vend 1 / Serial Int</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>3</pinID>
+    </signal>
+    <signal ID ="04">
+      <name>Vend 2</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>4</pinID>
+    </signal>
+    <signal ID ="05">
+      <name>Vend 3</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>5</pinID>
+    </signal>
+    <signal ID ="06">
+      <name>Vend 4</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>6</pinID>
+    </signal>
+    <signal ID ="07">
+      <name>Vend 5 (Parallel)</name>
+      <type>3</type>
+      <portID>S</portID>
+      <pinID>1</pinID>
+    </signal>
+    <signal ID ="08">
+      <name>Vend 6 / Busy</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>7</pinID>
+    </signal>
+    <signal ID ="09">
+      <name>Diagnostic Green</name>
+      <type>2</type>
+      <portID>M</portID>
+      <pinID>6</pinID>
+    </signal>
+    <signal ID ="10">
+      <name>Diagnostic Red</name>
+      <type>2</type>
+      <portID>M</portID>
+      <pinID>7</pinID>
+    </signal>
+    <signal ID ="20">
+      <name>Fascia Green</name>
+      <type>2</type>
+      <portID>S</portID>
+      <pinID>4</pinID>
+    </signal>
+    <signal ID ="21">
+      <name>Fascia Red</name>
+      <type>2</type>
+      <portID>S</portID>
+      <pinID>5</pinID>
+    </signal>
+    <signal ID ="22">
+      <name>OASG Enable</name>
+      <type>2</type>
+      <portID>K</portID>
+      <pinID>0</pinID>
+    </signal>
+    <signal ID ="23">
+      <name>Coupon Enable</name>
+      <type>2</type>
+      <portID>K</portID>
+      <pinID>1</pinID>
+    </signal>
+    <signal ID ="24">
+      <name>12V Monitor Enable</name>
+      <type>2</type>
+      <portID>K</portID>
+      <pinID>2</pinID>
+    </signal>
+    <signal ID ="25">
+      <name>Mag. Head Enable</name>
+      <type>2</type>
+      <portID>K</portID>
+      <pinID>3</pinID>
+    </signal>
+    <signal ID ="26">
+      <name>OASG Emitter</name>
+      <type>2</type>
+      <portID>S</portID>
+      <pinID>6</pinID>
+    </signal>
+    <signal ID ="11">
+      <name>PDT Connected</name>
+      <type>1</type>
+      <portID>B</portID>
+      <pinID>1</pinID>
+      <pin_high>ON</pin_high>
+      <pin_low>OFF</pin_low>
+    </signal>
+    <signal ID ="12">
+      <name>Note Escrow</name>
+      <type>1</type>
+      <portID>B</portID>
+      <pinID>3</pinID>
+      <pin_high>LOW</pin_high>
+      <pin_low>HIGH</pin_low>
+    </signal>
+    <signal ID ="13">
+      <name>Unit Disabled</name>
+      <type>1</type>
+      <portID>B</portID>
+      <pinID>4</pinID>
+      <pin_high>EN</pin_high>
+      <pin_low>DIS</pin_low>
+    </signal>
+    <signal ID ="14">
+      <name>Pulse / Serial</name>
+      <type>1</type>
+      <portID>B</portID>
+      <pinID>5</pinID>
+      <pin_high>SERIAL</pin_high>
+      <pin_low>PULSE</pin_low>
+    </signal>
+    <signal ID ="15">
+      <name>Serial Send</name>
+      <type>1</type>
+      <portID>B</portID>
+      <pinID>6</pinID>
+      <pin_high>ON</pin_high>
+      <pin_low>OFF</pin_low>
+    </signal>
+    <signal ID ="16">
+      <name>Push Button</name>
+      <type>0</type>
+      <portID>J</portID>
+      <pinID>1</pinID>
+      <pin_high>OFF</pin_high>
+      <pin_low>ON</pin_low>
+    </signal>
+    <signal ID ="17">
+      <name>MASG Home</name>
+      <type>0</type>
+      <portID>E</portID>
+      <pinID>0</pinID>
+      <pin_high>HOME</pin_high>
+      <pin_low>OPEN</pin_low>
+    </signal>
+    <signal ID ="18">
+      <name>Punch Home</name>
+      <type>0</type>
+      <portID>E</portID>
+      <pinID>1</pinID>
+      <pin_high>HOME</pin_high>
+      <pin_low>OPEN</pin_low>
+    </signal>
+    <signal ID ="19">
+      <name>Tacho</name>
+      <type>0</type>
+      <portID>T</portID>
+      <pinID>0</pinID>
+      <pin_high>ON</pin_high>
+      <pin_low>OFF</pin_low>
+    </signal>
+  </Model>
+  <Model ID="ST2">
+    <signal ID ="01">
+      <name>Alarm</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>1</pinID>
+    </signal>
+    <signal ID ="02">
+      <name>Pulse / Relay</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>2</pinID>
+    </signal>
+    <signal ID ="03">
+      <name>Vend 1 / Serial Int</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>3</pinID>
+    </signal>
+    <signal ID ="04">
+      <name>Vend 2</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>4</pinID>
+    </signal>
+    <signal ID ="05">
+      <name>Vend 3</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>5</pinID>
+    </signal>
+    <signal ID ="06">
+      <name>Vend 4</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>6</pinID>
+    </signal>
+    <signal ID ="07">
+      <name>Vend 5 (Parallel)</name>
+      <type>3</type>
+      <portID>S</portID>
+      <pinID>1</pinID>
+    </signal>
+    <signal ID ="08">
+      <name>Vend 6 / Busy</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>7</pinID>
+    </signal>
+    <signal ID ="09">
+      <name>Diagnostic Green</name>
+      <type>2</type>
+      <portID>M</portID>
+      <pinID>6</pinID>
+    </signal>
+    <signal ID ="10">
+      <name>Diagnostic Red</name>
+      <type>2</type>
+      <portID>M</portID>
+      <pinID>7</pinID>
+    </signal>
+    <signal ID ="11">
+      <name>PDT Connected</name>
+      <type>1</type>
+      <portID>B</portID>
+      <pinID>1</pinID>
+      <pin_high>OFF</pin_high>
+      <pin_low>ON</pin_low>
+    </signal>
+    <signal ID ="12">
+      <name>Note Escrow</name>
+      <type>1</type>
+      <portID>B</portID>
+      <pinID>3</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="13">
+      <name>Unit Disabled</name>
+      <type>1</type>
+      <portID>B</portID>
+      <pinID>4</pinID>
+      <pin_high>DIS</pin_high>
+      <pin_low>EN</pin_low>
+    </signal>
+    <signal ID ="14">
+      <name>Pulse / Serial</name>
+      <type>1</type>
+      <portID>B</portID>
+      <pinID>5</pinID>
+      <pin_high>PULSE</pin_high>
+      <pin_low>SERIAL</pin_low>
+    </signal>
+    <signal ID ="15">
+      <name>Serial Send</name>
+      <type>1</type>
+      <portID>B</portID>
+      <pinID>6</pinID>
+      <pin_high>OFF</pin_high>
+      <pin_low>ON</pin_low>
+    </signal>
+    <signal ID ="16">
+      <name>Push Button</name>
+      <type>0</type>
+      <portID>J</portID>
+      <pinID>1</pinID>
+      <pin_high>OFF</pin_high>
+      <pin_low>ON</pin_low>
+    </signal>
+    <signal ID ="17">
+      <name>MASG Home</name>
+      <type>0</type>
+      <portID>E</portID>
+      <pinID>0</pinID>
+      <pin_high>OPEN</pin_high>
+      <pin_low>HOME</pin_low>
+    </signal>
+    <signal ID ="32">
+      <name>USB Int</name>
+      <type>0</type>
+      <portID>E</portID>
+      <pinID>1</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="18">
+      <name>Tacho</name>
+      <type>0</type>
+      <portID>T</portID>
+      <pinID>0</pinID>
+      <pin_high>ON</pin_high>
+      <pin_low>OFF</pin_low>
+    </signal>
+    <signal ID ="19">
+      <name>Front Right</name>
+      <type>0</type>
+      <portID>H</portID>
+      <pinID>2</pinID>
+      <pin_high>ON</pin_high>
+      <pin_low>OFF</pin_low>
+    </signal>
+    <signal ID ="20">
+      <name>Front Left</name>
+      <type>0</type>
+      <portID>H</portID>
+      <pinID>1</pinID>
+      <pin_high>ON</pin_high>
+      <pin_low>OFF</pin_low>
+    </signal>
+    <signal ID ="21">
+      <name>Rear Optical</name>
+      <type>0</type>
+      <portID>H</portID>
+      <pinID>0</pinID>
+      <pin_high>ON</pin_high>
+      <pin_low>OFF</pin_low>
+    </signal>
+    <signal ID ="27">
+      <name>USB Slave</name>
+      <type>0</type>
+      <portID>T</portID>
+      <pinID>1</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="28">
+      <name>USB Host</name>
+      <type>0</type>
+      <portID>T</portID>
+      <pinID>2</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="29">
+      <name>USB Bus</name>
+      <type>0</type>
+      <portID>T</portID>
+      <pinID>3</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="22">
+      <name>Mag. Test</name>
+      <type>2</type>
+      <portID>M</portID>
+      <pinID>5</pinID>
+    </signal>
+    <signal ID ="23">
+      <name>Mag. Reset</name>
+      <type>2</type>
+      <portID>M</portID>
+      <pinID>4</pinID>
+    </signal>
+    <signal ID ="24">
+      <name>FNG</name>
+      <type>2</type>
+      <portID>K</portID>
+      <pinID>0</pinID>
+    </signal>
+    <signal ID ="26">
+      <name>GV1 Detect</name>
+      <type>0</type>
+      <portID>K</portID>
+      <pinID>2</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="30">
+      <name>Solenoid</name>
+      <type>2</type>
+      <portID>M</portID>
+      <pinID>2</pinID>
+    </signal>
+  </Model>
+  <Model ID="ST2X">
+    <signal ID ="01">
+      <name>Alarm</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>1</pinID>
+    </signal>
+    <signal ID ="02">
+      <name>Pulse / Relay</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>2</pinID>
+    </signal>
+    <signal ID ="03">
+      <name>Vend 1 / Serial Int</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>3</pinID>
+    </signal>
+    <signal ID ="04">
+      <name>Vend 2</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>4</pinID>
+    </signal>
+    <signal ID ="05">
+      <name>Vend 3</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>5</pinID>
+    </signal>
+    <signal ID ="06">
+      <name>Vend 4</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>6</pinID>
+    </signal>
+    <signal ID ="07">
+      <name>Vend 5 (Parallel)</name>
+      <type>3</type>
+      <portID>S</portID>
+      <pinID>1</pinID>
+    </signal>
+    <signal ID ="08">
+      <name>Vend 6 / Busy</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>7</pinID>
+    </signal>
+    <signal ID ="09">
+      <name>Diagnostic Green</name>
+      <type>2</type>
+      <portID>M</portID>
+      <pinID>6</pinID>
+    </signal>
+    <signal ID ="10">
+      <name>Diagnostic Red</name>
+      <type>2</type>
+      <portID>M</portID>
+      <pinID>7</pinID>
+    </signal>
+    <signal ID ="11">
+      <name>PDT Connected</name>
+      <type>1</type>
+      <portID>B</portID>
+      <pinID>1</pinID>
+      <pin_high>OFF</pin_high>
+      <pin_low>ON</pin_low>
+    </signal>
+    <signal ID ="12">
+      <name>Note Escrow</name>
+      <type>1</type>
+      <portID>B</portID>
+      <pinID>3</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="13">
+      <name>Unit Disabled</name>
+      <type>1</type>
+      <portID>B</portID>
+      <pinID>4</pinID>
+      <pin_high>DIS</pin_high>
+      <pin_low>EN</pin_low>
+    </signal>
+    <signal ID ="14">
+      <name>Pulse / Serial</name>
+      <type>1</type>
+      <portID>B</portID>
+      <pinID>5</pinID>
+      <pin_high>PULSE</pin_high>
+      <pin_low>SERIAL</pin_low>
+    </signal>
+    <signal ID ="15">
+      <name>Serial Send</name>
+      <type>1</type>
+      <portID>B</portID>
+      <pinID>6</pinID>
+      <pin_high>OFF</pin_high>
+      <pin_low>ON</pin_low>
+    </signal>
+    <signal ID ="16">
+      <name>Push Button</name>
+      <type>0</type>
+      <portID>J</portID>
+      <pinID>1</pinID>
+      <pin_high>OFF</pin_high>
+      <pin_low>ON</pin_low>
+    </signal>
+    <signal ID ="17">
+      <name>MASG Home</name>
+      <type>0</type>
+      <portID>E</portID>
+      <pinID>0</pinID>
+      <pin_high>OPEN</pin_high>
+      <pin_low>HOME</pin_low>
+    </signal>
+    <signal ID ="25">
+      <name>MASG Opto </name>
+      <type>2</type>
+      <portID>E</portID>
+      <pinID>2</pinID>
+    </signal>
+    <signal ID ="32">
+      <name>USB Int</name>
+      <type>0</type>
+      <portID>E</portID>
+      <pinID>1</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="18">
+      <name>Tacho</name>
+      <type>0</type>
+      <portID>T</portID>
+      <pinID>0</pinID>
+      <pin_high>ON</pin_high>
+      <pin_low>OFF</pin_low>
+    </signal>
+    <signal ID ="19">
+      <name>Front Right</name>
+      <type>0</type>
+      <portID>H</portID>
+      <pinID>2</pinID>
+      <pin_high>ON</pin_high>
+      <pin_low>OFF</pin_low>
+    </signal>
+    <signal ID ="20">
+      <name>Front Left</name>
+      <type>0</type>
+      <portID>H</portID>
+      <pinID>1</pinID>
+      <pin_high>ON</pin_high>
+      <pin_low>OFF</pin_low>
+    </signal>
+    <signal ID ="21">
+      <name>Rear Optical</name>
+      <type>0</type>
+      <portID>H</portID>
+      <pinID>0</pinID>
+      <pin_high>ON</pin_high>
+      <pin_low>OFF</pin_low>
+    </signal>
+    <signal ID ="28">
+      <name>USB Bus Fault</name>
+      <type>0</type>
+      <portID>T</portID>
+      <pinID>2</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="29">
+      <name>USB Bus</name>
+      <type>0</type>
+      <portID>T</portID>
+      <pinID>3</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="24">
+      <name>FNG</name>
+      <type>2</type>
+      <portID>K</portID>
+      <pinID>0</pinID>
+    </signal>
+    <signal ID ="26">
+      <name>GV1 Detect</name>
+      <type>0</type>
+      <portID>K</portID>
+      <pinID>2</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="30">
+      <name>Solenoid</name>
+      <type>2</type>
+      <portID>M</portID>
+      <pinID>2</pinID>
+    </signal>
+    <signal ID ="31">
+      <name>Enable Line Active</name>
+      <type>2</type>
+      <portID>J</portID>
+      <pinID>0</pinID>
+    </signal>
+    <signal ID ="33">
+      <name>RS232 Detect</name>
+      <type>0</type>
+      <portID>B</portID>
+      <pinID>7</pinID>
+      <pin_high>NO</pin_high>
+      <pin_low>FITTED</pin_low>
+    </signal>
+    <signal ID ="34">
+      <name>24-42V Reg Detect</name>
+      <type>0</type>
+      <portID>H</portID>
+      <pinID>7</pinID>
+      <pin_high>NO</pin_high>
+      <pin_low>FITTED</pin_low>
+    </signal>
+  </Model>
+  <Model ID="ST1+">
+    <signal ID ="01">
+      <name>Alarm</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>1</pinID>
+    </signal>
+    <signal ID ="02">
+      <name>Pulse / Relay</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>2</pinID>
+    </signal>
+    <signal ID ="03">
+      <name>Vend 1 / Serial Int</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>3</pinID>
+    </signal>
+    <signal ID ="04">
+      <name>Vend 2</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>4</pinID>
+    </signal>
+    <signal ID ="05">
+      <name>Vend 3</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>5</pinID>
+    </signal>
+    <signal ID ="06">
+      <name>Vend 4</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>6</pinID>
+    </signal>
+    <signal ID ="07">
+      <name>Vend 5 (Parallel)</name>
+      <type>3</type>
+      <portID>S</portID>
+      <pinID>1</pinID>
+    </signal>
+    <signal ID ="08">
+      <name>Vend 6 / Busy</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>7</pinID>
+    </signal>
+    <signal ID ="09">
+      <name>Diagnostic Green</name>
+      <type>2</type>
+      <portID>M</portID>
+      <pinID>6</pinID>
+    </signal>
+    <signal ID ="10">
+      <name>Diagnostic Red</name>
+      <type>2</type>
+      <portID>M</portID>
+      <pinID>7</pinID>
+    </signal>
+    <signal ID ="11">
+      <name>PDT Connected</name>
+      <type>1</type>
+      <portID>B</portID>
+      <pinID>1</pinID>
+      <pin_high>OFF</pin_high>
+      <pin_low>ON</pin_low>
+    </signal>
+    <signal ID ="12">
+      <name>Note Escrow</name>
+      <type>1</type>
+      <portID>B</portID>
+      <pinID>3</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="13">
+      <name>Unit Disabled</name>
+      <type>1</type>
+      <portID>B</portID>
+      <pinID>4</pinID>
+      <pin_high>DIS</pin_high>
+      <pin_low>EN</pin_low>
+    </signal>
+    <signal ID ="14">
+      <name>Pulse / Serial</name>
+      <type>1</type>
+      <portID>B</portID>
+      <pinID>5</pinID>
+      <pin_high>PULSE</pin_high>
+      <pin_low>SERIAL</pin_low>
+    </signal>
+    <signal ID ="15">
+      <name>Serial Send</name>
+      <type>1</type>
+      <portID>B</portID>
+      <pinID>6</pinID>
+      <pin_high>OFF</pin_high>
+      <pin_low>ON</pin_low>
+    </signal>
+    <signal ID ="16">
+      <name>Push Button</name>
+      <type>0</type>
+      <portID>J</portID>
+      <pinID>1</pinID>
+      <pin_high>OFF</pin_high>
+      <pin_low>ON</pin_low>
+    </signal>
+    <signal ID ="17">
+      <name>MASG Home</name>
+      <type>0</type>
+      <portID>E</portID>
+      <pinID>0</pinID>
+      <pin_high>HOME</pin_high>
+      <pin_low>OPEN</pin_low>
+    </signal>
+    <signal ID ="21">
+      <name>Punch Home</name>
+      <type>0</type>
+      <portID>H</portID>
+      <pinID>3</pinID>
+      <pin_high>HOME</pin_high>
+      <pin_low>OPEN</pin_low>
+    </signal>
+    <signal ID ="18">
+      <name>Tacho</name>
+      <type>0</type>
+      <portID>T</portID>
+      <pinID>0</pinID>
+      <pin_high>ON</pin_high>
+      <pin_low>OFF</pin_low>
+    </signal>
+    <signal ID ="19">
+      <name>Front Right</name>
+      <type>0</type>
+      <portID>H</portID>
+      <pinID>2</pinID>
+      <pin_high>ON</pin_high>
+      <pin_low>OFF</pin_low>
+    </signal>
+    <signal ID ="20">
+      <name>Front Left</name>
+      <type>0</type>
+      <portID>H</portID>
+      <pinID>1</pinID>
+      <pin_high>ON</pin_high>
+      <pin_low>OFF</pin_low>
+    </signal>
+    <signal ID ="24">
+      <name>FNG Green</name>
+      <type>2</type>
+      <portID>K</portID>
+      <pinID>0</pinID>
+    </signal>
+    <signal ID ="25">
+      <name>FNG Red</name>
+      <type>2</type>
+      <portID>K</portID>
+      <pinID>1</pinID>
+    </signal>
+    <signal ID ="30">
+      <name>Solenoid</name>
+      <type>2</type>
+      <portID>M</portID>
+      <pinID>2</pinID>
+    </signal>
+    <signal ID ="31">
+      <name>Service</name>
+      <type>2</type>
+      <portID>A</portID>
+      <pinID>0</pinID>
+    </signal>
+    <signal ID ="22">
+      <name>Wake</name>
+      <type>3</type>
+      <portID>M</portID>
+      <pinID>4</pinID>
+    </signal>
+    <signal ID ="23">
+      <name>Hold</name>
+      <type>2</type>
+      <portID>M</portID>
+      <pinID>5</pinID>
+    </signal>
+    <signal ID ="27">
+      <name>USB Slave</name>
+      <type>0</type>
+      <portID>T</portID>
+      <pinID>1</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="28">
+      <name>USB Host</name>
+      <type>0</type>
+      <portID>T</portID>
+      <pinID>2</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="29">
+      <name>USB Bus</name>
+      <type>0</type>
+      <portID>T</portID>
+      <pinID>3</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="32">
+      <name>USB Int</name>
+      <type>0</type>
+      <portID>E</portID>
+      <pinID>1</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="33">
+      <name>Inhibit Float</name>
+      <type>2</type>
+      <portID>E</portID>
+      <pinID>3</pinID>
+    </signal>
+    <signal ID ="34">
+      <name>Inhibit Low</name>
+      <type>2</type>
+      <portID>E</portID>
+      <pinID>2</pinID>
+    </signal>
+  </Model>
+  <Model ID="ST1C">
+    <signal ID ="01">
+      <name>Alarm</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>1</pinID>
+    </signal>
+    <signal ID ="02">
+      <name>Pulse / Relay</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>2</pinID>
+    </signal>
+    <signal ID ="03">
+      <name>Vend 1 / Serial Int</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>3</pinID>
+    </signal>
+    <signal ID ="04">
+      <name>Vend 2</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>4</pinID>
+    </signal>
+    <signal ID ="05">
+      <name>Vend 3</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>5</pinID>
+    </signal>
+    <signal ID ="06">
+      <name>Vend 4</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>6</pinID>
+    </signal>
+    <signal ID ="07">
+      <name>Vend 5 (Parallel)</name>
+      <type>3</type>
+      <portID>S</portID>
+      <pinID>1</pinID>
+    </signal>
+    <signal ID ="08">
+      <name>Vend 6 / Busy</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>7</pinID>
+    </signal>
+    <signal ID ="09">
+      <name>Diagnostic Green</name>
+      <type>2</type>
+      <portID>M</portID>
+      <pinID>6</pinID>
+    </signal>
+    <signal ID ="10">
+      <name>Diagnostic Red</name>
+      <type>2</type>
+      <portID>M</portID>
+      <pinID>7</pinID>
+    </signal>
+    <signal ID ="11">
+      <name>PDT Connected</name>
+      <type>1</type>
+      <portID>B</portID>
+      <pinID>1</pinID>
+      <pin_high>OFF</pin_high>
+      <pin_low>ON</pin_low>
+    </signal>
+    <signal ID ="12">
+      <name>Note Escrow</name>
+      <type>1</type>
+      <portID>B</portID>
+      <pinID>3</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="13">
+      <name>Disable/Enable</name>
+      <type>1</type>
+      <portID>B</portID>
+      <pinID>4</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="14">
+      <name>Pulse / Serial</name>
+      <type>1</type>
+      <portID>B</portID>
+      <pinID>5</pinID>
+      <pin_high>PULSE</pin_high>
+      <pin_low>SERIAL</pin_low>
+    </signal>
+    <signal ID ="15">
+      <name>Serial Send</name>
+      <type>1</type>
+      <portID>B</portID>
+      <pinID>6</pinID>
+      <pin_high>OFF</pin_high>
+      <pin_low>ON</pin_low>
+    </signal>
+    <signal ID ="16">
+      <name>Push Button</name>
+      <type>0</type>
+      <portID>J</portID>
+      <pinID>1</pinID>
+      <pin_high>OFF</pin_high>
+      <pin_low>ON</pin_low>
+    </signal>
+    <signal ID ="17">
+      <name>Cashbox Present</name>
+      <type>0</type>
+      <portID>E</portID>
+      <pinID>0</pinID>
+      <pin_high>IN PLACE</pin_high>
+      <pin_low>MISSING</pin_low>
+    </signal>
+    <signal ID ="21">
+      <name>Punch Home</name>
+      <type>0</type>
+      <portID>H</portID>
+      <pinID>3</pinID>
+      <pin_high>HOME</pin_high>
+      <pin_low>OPEN</pin_low>
+    </signal>
+    <signal ID ="18">
+      <name>Tacho</name>
+      <type>0</type>
+      <portID>T</portID>
+      <pinID>0</pinID>
+      <pin_high>ON</pin_high>
+      <pin_low>OFF</pin_low>
+    </signal>
+    <signal ID ="19">
+      <name>Front Right</name>
+      <type>0</type>
+      <portID>H</portID>
+      <pinID>2</pinID>
+      <pin_high>ON</pin_high>
+      <pin_low>OFF</pin_low>
+    </signal>
+    <signal ID ="20">
+      <name>Front Left</name>
+      <type>0</type>
+      <portID>H</portID>
+      <pinID>1</pinID>
+      <pin_high>ON</pin_high>
+      <pin_low>OFF</pin_low>
+    </signal>
+    <signal ID ="22">
+      <name>Wake</name>
+      <type>3</type>
+      <portID>M</portID>
+      <pinID>4</pinID>
+    </signal>
+    <signal ID ="23">
+      <name>Hold</name>
+      <type>2</type>
+      <portID>M</portID>
+      <pinID>5</pinID>
+    </signal>
+    <signal ID ="27">
+      <name>USB Slave</name>
+      <type>0</type>
+      <portID>T</portID>
+      <pinID>1</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="28">
+      <name>USB Host</name>
+      <type>0</type>
+      <portID>T</portID>
+      <pinID>2</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="29">
+      <name>USB Bus</name>
+      <type>0</type>
+      <portID>T</portID>
+      <pinID>3</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="32">
+      <name>USB Int</name>
+      <type>0</type>
+      <portID>E</portID>
+      <pinID>1</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="30">
+      <name>Cashbox Emitters</name>
+      <type>2</type>
+      <portID>B</portID>
+      <pinID>0</pinID>
+    </signal>
+    <signal ID ="31">
+      <name>Enable Line Active</name>
+      <type>2</type>
+      <portID>J</portID>
+      <pinID>0</pinID>
+    </signal>
+    <signal ID ="33">
+      <name>DIP Switch 1</name>
+      <type>1</type>
+      <portID>E</portID>
+      <pinID>2</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="34">
+      <name>DIP Switch 2</name>
+      <type>1</type>
+      <portID>E</portID>
+      <pinID>3</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="35">
+      <name>DIP Switch 3</name>
+      <type>1</type>
+      <portID>H</portID>
+      <pinID>0</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="36">
+      <name>DIP Switch 4</name>
+      <type>1</type>
+      <portID>H</portID>
+      <pinID>4</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="37">
+      <name>DIP Switch 5</name>
+      <type>1</type>
+      <portID>H</portID>
+      <pinID>5</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="38">
+      <name>DIP Switch 6</name>
+      <type>1</type>
+      <portID>H</portID>
+      <pinID>6</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="39">
+      <name>DIP Switch 7</name>
+      <type>1</type>
+      <portID>H</portID>
+      <pinID>7</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="40">
+      <name>DIP Switch 8</name>
+      <type>1</type>
+      <portID>B</portID>
+      <pinID>7</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+  </Model>
+  <Model ID="ST1CX">
+    <signal ID ="01">
+      <name>Alarm</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>1</pinID>
+    </signal>
+    <signal ID ="02">
+      <name>Pulse / Relay</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>2</pinID>
+    </signal>
+    <signal ID ="03">
+      <name>Vend 1 / Serial Int</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>3</pinID>
+    </signal>
+    <signal ID ="04">
+      <name>Vend 2</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>4</pinID>
+    </signal>
+    <signal ID ="05">
+      <name>Vend 3</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>5</pinID>
+    </signal>
+    <signal ID ="06">
+      <name>Vend 4</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>6</pinID>
+    </signal>
+    <signal ID ="07">
+      <name>Vend 5 (Parallel)</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>0</pinID>
+    </signal>
+    <signal ID ="08">
+      <name>Vend 6 / Busy</name>
+      <type>3</type>
+      <portID>A</portID>
+      <pinID>7</pinID>
+    </signal>
+    <signal ID ="09">
+      <name>Diagnostic Green</name>
+      <type>2</type>
+      <portID>M</portID>
+      <pinID>6</pinID>
+    </signal>
+    <signal ID ="10">
+      <name>Diagnostic Red</name>
+      <type>2</type>
+      <portID>M</portID>
+      <pinID>7</pinID>
+    </signal>
+    <signal ID ="11">
+      <name>PDT Connected</name>
+      <type>1</type>
+      <portID>B</portID>
+      <pinID>1</pinID>
+      <pin_high>OFF</pin_high>
+      <pin_low>ON</pin_low>
+    </signal>
+    <signal ID ="41">
+      <name>Pulse / Digital</name>
+      <type>3</type>
+      <portID>B</portID>
+      <pinID>2</pinID>
+    </signal>
+    <signal ID ="12">
+      <name>Note Escrow</name>
+      <type>1</type>
+      <portID>B</portID>
+      <pinID>3</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="13">
+      <name>Disable/Enable</name>
+      <type>1</type>
+      <portID>B</portID>
+      <pinID>4</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="14">
+      <name>Pulse / Serial</name>
+      <type>1</type>
+      <portID>B</portID>
+      <pinID>5</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="15">
+      <name>Serial Send</name>
+      <type>1</type>
+      <portID>S</portID>
+      <pinID>0</pinID>
+      <pin_high>OFF</pin_high>
+      <pin_low>ON</pin_low>
+    </signal>
+    <signal ID ="16">
+      <name>Push Button</name>
+      <type>0</type>
+      <portID>J</portID>
+      <pinID>1</pinID>
+      <pin_high>OFF</pin_high>
+      <pin_low>ON</pin_low>
+    </signal>
+    <signal ID ="17">
+      <name>Cashbox Present</name>
+      <type>0</type>
+      <portID>E</portID>
+      <pinID>0</pinID>
+      <pin_high>IN PLACE</pin_high>
+      <pin_low>MISSING</pin_low>
+    </signal>
+    <signal ID ="21">
+      <name>Punch Home</name>
+      <type>0</type>
+      <portID>H</portID>
+      <pinID>3</pinID>
+      <pin_high>HOME</pin_high>
+      <pin_low>OPEN</pin_low>
+    </signal>
+    <signal ID ="18">
+      <name>Tacho</name>
+      <type>0</type>
+      <portID>T</portID>
+      <pinID>0</pinID>
+      <pin_high>ON</pin_high>
+      <pin_low>OFF</pin_low>
+    </signal>
+    <signal ID ="19">
+      <name>Front Right</name>
+      <type>0</type>
+      <portID>H</portID>
+      <pinID>2</pinID>
+      <pin_high>ON</pin_high>
+      <pin_low>OFF</pin_low>
+    </signal>
+    <signal ID ="20">
+      <name>Front Left</name>
+      <type>0</type>
+      <portID>H</portID>
+      <pinID>1</pinID>
+      <pin_high>ON</pin_high>
+      <pin_low>OFF</pin_low>
+    </signal>
+    <signal ID ="22">
+      <name>Wake</name>
+      <type>3</type>
+      <portID>J</portID>
+      <pinID>6</pinID>
+    </signal>
+    <signal ID ="23">
+      <name>Hold</name>
+      <type>2</type>
+      <portID>M</portID>
+      <pinID>5</pinID>
+    </signal>
+    <signal ID ="28">
+      <name>USB Power Fault</name>
+      <type>0</type>
+      <portID>T</portID>
+      <pinID>2</pinID>
+      <pin_high>HEALTHY</pin_high>
+      <pin_low>FAULT</pin_low>
+    </signal>
+    <signal ID ="29">
+      <name>USB Bus</name>
+      <type>0</type>
+      <portID>T</portID>
+      <pinID>3</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="32">
+      <name>USB Int</name>
+      <type>0</type>
+      <portID>E</portID>
+      <pinID>1</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="30">
+      <name>Cashbox Emitters</name>
+      <type>2</type>
+      <portID>B</portID>
+      <pinID>0</pinID>
+    </signal>
+    <signal ID ="31">
+      <name>Enable Line Active</name>
+      <type>2</type>
+      <portID>J</portID>
+      <pinID>0</pinID>
+    </signal>
+    <signal ID ="33">
+      <name>DIP Switch 1</name>
+      <type>1</type>
+      <portID>E</portID>
+      <pinID>2</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="34">
+      <name>DIP Switch 2</name>
+      <type>1</type>
+      <portID>E</portID>
+      <pinID>3</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="35">
+      <name>DIP Switch 3</name>
+      <type>1</type>
+      <portID>H</portID>
+      <pinID>0</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="36">
+      <name>DIP Switch 4</name>
+      <type>1</type>
+      <portID>H</portID>
+      <pinID>4</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="37">
+      <name>DIP Switch 5</name>
+      <type>1</type>
+      <portID>H</portID>
+      <pinID>5</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="38">
+      <name>DIP Switch 6</name>
+      <type>1</type>
+      <portID>H</portID>
+      <pinID>6</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="39">
+      <name>DIP Switch 7</name>
+      <type>1</type>
+      <portID>H</portID>
+      <pinID>7</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="40">
+      <name>DIP Switch 8</name>
+      <type>1</type>
+      <portID>B</portID>
+      <pinID>7</pinID>
+      <pin_high>HIGH</pin_high>
+      <pin_low>LOW</pin_low>
+    </signal>
+    <signal ID ="41">
+      <name>Motor Fault</name>
+      <type>0</type>
+      <portID>M</portID>
+      <pinID>2</pinID>
+      <pin_high>HEALTHY</pin_high>
+      <pin_low>FAULT</pin_low>
+    </signal>
+  </Model>
+</Signal_Data>

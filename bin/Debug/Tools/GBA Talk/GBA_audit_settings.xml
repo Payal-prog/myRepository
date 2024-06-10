@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Audit_Data>
+  <!--Setting Types are as follows:
+  1: 8 bit - limits are warning only
+  2: 8 bit - limits are error
+  3: 8 bit - value must equal max_limit exactly
+  4: 16 bit - limits are warning only
+  5: 16 bit - limits are error
+  6: 16 bit - value must equal max_limit exactly
+  Note that for 16-bit values the ID points to the msb
+  -->
+  <Model ID="ST1">
+    <setting ID="73">
+      <name>Interface</name>
+      <type>1</type>
+      <Min_limit>0</Min_limit>
+      <Min_error>none</Min_error>
+      <Max_limit>12</Max_limit>
+      <Max_error>Interface ID exceeds upper value allowed</Max_error>
+    </setting>
+    <setting ID="82">
+      <name>Tx Transform</name>
+      <type>3</type>
+      <Max_limit>129</Max_limit>
+      <Max_error>Tx sensor data transform should = 0x81</Max_error>
+    </setting>
+    <setting ID="83">
+      <name>Rf Transform</name>
+      <type>3</type>
+      <Max_limit>128</Max_limit>
+      <Max_error>Rf data transform should = 0x80</Max_error>
+    </setting>
+    <setting ID="84">
+      <name>Cpn Transform</name>
+      <type>3</type>
+      <Max_limit>130</Max_limit>
+      <Max_error>Coupon sensor data transform should = 0x82</Max_error>
+    </setting>
+    <setting ID="85">
+      <name>Mag Transform</name>
+      <type>3</type>
+      <Max_limit>1</Max_limit>
+      <Max_error>Mag. Head data transform should = 0x01</Max_error>
+    </setting>
+    <setting ID="87">
+      <name>Tx Cal target</name>
+      <type>6</type>
+      <Max_limit>61440</Max_limit>
+      <Max_error>Transmissive sensor cal target is 0xf000</Max_error>
+    </setting>
+    <setting ID="89">
+      <name>Refl IR Cal target</name>
+      <type>6</type>
+      <Max_limit>16384</Max_limit>
+      <Max_error>IR Reflective sensor cal target is 0x4000</Max_error>
+    </setting>
+    <setting ID="91">
+      <name>Front Cal target</name>
+      <type>6</type>
+      <Max_limit>61440</Max_limit>
+      <Max_error>Front Tx sensor cal target is 0xf000</Max_error>
+    </setting>
+    <setting ID="93">
+      <name>Cpn Cal target</name>
+      <type>6</type>
+      <Max_limit>49152</Max_limit>
+      <Max_error>Coupon sensor cal target = 0xc000</Max_error>
+    </setting>
+    <setting ID="95">
+      <name>ccTalk ID</name>
+      <type>1</type>
+      <Min_limit>0</Min_limit>
+      <Min_error>none</Min_error>
+      <Max_limit>254</Max_limit>
+      <Max_error>ccTalk ID exceeds upper value allowed</Max_error>
+    </setting>
+    <setting ID="226">
+      <name>Front Skew</name>
+      <type>1</type>
+      <Min_limit>0</Min_limit>
+      <Min_error>none</Min_error>
+      <Max_limit>5</Max_limit>
+      <Max_error>Front skew limit seems high</Max_error>
+    </setting>
+    <setting ID="227">
+      <name>Rear Skew</name>
+      <type>1</type>
+      <Min_limit>0</Min_limit>
+      <Min_error>none</Min_error>
+      <Max_limit>120</Max_limit>
+      <Max_error>Rear skew limit seems high</Max_error>
+    </setting>
+    <setting ID="248">
+      <name>Note Thickness</name>
+      <type>1</type>
+      <Min_limit>0</Min_limit>
+      <Min_error>none</Min_error>
+      <Max_limit>5</Max_limit>
+      <Max_error>Limit on note thickness seems high</Max_error>
+    </setting>
+  </Model>
+  <Model ID="ST2">
+    <setting ID="73">
+      <name>Interface</name>
+      <type>1</type>
+      <Min_limit>0</Min_limit>
+      <Min_error>none</Min_error>
+      <Max_limit>15</Max_limit>
+      <Max_error>Interface ID exceeds upper value allowed</Max_error>
+    </setting>
+    <setting ID="82">
+      <name>Tx Transform</name>
+      <type>3</type>
+      <Max_limit>129</Max_limit>
+      <Max_error>Tx sensor data transform should = 0x81</Max_error>
+    </setting>
+    <setting ID="83">
+      <name>Rf Transform</name>
+      <type>3</type>
+      <Max_limit>128</Max_limit>
+      <Max_error>Rf data transform should = 0x80</Max_error>
+    </setting>
+    <setting ID="84">
+      <name>Cpn Transform</name>
+      <type>3</type>
+      <Max_limit>129</Max_limit>
+      <Max_error>Coupon sensor data transform should = 0x81</Max_error>
+    </setting>
+    <setting ID="85">
+      <name>Mag Transform</name>
+      <type>3</type>
+      <Max_limit>1</Max_limit>
+      <Max_error>Mag. Head data transform should = 0x01</Max_error>
+    </setting>
+    <setting ID="87">
+      <name>Tx Cal target</name>
+      <type>6</type>
+      <Max_limit>61440</Max_limit>
+      <Max_error>Transmissive sensor cal target is 0xf000</Max_error>
+    </setting>
+    <setting ID="89">
+      <name>Refl IR Cal target</name>
+      <type>6</type>
+      <Max_limit>16384</Max_limit>
+      <Max_error>IR Reflective sensor cal target is 0x4000</Max_error>
+    </setting>
+    <setting ID="91">
+      <name>Refl UV Cal target</name>
+      <type>6</type>
+      <Max_limit>40960</Max_limit>
+      <Max_error>UV Reflective sensor cal target is 0xa000</Max_error>
+    </setting>
+    <setting ID="93">
+      <name>Cpn Cal target</name>
+      <type>6</type>
+      <Max_limit>32768</Max_limit>
+      <Max_error>Coupon sensor cal target = 0x8000</Max_error>
+    </setting>
+    <setting ID="95">
+      <name>ccTalk ID</name>
+      <type>1</type>
+      <Min_limit>0</Min_limit>
+      <Min_error>none</Min_error>
+      <Max_limit>254</Max_limit>
+      <Max_error>ccTalk ID exceeds upper value allowed</Max_error>
+    </setting>
+    <setting ID="149">
+      <name>SSP ID</name>
+      <type>1</type>
+      <Min_limit>0</Min_limit>
+      <Min_error>none</Min_error>
+      <Max_limit>1</Max_limit>
+      <Max_error>SSP ID exceeds upper value allowed</Max_error>
+    </setting>
+    <setting ID="106">
+      <name>OASG Target</name>
+      <type>3</type>
+      <Max_limit>102</Max_limit>
+      <Max_error>OASG calibration target should = 0x66</Max_error>
+    </setting>
+    <setting ID="163">
+      <name>2 Note Rtrn 1</name>
+      <type>3</type>
+      <Max_limit>0</Max_limit>
+      <Max_error>2 Note return test offset should = 0</Max_error>
+    </setting>
+    <setting ID="164">
+      <name>2 Note Rtrn 2</name>
+      <type>1</type>
+      <Min_limit>10</Min_limit>
+      <Min_error>2 Note return test limit looks too small</Min_error>
+      <Max_limit>24</Max_limit>
+      <Max_error>2 Note return test limit looks too large</Max_error>
+    </setting>
+    <setting ID="226">
+      <name>Front Skew</name>
+      <type>1</type>
+      <Min_limit>0</Min_limit>
+      <Min_error>none</Min_error>
+      <Max_limit>10</Max_limit>
+      <Max_error>Front skew limit seems high</Max_error>
+    </setting>
+    <setting ID="227">
+      <name>Rear Skew</name>
+      <type>1</type>
+      <Min_limit>0</Min_limit>
+      <Min_error>none</Min_error>
+      <Max_limit>120</Max_limit>
+      <Max_error>Rear skew limit seems high</Max_error>
+    </setting>
+    <setting ID="228">
+      <name>FNG Out of Service</name>
+      <type>2</type>
+      <Min_limit>0</Min_limit>
+      <Min_error>none</Min_error>
+      <Max_limit>20</Max_limit>
+      <Max_error>FNG Error Status Code note recognised</Max_error>
+    </setting>
+    <setting ID="229">
+      <name>FNG Disabled</name>
+      <type>2</type>
+      <Min_limit>0</Min_limit>
+      <Min_error>none</Min_error>
+      <Max_limit>20</Max_limit>
+      <Max_error>FNG Disabled Status Code note recognised</Max_error>
+    </setting>
+    <setting ID="230">
+      <name>FNG Busy</name>
+      <type>2</type>
+      <Min_limit>0</Min_limit>
+      <Min_error>none</Min_error>
+      <Max_limit>20</Max_limit>
+      <Max_error>FNG Busy Status Code note recognised</Max_error>
+    </setting>
+    <setting ID="231">
+      <name>FNG Idle</name>
+      <type>2</type>
+      <Min_limit>0</Min_limit>
+      <Min_error>none</Min_error>
+      <Max_limit>20</Max_limit>
+      <Max_error>FNG Idle Status Code note recognised</Max_error>
+    </setting>
+    <setting ID="232">
+      <name>Refl IR Blk target</name>
+      <type>3</type>
+      <Max_limit>236</Max_limit>
+      <Max_error>IR Reflective sensor black target is 0xec00</Max_error>
+    </setting>
+    <setting ID="233">
+      <name>Refl UV Blk target</name>
+      <type>3</type>
+      <Max_limit>245</Max_limit>
+      <Max_error>UV Reflective sensor black target is 0xf500</Max_error>
+    </setting>
+    <setting ID="234">
+      <name>Cpn Blk target</name>
+      <type>3</type>
+      <Max_limit>239</Max_limit>
+      <Max_error>Coupon sensor black target = 0xef00</Max_error>
+    </setting>
+    <setting ID="248">
+      <name>Note Thickness</name>
+      <type>1</type>
+      <Min_limit>0</Min_limit>
+      <Min_error>none</Min_error>
+      <Max_limit>5</Max_limit>
+      <Max_error>Limit on note thickness seems high</Max_error>
+    </setting>
+  </Model>
+  <Model ID="ST1P">
+    <setting ID="73">
+      <name>Interface</name>
+      <type>1</type>
+      <Min_limit>0</Min_limit>
+      <Min_error>none</Min_error>
+      <Max_limit>15</Max_limit>
+      <Max_error>Interface ID exceeds upper value allowed</Max_error>
+    </setting>
+    <setting ID="82">
+      <name>Tx Transform</name>
+      <type>3</type>
+      <Max_limit>129</Max_limit>
+      <Max_error>Tx sensor data transform should = 0x81</Max_error>
+    </setting>
+    <setting ID="83">
+      <name>Rf Transform</name>
+      <type>3</type>
+      <Max_limit>128</Max_limit>
+      <Max_error>Rf data transform should = 0x80</Max_error>
+    </setting>
+    <setting ID="84">
+      <name>Cpn Transform</name>
+      <type>3</type>
+      <Max_limit>129</Max_limit>
+      <Max_error>Coupon sensor data transform should = 0x81</Max_error>
+    </setting>
+    <setting ID="85">
+      <name>Mag Transform</name>
+      <type>3</type>
+      <Max_limit>1</Max_limit>
+      <Max_error>Mag. Head data transform should = 0x01</Max_error>
+    </setting>
+    <setting ID="87">
+      <name>Tx Cal target</name>
+      <type>6</type>
+      <Max_limit>61440</Max_limit>
+      <Max_error>Transmissive sensor cal target is 0xf000</Max_error>
+    </setting>
+    <setting ID="89">
+      <name>Refl IR Cal target</name>
+      <type>6</type>
+      <Max_limit>16384</Max_limit>
+      <Max_error>IR Reflective sensor cal target is 0x4000</Max_error>
+    </setting>
+    <setting ID="91">
+      <name>Refl UV Cal target</name>
+      <type>6</type>
+      <Max_limit>40960</Max_limit>
+      <Max_error>UV Reflective sensor cal target is 0xa000</Max_error>
+    </setting>
+    <setting ID="93">
+      <name>Cpn Cal target</name>
+      <type>6</type>
+      <Max_limit>32768</Max_limit>
+      <Max_error>Coupon sensor cal target = 0x8000</Max_error>
+    </setting>
+    <setting ID="95">
+      <name>ccTalk ID</name>
+      <type>1</type>
+      <Min_limit>0</Min_limit>
+      <Min_error>none</Min_error>
+      <Max_limit>254</Max_limit>
+      <Max_error>ccTalk ID exceeds upper value allowed</Max_error>
+    </setting>
+    <setting ID="149">
+      <name>SSP ID</name>
+      <type>1</type>
+      <Min_limit>0</Min_limit>
+      <Min_error>none</Min_error>
+      <Max_limit>1</Max_limit>
+      <Max_error>SSP ID exceeds upper value allowed</Max_error>
+    </setting>
+    <setting ID="106">
+      <name>OASG Target</name>
+      <type>3</type>
+      <Max_limit>100</Max_limit>
+      <Max_error>OASG calibration target should = 0x64</Max_error>
+    </setting>
+    <setting ID="163">
+      <name>2 Note Rtrn 1</name>
+      <type>3</type>
+      <Max_limit>0</Max_limit>
+      <Max_error>2 Note return test offset should = 0</Max_error>
+    </setting>
+    <setting ID="164">
+      <name>2 Note Rtrn 2</name>
+      <type>1</type>
+      <Min_limit>10</Min_limit>
+      <Min_error>2 Note return test limit looks too small</Min_error>
+      <Max_limit>24</Max_limit>
+      <Max_error>2 Note return test limit looks too large</Max_error>
+    </setting>
+    <setting ID="226">
+      <name>Front Skew</name>
+      <type>1</type>
+      <Min_limit>0</Min_limit>
+      <Min_error>none</Min_error>
+      <Max_limit>5</Max_limit>
+      <Max_error>Front skew limit seems high</Max_error>
+    </setting>
+    <setting ID="227">
+      <name>Rear Skew</name>
+      <type>1</type>
+      <Min_limit>0</Min_limit>
+      <Min_error>none</Min_error>
+      <Max_limit>120</Max_limit>
+      <Max_error>Rear skew limit seems high</Max_error>
+    </setting>
+    <setting ID="232">
+      <name>Refl IR Blk target</name>
+      <type>3</type>
+      <Max_limit>236</Max_limit>
+      <Max_error>IR Reflective sensor black target is 0xec00</Max_error>
+    </setting>
+    <setting ID="233">
+      <name>Refl UV Blk target</name>
+      <type>3</type>
+      <Max_limit>245</Max_limit>
+      <Max_error>UV Reflective sensor black target is 0xf500</Max_error>
+    </setting>
+    <setting ID="234">
+      <name>Cpn Blk target</name>
+      <type>3</type>
+      <Max_limit>239</Max_limit>
+      <Max_error>Coupon sensor black target = 0xef00</Max_error>
+    </setting>
+    <setting ID="248">
+      <name>Note Thickness</name>
+      <type>1</type>
+      <Min_limit>0</Min_limit>
+      <Min_error>none</Min_error>
+      <Max_limit>5</Max_limit>
+      <Max_error>Limit on note thickness seems high</Max_error>
+    </setting>
+  </Model>
+  <Model ID="ST1C">
+    <setting ID="73">
+      <name>Interface</name>
+      <type>1</type>
+      <Min_limit>0</Min_limit>
+      <Min_error>none</Min_error>
+      <Max_limit>15</Max_limit>
+      <Max_error>Interface ID exceeds upper value allowed</Max_error>
+    </setting>
+    <setting ID="82">
+      <name>Tx Transform</name>
+      <type>3</type>
+      <Max_limit>129</Max_limit>
+      <Max_error>Tx sensor data transform should = 0x81</Max_error>
+    </setting>
+    <setting ID="83">
+      <name>Rf Transform</name>
+      <type>3</type>
+      <Max_limit>128</Max_limit>
+      <Max_error>Rf data transform should = 0x80</Max_error>
+    </setting>
+    <setting ID="84">
+      <name>Cpn Transform</name>
+      <type>3</type>
+      <Max_limit>129</Max_limit>
+      <Max_error>Coupon sensor data transform should = 0x81</Max_error>
+    </setting>
+    <setting ID="85">
+      <name>Mag Transform</name>
+      <type>3</type>
+      <Max_limit>1</Max_limit>
+      <Max_error>Mag. Head data transform should = 0x01</Max_error>
+    </setting>
+    <setting ID="87">
+      <name>Tx Cal target</name>
+      <type>6</type>
+      <Max_limit>61440</Max_limit>
+      <Max_error>Transmissive sensor cal target is 0xf000</Max_error>
+    </setting>
+    <setting ID="89">
+      <name>Refl IR Cal target</name>
+      <type>6</type>
+      <Max_limit>16384</Max_limit>
+      <Max_error>IR Reflective sensor cal target is 0x4000</Max_error>
+    </setting>
+    <setting ID="91">
+      <name>Refl UV Cal target</name>
+      <type>6</type>
+      <Max_limit>40960</Max_limit>
+      <Max_error>UV Reflective sensor cal target is 0xa000</Max_error>
+    </setting>
+    <setting ID="93">
+      <name>Cpn Cal target</name>
+      <type>6</type>
+      <Max_limit>32768</Max_limit>
+      <Max_error>Coupon sensor cal target = 0x8000</Max_error>
+    </setting>
+    <setting ID="95">
+      <name>ccTalk ID</name>
+      <type>1</type>
+      <Min_limit>0</Min_limit>
+      <Min_error>none</Min_error>
+      <Max_limit>254</Max_limit>
+      <Max_error>ccTalk ID exceeds upper value allowed</Max_error>
+    </setting>
+    <setting ID="149">
+      <name>SSP ID</name>
+      <type>1</type>
+      <Min_limit>0</Min_limit>
+      <Min_error>none</Min_error>
+      <Max_limit>1</Max_limit>
+      <Max_error>SSP ID exceeds upper value allowed</Max_error>
+    </setting>
+    <setting ID="106">
+      <name>OASG Target</name>
+      <type>3</type>
+      <Max_limit>100</Max_limit>
+      <Max_error>OASG calibration target should = 0x64</Max_error>
+    </setting>
+    <setting ID="163">
+      <name>2 Note Rtrn 1</name>
+      <type>3</type>
+      <Max_limit>0</Max_limit>
+      <Max_error>2 Note return test offset should = 0</Max_error>
+    </setting>
+    <setting ID="164">
+      <name>2 Note Rtrn 2</name>
+      <type>1</type>
+      <Min_limit>10</Min_limit>
+      <Min_error>2 Note return test limit looks too small</Min_error>
+      <Max_limit>24</Max_limit>
+      <Max_error>2 Note return test limit looks too large</Max_error>
+    </setting>
+    <setting ID="226">
+      <name>Front Skew</name>
+      <type>1</type>
+      <Min_limit>0</Min_limit>
+      <Min_error>none</Min_error>
+      <Max_limit>5</Max_limit>
+      <Max_error>Front skew limit seems high</Max_error>
+    </setting>
+    <setting ID="227">
+      <name>Rear Skew</name>
+      <type>1</type>
+      <Min_limit>0</Min_limit>
+      <Min_error>none</Min_error>
+      <Max_limit>120</Max_limit>
+      <Max_error>Rear skew limit seems high</Max_error>
+    </setting>
+    <setting ID="232">
+      <name>Refl IR Blk target</name>
+      <type>3</type>
+      <Max_limit>236</Max_limit>
+      <Max_error>IR Reflective sensor black target is 0xec00</Max_error>
+    </setting>
+    <setting ID="233">
+      <name>Refl UV Blk target</name>
+      <type>3</type>
+      <Max_limit>245</Max_limit>
+      <Max_error>UV Reflective sensor black target is 0xf500</Max_error>
+    </setting>
+    <setting ID="234">
+      <name>Cpn Blk target</name>
+      <type>3</type>
+      <Max_limit>239</Max_limit>
+      <Max_error>Coupon sensor black target = 0xef00</Max_error>
+    </setting>
+    <setting ID="248">
+      <name>Note Thickness</name>
+      <type>1</type>
+      <Min_limit>0</Min_limit>
+      <Min_error>none</Min_error>
+      <Max_limit>5</Max_limit>
+      <Max_error>Limit on note thickness seems high</Max_error>
+    </setting>
+  </Model>
+</Audit_Data>

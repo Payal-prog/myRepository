@@ -433,7 +433,7 @@
             // 
             this.dxdiagLbl.AutoSize = true;
             this.dxdiagLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dxdiagLbl.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.dxdiagLbl.ForeColor = System.Drawing.Color.DodgerBlue;
             this.dxdiagLbl.Location = new System.Drawing.Point(18, 60);
             this.dxdiagLbl.Name = "dxdiagLbl";
             this.dxdiagLbl.Size = new System.Drawing.Size(65, 20);

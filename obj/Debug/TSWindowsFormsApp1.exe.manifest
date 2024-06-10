@@ -54,174 +54,6 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.HyperV.PowerShell.dll" size="1153024">
-      <assemblyIdentity name="Microsoft.HyperV.PowerShell" version="10.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>gIF2pCw2Ad23pNSB01Ml3Vw5DREA+IzASmZy+qn5g48=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.Management.Infrastructure.dll" size="118272">
-      <assemblyIdentity name="Microsoft.Management.Infrastructure" version="1.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>0bFqqCN7I5dlDSGXeOp81DhFM84ZLnsuYc+5Gm+7lMU=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.Virtualization.Client.dll" size="514560">
-      <assemblyIdentity name="Microsoft.Virtualization.Client" version="10.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>4omIouXOOIi2HGgpw3ZrjGsV7EYtMHjQV3iLpJI+i0Q=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.Virtualization.Client.6.3.Management.dll" size="467968">
-      <assemblyIdentity name="Microsoft.Virtualization.Client.6.3.Management" version="10.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>OSUz7irO6Bu482YYj8zZZmLnZmF0EoWrnDb/10ZItZ4=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="en-US\Microsoft.Virtualization.Client.6.3.Management.resources.dll" size="33792">
-      <assemblyIdentity name="Microsoft.Virtualization.Client.6.3.Management.resources" version="10.0.0.0" publicKeyToken="31BF3856AD364E35" language="en" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>aywgQKvQkJwA3P5qpvaFCUX/Q2E6G8d2sNgr4O2rb1w=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.Virtualization.Client.Common.dll" size="83456">
-      <assemblyIdentity name="Microsoft.Virtualization.Client.Common" version="10.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Qy4+uxaiw0jynbavueXHdjwBR5pUHOyG4Y2qe1VByiw=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="en-US\Microsoft.Virtualization.Client.Common.resources.dll" size="4608">
-      <assemblyIdentity name="Microsoft.Virtualization.Client.Common.resources" version="10.0.0.0" publicKeyToken="31BF3856AD364E35" language="en" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>LlLvQuzAfSRap1pxAxdrYTvnZWSaYbNJtwZTFhJSnYY=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.Virtualization.Client.Management.dll" size="914944">
-      <assemblyIdentity name="Microsoft.Virtualization.Client.Management" version="10.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>5FBdUwi7vx5EVsshP9QFmV8zdGm27BW40nAtS5mF6X0=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="en-US\Microsoft.Virtualization.Client.Management.resources.dll" size="43520">
-      <assemblyIdentity name="Microsoft.Virtualization.Client.Management.resources" version="10.0.0.0" publicKeyToken="31BF3856AD364E35" language="en" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>yzO9rtAJy84xoiZlR1ZKjyMWDhvuXH/X1Odq8jL82wY=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="en-US\Microsoft.Virtualization.Client.resources.dll" size="288768">
-      <assemblyIdentity name="Microsoft.Virtualization.Client.resources" version="10.0.0.0" publicKeyToken="31BF3856AD364E35" language="en" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>eU7C5Z6qSatpFcaURaFneput9ylqYSmR1+9N4Vf9h3E=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.Virtualization.Client.Settings.dll" size="1308160">
-      <assemblyIdentity name="Microsoft.Virtualization.Client.Settings" version="10.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>oiRxmt07m2gzW6uvB6/e5Ra3lHvk+cn8tnZ0FyIUzPs=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="en-US\Microsoft.Virtualization.Client.Settings.resources.dll" size="647168">
-      <assemblyIdentity name="Microsoft.Virtualization.Client.Settings.resources" version="10.0.0.0" publicKeyToken="31BF3856AD364E35" language="en" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Mo/OSRuWIMblWQlnBjbgssm1hmPPb+ycuvj0S5Qtt44=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.Virtualization.Client.Wizards.dll" size="2036736">
-      <assemblyIdentity name="Microsoft.Virtualization.Client.Wizards" version="10.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>rHZse9E4Y8q5qfeHYNdB/kDoVbKyJV6ZcfQnesz47hU=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="en-US\Microsoft.Virtualization.Client.Wizards.resources.dll" size="1237504">
-      <assemblyIdentity name="Microsoft.Virtualization.Client.Wizards.resources" version="10.0.0.0" publicKeyToken="31BF3856AD364E35" language="en" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>5gNobfFpcb4yuufp2V6PvUt+MFtQCAESnfbBZ7jOGsA=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Renci.SshNet.dll" size="848896">
       <assemblyIdentity name="Renci.SshNet" version="2024.0.0.0" publicKeyToken="1CEE9F8BDE3DB106" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -230,18 +62,6 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>4MCjRwjqtB/dfjm0cDoaOffVTSzU8/gtvKzC+pMgjCw=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Management.Automation.dll" size="6462976">
-      <assemblyIdentity name="System.Management.Automation" version="3.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>xvKTne47dG45JaHgYndGAj3MVNrqDuDYh1iIBwxNVXc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -277,7 +97,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ccPtX4wlURIt0Sk02RhrvrJ+INjarWmn3mNyQ3g/LL0=</dsig:DigestValue>
+        <dsig:DigestValue>aiXu9i9z3vTOxsMXRW6rmq4zs5YcvH+Hubqp/AC5vaI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

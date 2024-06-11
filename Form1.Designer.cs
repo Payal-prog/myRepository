@@ -197,7 +197,7 @@
             this.terminalLbl.BackColor = System.Drawing.Color.Transparent;
             this.terminalLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.terminalLbl.ForeColor = System.Drawing.Color.Crimson;
-            this.terminalLbl.Location = new System.Drawing.Point(338, 212);
+            this.terminalLbl.Location = new System.Drawing.Point(350, 212);
             this.terminalLbl.Name = "terminalLbl";
             this.terminalLbl.Size = new System.Drawing.Size(105, 25);
             this.terminalLbl.TabIndex = 20;
@@ -212,7 +212,7 @@
             this.renameBtn.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.renameBtn.ForeColor = System.Drawing.Color.Black;
             this.renameBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.renameBtn.Location = new System.Drawing.Point(338, 240);
+            this.renameBtn.Location = new System.Drawing.Point(350, 240);
             this.renameBtn.Name = "renameBtn";
             this.renameBtn.Size = new System.Drawing.Size(202, 30);
             this.renameBtn.TabIndex = 21;
@@ -234,7 +234,7 @@
             this.updatePgsLoaderBtn.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updatePgsLoaderBtn.ForeColor = System.Drawing.Color.Black;
             this.updatePgsLoaderBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.updatePgsLoaderBtn.Location = new System.Drawing.Point(338, 276);
+            this.updatePgsLoaderBtn.Location = new System.Drawing.Point(350, 276);
             this.updatePgsLoaderBtn.Name = "updatePgsLoaderBtn";
             this.updatePgsLoaderBtn.Size = new System.Drawing.Size(202, 30);
             this.updatePgsLoaderBtn.TabIndex = 22;
@@ -256,7 +256,7 @@
             this.openhwFileBtn.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.openhwFileBtn.ForeColor = System.Drawing.Color.Black;
             this.openhwFileBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.openhwFileBtn.Location = new System.Drawing.Point(338, 312);
+            this.openhwFileBtn.Location = new System.Drawing.Point(350, 313);
             this.openhwFileBtn.Name = "openhwFileBtn";
             this.openhwFileBtn.Size = new System.Drawing.Size(202, 30);
             this.openhwFileBtn.TabIndex = 25;
@@ -278,7 +278,7 @@
             this.testPrinterBtn.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.testPrinterBtn.ForeColor = System.Drawing.Color.Black;
             this.testPrinterBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.testPrinterBtn.Location = new System.Drawing.Point(338, 420);
+            this.testPrinterBtn.Location = new System.Drawing.Point(350, 421);
             this.testPrinterBtn.Name = "testPrinterBtn";
             this.testPrinterBtn.Size = new System.Drawing.Size(202, 30);
             this.testPrinterBtn.TabIndex = 23;
@@ -300,7 +300,7 @@
             this.testBvBtn.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.testBvBtn.ForeColor = System.Drawing.Color.Black;
             this.testBvBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.testBvBtn.Location = new System.Drawing.Point(338, 384);
+            this.testBvBtn.Location = new System.Drawing.Point(350, 385);
             this.testBvBtn.Name = "testBvBtn";
             this.testBvBtn.Size = new System.Drawing.Size(202, 30);
             this.testBvBtn.TabIndex = 24;
@@ -322,7 +322,7 @@
             this.copyLogsBtn.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.copyLogsBtn.ForeColor = System.Drawing.Color.Black;
             this.copyLogsBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.copyLogsBtn.Location = new System.Drawing.Point(338, 348);
+            this.copyLogsBtn.Location = new System.Drawing.Point(350, 349);
             this.copyLogsBtn.Name = "copyLogsBtn";
             this.copyLogsBtn.Size = new System.Drawing.Size(202, 30);
             this.copyLogsBtn.TabIndex = 26;
@@ -344,7 +344,7 @@
             this.downldBtn.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.downldBtn.ForeColor = System.Drawing.Color.Black;
             this.downldBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.downldBtn.Location = new System.Drawing.Point(338, 456);
+            this.downldBtn.Location = new System.Drawing.Point(350, 456);
             this.downldBtn.Name = "downldBtn";
             this.downldBtn.Size = new System.Drawing.Size(202, 30);
             this.downldBtn.TabIndex = 27;
@@ -433,7 +433,7 @@
             // 
             this.dxdiagLbl.AutoSize = true;
             this.dxdiagLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dxdiagLbl.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.dxdiagLbl.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.dxdiagLbl.Location = new System.Drawing.Point(18, 60);
             this.dxdiagLbl.Name = "dxdiagLbl";
             this.dxdiagLbl.Size = new System.Drawing.Size(65, 20);
@@ -570,7 +570,7 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(559, 651);
+            this.ClientSize = new System.Drawing.Size(572, 651);
             this.Controls.Add(this.serverLogsBtn);
             this.Controls.Add(this.prntLbl);
             this.Controls.Add(this.billAcptrLbl);

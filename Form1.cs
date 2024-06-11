@@ -260,6 +260,7 @@ namespace TSWindowsFormsApp1
             string manufacturer="";
             string model="";
             string chipType="";
+            //string processor = "";
 
             try
             {
@@ -283,6 +284,17 @@ namespace TSWindowsFormsApp1
                 }
 
                 graphicsLbl.Text += chipType;
+
+
+               /* searcher = new ManagementObjectSearcher("SELECT * FROM Win32_Processor");
+                collection = searcher.Get();
+
+                foreach (ManagementObject item in collection)
+                {
+                    processor = item["Name"].ToString();
+                }
+
+                label1.Text += processor;*/
             }
             catch(Exception ex) 
             {
@@ -1294,13 +1306,20 @@ namespace TSWindowsFormsApp1
 
             string filePath = @"C:\Game\config\hardware.xml";
 
-            try
+            if(System.IO.File.Exists(filePath))
             {
-                Process.Start("notepad.exe", filePath);
+                try
+                {
+                    Process.Start("notepad.exe", filePath);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error: " + ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("C:\\Game\\config\\hardware.xml file not found. ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             this.ActiveControl = null;
@@ -1370,82 +1389,92 @@ namespace TSWindowsFormsApp1
 
             infoLbl.Text = "Testing Bill Acceptor...";
 
-            if (billIndex != -1)
+            string filePath = @"C:\Game\config\hardware.xml";
+
+            if (System.IO.File.Exists(filePath))
             {
-                switch (deviceTypeArr[billIndex])
+                if (billIndex != -1)
                 {
-                    case "CashCode":
-                        {
-                            string promptMessage = "Enter :-\n\n1 to run CCNet Simulator\n2 to run GBA Talk Tools";
-                            string choice = Interaction.InputBox(promptMessage, "Choose a simulation tool", "").Trim();
-
-                            if (choice == "1")
+                    switch (deviceTypeArr[billIndex])
+                    {
+                        case "CashCode":
                             {
-                                if (System.IO.File.Exists(@"Tools\CCNETSimulator.exe"))
+                                string promptMessage = "Enter :-\n\n1 to run CCNet Simulator\n2 to run GBA Talk Tools";
+                                string choice = Interaction.InputBox(promptMessage, "Choose a simulation tool", "").Trim();
+
+                                if (choice == "1")
                                 {
-                                    infoLbl.Text += "\nRunning CCNet Simulator...";
-                                    Process.Start(@"Tools\CCNETSimulator.exe");
+                                    if (System.IO.File.Exists(@"Tools\CCNETSimulator.exe"))
+                                    {
+                                        infoLbl.Text += "\nRunning CCNet Simulator...";
+                                        Process.Start(@"Tools\CCNETSimulator.exe");
+                                    }
                                 }
-                            }
-                            else if (choice == "2")
-                            {
-                                if (System.IO.File.Exists(@"Tools\CCNETSimulator.exe"))
+                                else if (choice == "2")
                                 {
-                                    infoLbl.Text += "\nRunning GBA Talk Tools...";
-                                    Process.Start(@"Tools\GBA Talk\GBA_Talk_NET.exe");
+                                    if (System.IO.File.Exists(@"Tools\CCNETSimulator.exe"))
+                                    {
+                                        infoLbl.Text += "\nRunning GBA Talk Tools...";
+                                        Process.Start(@"Tools\GBA Talk\GBA_Talk_NET.exe");
+                                    }
                                 }
+                                else
+                                {
+                                    MessageBox.Show("Incorrect choice entered!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                                infoLbl.Text = "";
+                                break;
                             }
-                            else
-                            {
-                                MessageBox.Show("Incorrect choice entered!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                            infoLbl.Text = "";
-                            break;
-                        }
 
-                    case "PTI":
-                        {
-                            if (System.IO.File.Exists(@"Tools\Pyramid NET RS-232\PyramidNETRS232_TestApp.exe"))
+                        case "PTI":
                             {
-                                infoLbl.Text += "\nRunning RS232 application...";
-                                Process.Start(@"Tools\Pyramid NET RS-232\PyramidNETRS232_TestApp.exe");
+                                if (System.IO.File.Exists(@"Tools\Pyramid NET RS-232\PyramidNETRS232_TestApp.exe"))
+                                {
+                                    infoLbl.Text += "\nRunning RS232 application...";
+                                    Process.Start(@"Tools\Pyramid NET RS-232\PyramidNETRS232_TestApp.exe");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Error: PTI Bill Acceptor drivers/application not found!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                                infoLbl.Text = "";
+                                break;
                             }
-                            else
-                            {
-                                MessageBox.Show("Error: PTI Bill Acceptor drivers/application not found!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                            infoLbl.Text = "";
-                            break;
-                        }
 
-                    case "ID003":
-                        {
-                            if (System.IO.File.Exists(@"Tools\BV_JCM\ID-003_Basic_Driver_v1.6\ID003 Basic Driver v1.6.exe"))
+                        case "ID003":
                             {
-                                infoLbl.Text += "\nRunning ID003 Utility....";
-                                Process.Start(@"Tools\BV_JCM\ID-003_Basic_Driver_v1.6\ID003 Basic Driver v1.6.exe");
+                                if (System.IO.File.Exists(@"Tools\BV_JCM\ID-003_Basic_Driver_v1.6\ID003 Basic Driver v1.6.exe"))
+                                {
+                                    infoLbl.Text += "\nRunning ID003 Utility....";
+                                    Process.Start(@"Tools\BV_JCM\ID-003_Basic_Driver_v1.6\ID003 Basic Driver v1.6.exe");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Error: ID003 Bill Acceptor drivers/application not found!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                                infoLbl.Text = "";
+                                break;
                             }
-                            else
-                            {
-                                MessageBox.Show("Error: ID003 Bill Acceptor drivers/application not found!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                            infoLbl.Text = "";
-                            break;
-                        }
 
-                    default:
-                        {
-                            billAcptrLbl.Text = "Bill Acceptor : Error";
-                            MessageBox.Show("Error: No Bill Acceptor found in C:\\Game\\config\\hardware file.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            break;
-                        }
+                        default:
+                            {
+                                billAcptrLbl.Text = "Bill Acceptor : Error";
+                                MessageBox.Show("Error: No Bill Acceptor found in C:\\Game\\config\\hardware file.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                break;
+                            }
+                    }
+                }
+                else
+                {
+                    billAcptrLbl.Text = "Bill Acceptor : Error";
+                    MessageBox.Show("Error: No Bill Acceptor found in C:\\Game\\config\\hardware file.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                billAcptrLbl.Text = "Bill Acceptor : Error";
-                MessageBox.Show("Error: No Bill Acceptor found in C:\\Game\\config\\hardware file.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("C:\\Game\\config\\hardware.xml file not found. ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
 
             this.ActiveControl = null;
             ApplyOriginalStyle(testBvBtn);
@@ -1459,124 +1488,133 @@ namespace TSWindowsFormsApp1
             testPrinterBtn.BackColor = SystemColors.ControlDark;
             infoLbl.Text = "Testing Printer...";
 
-            if (printerIndex != -1)
+            string filePath = @"C:\Game\config\hardware.xml";
+
+            if (System.IO.File.Exists(filePath))
             {
-                switch (deviceTypeArr[printerIndex])
+                if (printerIndex != -1)
                 {
-                    case "PayCheck":
-                        {
-                            if (System.IO.File.Exists(@"Tools\Nanoptix Printer Management\npxStatus.exe"))
+                    switch (deviceTypeArr[printerIndex])
+                    {
+                        case "PayCheck":
                             {
-                                infoLbl.Text += "\nRunning Nanoptix Printer application...";
-                                //Process.Start(@"Tools\Nanoptix Printer Management\npxStatus.exe");
-                            }
-                            else
-                            {
-                                MessageBox.Show("Error: Nanoptix Printer application not found!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                            infoLbl.Text = "";
-                            break;
-                        }
-
-                    case "Epson":
-                        {
-                            if (System.IO.File.Exists(@"C:\Program Files (x86)\EPSON\EPSON Advanced Printer Driver 6\DriverPack\PrinterReg.exe"))
-                            {
-                                infoLbl.Text += "\nRunning Epson Printer Utility...";
-                                Process.Start(@"C:\Program Files (x86)\EPSON\EPSON Advanced Printer Driver 6\DriverPack\PrinterReg.exe");
+                                if (System.IO.File.Exists(@"Tools\Nanoptix Printer Management\npxStatus.exe"))
+                                {
+                                    infoLbl.Text += "\nRunning Nanoptix Printer application...";
+                                    Process.Start(@"Tools\Nanoptix Printer Management\npxStatus.exe");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Error: Nanoptix Printer application not found!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                                infoLbl.Text = "";
+                                break;
                             }
 
-                            else if (System.IO.File.Exists(@"C:\Program Files (x86)\EPSON\EPSON Advanced Printer Driver 5\PrinterReg.exe"))
+                        case "Epson":
                             {
-                                infoLbl.Text += "\nRunning Epson Printer Utility...";
-                                Process.Start(@"C:\Program Files (x86)\EPSON\EPSON Advanced Printer Driver 5\PrinterReg.exe");
+                                if (System.IO.File.Exists(@"C:\Program Files (x86)\EPSON\EPSON Advanced Printer Driver 6\DriverPack\PrinterReg.exe"))
+                                {
+                                    infoLbl.Text += "\nRunning Epson Printer Utility...";
+                                    Process.Start(@"C:\Program Files (x86)\EPSON\EPSON Advanced Printer Driver 6\DriverPack\PrinterReg.exe");
+                                }
+
+                                else if (System.IO.File.Exists(@"C:\Program Files (x86)\EPSON\EPSON Advanced Printer Driver 5\PrinterReg.exe"))
+                                {
+                                    infoLbl.Text += "\nRunning Epson Printer Utility...";
+                                    Process.Start(@"C:\Program Files (x86)\EPSON\EPSON Advanced Printer Driver 5\PrinterReg.exe");
+                                }
+
+                                else
+                                {
+                                    MessageBox.Show("Error: Epson Printer drivers/application not found!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                                infoLbl.Text = "";
+                                break;
                             }
 
-                            else
+                        case "PHX":
                             {
-                                MessageBox.Show("Error: Epson Printer drivers/application not found!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                            infoLbl.Text = "";
-                            break;
-                        }
+                                infoLbl.Text += "\nPhoenix Printer can be tested on games.";
 
-                    case "PHX":
-                        {
-                            infoLbl.Text += "\nPhoenix Printer can be tested on games.";
+                                if (System.IO.File.Exists(@"Tools\Phoenix Tools\PhoenixTools.exe"))
+                                {
+                                    infoLbl.Text += "\nRunning Phoenix Printer utility...";
+                                    Process.Start(@"Tools\Phoenix Tools\PhoenixTools.exe");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Error: Phoenix Priner application not found!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                                infoLbl.Text = "";
+                                break;
+                            }
 
-                            if (System.IO.File.Exists(@"Tools\Phoenix Tools\PhoenixTools.exe"))
+                        case "REL":
                             {
-                                infoLbl.Text += "\nRunning Phoenix Printer utility...";
-                                Process.Start(@"Tools\Phoenix Tools\PhoenixTools.exe");
+                                if (System.IO.File.Exists(@"Tools\Reliance Tools\Reliance.NET.UI.exe"))
+                                {
+                                    infoLbl.Text += "\nRunning Reliance Tools...";
+                                    Process.Start(@"Tools\Reliance Tools\Reliance.NET.UI.exe");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Error: Reliance Tools not found!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                                infoLbl.Text = "";
+                                break;
                             }
-                            else
-                            {
-                                MessageBox.Show("Error: Phoenix Priner application not found!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                            //infoLbl.Text = "";
-                            break;
-                        }
 
-                    case "REL":
-                        {
-                            if (System.IO.File.Exists(@"Tools\Reliance Tools\Reliance.NET.UI.exe"))
+                        case "CustomSPA":
                             {
-                                infoLbl.Text += "\nRunning Reliance Tools...";
-                                Process.Start(@"Tools\Reliance Tools\Reliance.NET.UI.exe");
+                                if (System.IO.File.Exists(@"Tools\CUSTOM\PrinterSet\CePrinterSet.exe"))
+                                {
+                                    infoLbl.Text += "\nRunning Custom Tool...";
+                                    Process.Start(@"Tools\CUSTOM\PrinterSet\CePrinterSet.exe");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Error: Custom Tool not found!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                                infoLbl.Text = "";
+                                break;
                             }
-                            else
+                        default:
                             {
-                                MessageBox.Show("Error: Reliance Tools not found!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                prntLbl.Text = "Printer : Error";
+                                MessageBox.Show("Error: No printer found in C:\\Game\\config\\hardware file.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                break;
                             }
-                            infoLbl.Text = "";
-                            break;
-                        }
-
-                    case "CustomSPA":
-                        {
-                            if (System.IO.File.Exists(@"Tools\CUSTOM\PrinterSet\CePrinterSet.exe"))
-                            {
-                                infoLbl.Text += "\nRunning Custom Tool...";
-                                Process.Start(@"Tools\CUSTOM\PrinterSet\CePrinterSet.exe");
-                            }
-                            else
-                            {
-                                MessageBox.Show("Error: Custom Tool not found!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                            infoLbl.Text = "";
-                            break;
-                        }
-                    default:
-                        {
-                            prntLbl.Text = "Printer : Error";
-                            MessageBox.Show("Error: No printer found in C:\\Game\\config\\hardware file.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            break;
-                        }
+                    }
                 }
-            }
 
-            else if (printer2Index != -1)
-            {
-                if (System.IO.File.Exists(@"Tools\Nanoptix Printer Management\npxStatus.exe"))
+                else if (printer2Index != -1)
                 {
-                    infoLbl.Text += "\nRunning Nanoptix Printer application...";
-                    Process.Start(@"Tools\Nanoptix Printer Management\npxStatus.exe");
+                    if (System.IO.File.Exists(@"Tools\Nanoptix Printer Management\npxStatus.exe"))
+                    {
+                        infoLbl.Text += "\nRunning Nanoptix Printer application...";
+                        Process.Start(@"Tools\Nanoptix Printer Management\npxStatus.exe");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error: Nanoptix Printer application not found!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
+
                 else
                 {
-                    MessageBox.Show("Error: Nanoptix Printer application not found!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    prntLbl.Text = "Printer : Error";
+                    MessageBox.Show("Error: No printer found in C:\\Game\\config\\hardware file.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
             else
             {
-                prntLbl.Text = "Printer : Error";
-                MessageBox.Show("Error: No printer found in C:\\Game\\config\\hardware file.!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("C:\\Game\\config\\hardware.xml file not found. ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             this.ActiveControl = null;
             ApplyOriginalStyle(testPrinterBtn);
-           //infoLbl.Text = "";
+            infoLbl.Text = "";
         }
 
         private async void downldBtn_Click(object sender, EventArgs e)
@@ -1643,16 +1681,15 @@ namespace TSWindowsFormsApp1
             this.ActiveControl = null;
             ApplyCustomStyle(serverLogsBtn);
             serverLogsBtn.BackColor = SystemColors.ControlDark;
+            
+            infoLbl.Text += "Attempting to Connect to Server...";
 
-            using(PasswordForm passwordForm = new PasswordForm())
+            using (PasswordForm passwordForm = new PasswordForm())
             {
                 if(passwordForm.ShowDialog() == DialogResult.OK)
                 {
                    enteredPassword = passwordForm.password;
                 }
-
-            //string promptMessage = "Please enter the password to login to VM.\n\nUsername : oracle";
-            // string enteredPassword = Interaction.InputBox(promptMessage, "Login", "").Trim();
 
             string hostname = "10.0.42.10";
             string username = "oracle";
@@ -1660,12 +1697,10 @@ namespace TSWindowsFormsApp1
 
             if(String.Equals(enteredPassword,password))
                 {
-                
                 try
                 {
                     using (var sshClient = new SshClient(hostname, username, password))
                     {
-                        infoLbl.Text+="Attempting to Connect to Server...";
                         sshClient.Connect();
 
                         if (sshClient.IsConnected)
@@ -1684,7 +1719,6 @@ namespace TSWindowsFormsApp1
                             infoLbl.Text += "\nCopying server.log...";
                             if (cmd1.ExitStatus == 0)
                             {
-                                // MessageBox.Show("server.log file copied successfully to \\\\10.0.42.10\\shared\\ folder", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 infoLbl.Text += "Done";
                             }
 

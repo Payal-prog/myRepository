@@ -60,6 +60,7 @@
             this.billAcptrLbl = new System.Windows.Forms.Label();
             this.prntLbl = new System.Windows.Forms.Label();
             this.serverLogsBtn = new System.Windows.Forms.Button();
+            this.deployerLogBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -344,7 +345,7 @@
             this.downldBtn.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.downldBtn.ForeColor = System.Drawing.Color.Black;
             this.downldBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.downldBtn.Location = new System.Drawing.Point(350, 456);
+            this.downldBtn.Location = new System.Drawing.Point(350, 457);
             this.downldBtn.Name = "downldBtn";
             this.downldBtn.Size = new System.Drawing.Size(202, 30);
             this.downldBtn.TabIndex = 27;
@@ -563,6 +564,25 @@
             this.serverLogsBtn.MouseEnter += new System.EventHandler(this.serverLogsBtn_MouseEnter);
             this.serverLogsBtn.MouseLeave += new System.EventHandler(this.serverLogsBtn_MouseLeave);
             // 
+            // deployerLogBtn
+            // 
+            this.deployerLogBtn.BackColor = System.Drawing.SystemColors.Control;
+            this.deployerLogBtn.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.deployerLogBtn.FlatAppearance.BorderSize = 0;
+            this.deployerLogBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deployerLogBtn.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deployerLogBtn.ForeColor = System.Drawing.Color.Black;
+            this.deployerLogBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.deployerLogBtn.Location = new System.Drawing.Point(16, 457);
+            this.deployerLogBtn.Name = "deployerLogBtn";
+            this.deployerLogBtn.Size = new System.Drawing.Size(202, 30);
+            this.deployerLogBtn.TabIndex = 49;
+            this.deployerLogBtn.TabStop = false;
+            this.deployerLogBtn.Text = "Check deployer.log";
+            this.deployerLogBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.deployerLogBtn.UseVisualStyleBackColor = false;
+            this.deployerLogBtn.Click += new System.EventHandler(this.deployerLogBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -571,6 +591,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(572, 651);
+            this.Controls.Add(this.deployerLogBtn);
             this.Controls.Add(this.serverLogsBtn);
             this.Controls.Add(this.prntLbl);
             this.Controls.Add(this.billAcptrLbl);
@@ -650,6 +671,7 @@
         private System.Windows.Forms.Label billAcptrLbl;
         private System.Windows.Forms.Label prntLbl;
         private System.Windows.Forms.Button serverLogsBtn;
+        private System.Windows.Forms.Button deployerLogBtn;
         //private System.Windows.Forms.Label label3;
     }
 }

@@ -1017,17 +1017,6 @@ namespace TSWindowsFormsApp1
             infoLbl.Text = "";
         }
 
-       /* private void vpnAdptrBtn1_Click(object sender, EventArgs e)//Vendor 1 VPN
-        {
-            this.ActiveControl = null;
-            ApplyCustomStyle(vpnAdptrBtn1);
-            infoLbl.Text = "Creating a VPN adapter...";
-            createVpn(@"Scripts\VPN\Vendor1-Win10\Create-VPNConnection.ps1");
-            this.ActiveControl = null;
-            ApplyOriginalStyle(vpnAdptrBtn1);
-            infoLbl.Text = "";
-        }*/
-
         private async void vpnAdptrBtn2_Click(object sender, EventArgs e)//Vendor 2 VPN
         {
             this.ActiveControl = null;
@@ -1796,8 +1785,54 @@ namespace TSWindowsFormsApp1
             infoLbl.Text = "";
         }
 
+        private void deployerLogBtn_Click(object sender, EventArgs e)
+        {
+            string hostname = "10.0.42.10";
+            string username = "oracle";
+            string password = "zsxdcfvPT007";
+            string deployerLogPath = "/home/oracle/deploymgr/pong/deploy/deployer.log";
+
+            infoLbl.Text += "Checking deployer.log...";
+
+            try
+            {
+                using (var sshClient = new SshClient(hostname, username, password))
+                {
+                    infoLbl.Text += "Attempting to Connect to Server...";
+                    sshClient.Connect();
+
+                    if(sshClient.IsConnected)
+                    {
+                        string command = $"tail -f {deployerLogPath}";
+                        var cmd = sshClient.CreateCommand(command);
+
+                        var processInfo = new ProcessStartInfo
+                        {
+                            FileName = "cmd.exe",
+                            Arguments = $"/C start cmd.exe /K \"ssh {username}@{hostname} '{command}'\"",
+                            UseShellExecute = false,
+                        };
+
+                        Process.Start(processInfo);
+                        sshClient.Disconnect();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to establish session to VM!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+
+        }
+
         /************************MOUSE DOWN EVENT HANDLERS************************/
-   
+
         private void logoffBtn_MouseEnter(object sender, EventArgs e)
         {
             logoffButton.FlatAppearance.MouseOverBackColor = Color.WhiteSmoke;             
@@ -1947,18 +1982,6 @@ namespace TSWindowsFormsApp1
                 process.StartInfo = processInfo;
                 process.Start();
                 process.WaitForExit();
-
-                //string output = process.StandardOutput.ReadToEnd();
-                /* string errors = process.StandardError.ReadToEnd();
-
-                 if (!string.IsNullOrEmpty(errors))
-                 {
-                     MessageBox.Show("Error: " + errors, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                 }
-                 else
-                 {
-                     MessageBox.Show("Virtual Network Adapter V2-VM-NAT has been created!", "Enable Hyper-V", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                 }*/
             }
 
             catch (Exception ex)
@@ -2058,15 +2081,20 @@ namespace TSWindowsFormsApp1
                 processInfo.UseShellExecute = true;
                 processInfo.RedirectStandardOutput = false; // Enable redirection of stdout
                 processInfo.RedirectStandardError = false; // Enable redirection of stderr
-                //processInfo.CreateNoWindow = true;
-                // processInfo.WindowStyle = ProcessWindowStyle.Minimized;
                 process.StartInfo = processInfo;
                 process.Start();
                 process.WaitForExit();
+<<<<<<< HEAD
                 
                 infoLbl.Text += "\nVPN adapter created!";
                 MessageBox.Show("VPN adapter has been created successfully!", "VPN Connection", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
+=======
+
+                infoLbl.Text += "\nVPN adapter created!";
+                MessageBox.Show("VPN adapter has been created successfully!", "VPN Connection", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+>>>>>>> 00aa88f78eae17f07cb6344fc59a798efae60044
             }
             catch (Exception ex)
             {
@@ -2079,6 +2107,8 @@ namespace TSWindowsFormsApp1
         {
             progPercentLbl.Text = text;
         }
+
+       
     }
 }
 

@@ -2084,17 +2084,12 @@ namespace TSWindowsFormsApp1
                 process.StartInfo = processInfo;
                 process.Start();
                 process.WaitForExit();
-<<<<<<< HEAD
                 
                 infoLbl.Text += "\nVPN adapter created!";
                 MessageBox.Show("VPN adapter has been created successfully!", "VPN Connection", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
-=======
-
                 infoLbl.Text += "\nVPN adapter created!";
                 MessageBox.Show("VPN adapter has been created successfully!", "VPN Connection", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
->>>>>>> 00aa88f78eae17f07cb6344fc59a798efae60044
             }
             catch (Exception ex)
             {

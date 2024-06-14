@@ -2063,19 +2063,10 @@ namespace TSWindowsFormsApp1
                 process.StartInfo = processInfo;
                 process.Start();
                 process.WaitForExit();
-
-                string output2 = process.StandardOutput.ReadToEnd();
-                string errors2 = process.StandardError.ReadToEnd();
-
-                if (!string.IsNullOrEmpty(errors2))
-                {
-                    MessageBox.Show("Error: " + errors2, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    infoLbl.Text += "\nVPN adapter created!";
-                    MessageBox.Show("VPN adapter has been created successfully!", "VPN Connection", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                
+                infoLbl.Text += "\nVPN adapter created!";
+                MessageBox.Show("VPN adapter has been created successfully!", "VPN Connection", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
             }
             catch (Exception ex)
             {

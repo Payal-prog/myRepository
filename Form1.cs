@@ -1032,7 +1032,7 @@ namespace TSWindowsFormsApp1
         {
             this.ActiveControl = null;
             ApplyCustomStyle(vpnAdptrBtn2);
-            infoLbl.Text = "Creating a VPN adapter...";
+            infoLbl.Text = "Creating a VPN adapter...\nIt may take some time, Please wait...";
             createVpn(@"Scripts\VPN\Vendor2-InternalSwitch\Create-VPNConnection.ps1");
             this.ActiveControl = null;
             ApplyOriginalStyle(vpnAdptrBtn2);
@@ -2055,10 +2055,10 @@ namespace TSWindowsFormsApp1
                 ProcessStartInfo processInfo = new ProcessStartInfo();
                 processInfo.FileName = "powershell.exe";
                 processInfo.Arguments = "-ExecutionPolicy Bypass -File " + scriptPath;
-                processInfo.UseShellExecute = false;
-                processInfo.RedirectStandardOutput = true; // Enable redirection of stdout
-                processInfo.RedirectStandardError = true; // Enable redirection of stderr
-                processInfo.CreateNoWindow = true;
+                processInfo.UseShellExecute = true;
+                processInfo.RedirectStandardOutput = false; // Enable redirection of stdout
+                processInfo.RedirectStandardError = false; // Enable redirection of stderr
+                //processInfo.CreateNoWindow = true;
                 // processInfo.WindowStyle = ProcessWindowStyle.Minimized;
                 process.StartInfo = processInfo;
                 process.Start();

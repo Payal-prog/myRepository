@@ -1798,7 +1798,7 @@ namespace TSWindowsFormsApp1
             {
                 using (var sshClient = new SshClient(hostname, username, password))
                 {
-                    infoLbl.Text += "Attempting to Connect to Server...";
+                    infoLbl.Text += "\nAttempting to Connect to Server...";
                     sshClient.Connect();
 
                     if(sshClient.IsConnected)
@@ -1809,8 +1809,8 @@ namespace TSWindowsFormsApp1
                         var processInfo = new ProcessStartInfo
                         {
                             FileName = "cmd.exe",
-                            Arguments = $"/C start cmd.exe /K \"ssh {username}@{hostname} '{command}'\"",
-                            UseShellExecute = false,
+                            Arguments = $"/C start cmd.exe /K \"ssh {username}@{hostname} \\\"{command}\\\"\"",
+                            UseShellExecute = true,
                         };
 
                         Process.Start(processInfo);

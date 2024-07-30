@@ -35,6 +35,9 @@ using System.Diagnostics.Eventing.Reader;
 using Renci.SshNet;
 using Microsoft.HyperV.PowerShell;
 using Renci.SshNet.Sftp;
+using Microsoft.Web.Administration;
+using System.Xml.Linq;
+
 
 namespace TSWindowsFormsApp1
 {
@@ -2103,7 +2106,314 @@ namespace TSWindowsFormsApp1
             progPercentLbl.Text = text;
         }
 
-       
+        private void Check_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonCheckServer_MouseEnter(object sender, EventArgs e)
+        {
+            changeToEnlargedFont(buttonCheckServer);
+        }
+
+
+        private void buttonCheckServer_MouseEnter_1(object sender, EventArgs e)
+        {
+            changeToEnlargedFont(buttonCheckServer);
+        }
+
+        private void buttonCheckServer_MouseLeave(object sender, EventArgs e)
+        {
+            changeToOriginalFont(buttonCheckServer);
+        }
+
+        /* ADD VALUES TO THE LIST BOX */
+
+        public void addRequirements(object sender, EventArgs e)
+        {
+            if(dropDownVendor.Text == "V2")
+            {
+                listBoxRequirements.Items.Clear();
+                labelStatus.Text = "";
+                listBoxRequirements.Items.Add("Hyper V");
+                listBoxRequirements.Items.Add("Virtualization Enabled in BIOS");
+                listBoxRequirements.Items.Add("RAM - min. 16GB");
+                
+            }
+            else if(dropDownVendor.Text == "V1")
+            {
+                listBoxRequirements.Items.Clear();
+                labelStatus.Text = "";
+                listBoxRequirements.Items.Add(".NET Framework v4.8 or later");
+                listBoxRequirements.Items.Add(".NET Hosting Bundle v6.0.15");
+                listBoxRequirements.Items.Add("Application Initialization Feature enabled in IIS");
+                listBoxRequirements.Items.Add("ASPNETCORE Environment set to Production");
+                listBoxRequirements.Items.Add("Visual C++ runtime 2012, 2013 and 2015-2019");
+            }
+        }
+
+        public int CheckVirtualizationBios()
+        {
+            int flag = 0;
+            try
+            {
+                // Query WMI for processor information
+                using (ManagementObjectSearcher searcher = new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM Win32_Processor"))
+                {
+                    foreach (ManagementObject queryObj in searcher.Get())
+                    {
+                        // Check if virtualization is enabled
+                        if (queryObj["VirtualizationFirmwareEnabled"] != null)
+                        {
+                            bool isVirtualizationEnabled = (bool)queryObj["VirtualizationFirmwareEnabled"];
+                            flag = 1;
+                        }
+                        else
+                        {
+                            flag = 0;
+                        }
+                    }
+                }
+            }
+            catch (ManagementException e)
+            {
+                flag = 2;
+            }
+            return flag;
+        }
+
+        private void checkCompatiability(object Sender, EventArgs e) 
+        {
+            
+            if (dropDownVendor.Text == "V2")
+            {
+                if (checkV2Server() == 3)
+                {
+                    labelStatus.Text = "✅ This PC is compatible for hosting a V2 Server.";
+                }
+                else
+                {
+                    labelStatus.Text = "❌ This PC is not compatible for hosting V2 Server.";
+                }
+            }
+            else if (dropDownVendor.Text == "V1")
+            {
+                if (checkV1Server() == 5)
+                {
+                    labelStatus.Text = "✅ This PC is compatible for hosting a V1 Server.";
+                }
+                else
+                {
+                    labelStatus.Text = "❌ This PC is not compatible for hosting V1 Server.";
+                }
+            }
+            
+
+        }
+
+        private int checkPhysicalMemory()
+        {
+            ComputerInfo computerInfo = new ComputerInfo();
+            ulong totalPhysicalMemory = computerInfo.TotalPhysicalMemory;
+
+            float ram = (float)totalPhysicalMemory / 1073741824;
+
+            if (ram >= 15)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        private int checkV2Server()
+        {
+            int flag = 0;
+
+            if (checkHyperVState() == "1")
+            {
+                listBoxRequirements.SetItemChecked(0, true);
+                flag++;
+            }
+            else 
+            {
+                labelStatus.Text = "Hyper V is disabled.";
+            }
+            if (CheckVirtualizationBios() == 1)
+            {
+                listBoxRequirements.SetItemChecked(1, true);
+                flag++;
+            }
+            if (checkPhysicalMemory() == 1)
+            {
+                listBoxRequirements.SetItemChecked(2, true);
+                flag++;
+            }
+            return flag;
+        }
+
+        private int checkV1Server()
+        {
+            int flag = 0;
+            if (IsApplicationInitializationEnabled() == 1) 
+            {
+                listBoxRequirements.SetItemChecked(2, true);
+                flag++;
+            }
+            if (IsAspNetCoreEnvironmentProduction())
+            {
+                listBoxRequirements.SetItemChecked (3, true);
+                flag++;
+            }
+            if (AreVisualCRuntimesInstalled())
+            {
+                listBoxRequirements.SetItemChecked(4, true);
+                flag++;
+            }
+            if (IsDotNetFramework48OrLater())
+            {
+                listBoxRequirements.SetItemChecked(0, true);
+                flag++;
+            }
+            if (IsDotNetHostingBundle6015Installed())
+            {
+                listBoxRequirements.SetItemChecked(1, true);
+                flag++;
+            }
+            return flag;
+
+        }
+
+        public bool IsDotNetFramework48OrLater()
+        {
+            const string subkey = @"SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\";
+            using (RegistryKey ndpKey = Registry.LocalMachine.OpenSubKey(subkey))
+            {
+                if (ndpKey != null && ndpKey.GetValue("Release") != null)
+                {
+                    int releaseKey = (int)ndpKey.GetValue("Release");
+
+                    // 528040 is for .NET Framework 4.8, 528209 for 4.8.1
+                    return releaseKey >= 528040;
+                }
+            }
+            return false;
+        }
+
+
+        public bool IsDotNetHostingBundle6015Installed()
+        {
+            const string subkey32 = @"SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall";
+            const string subkey64 = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall";
+
+            bool CheckSubkey(string subkey)
+            {
+                using (RegistryKey key = Registry.LocalMachine.OpenSubKey(subkey))
+                {
+                    if (key != null)
+                    {
+                        foreach (string subKeyName in key.GetSubKeyNames())
+                        {
+                            using (RegistryKey subKey = key.OpenSubKey(subKeyName))
+                            {
+                                if (subKey != null)
+                                {
+                                    string displayName = subKey.GetValue("DisplayName") as string;
+                                    if (!string.IsNullOrEmpty(displayName) &&
+                                        displayName.IndexOf("Hosting", StringComparison.OrdinalIgnoreCase) >= 0 &&
+                                        displayName.IndexOf("6.0.15", StringComparison.OrdinalIgnoreCase) >= 0)
+                                    {
+                                        return true;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    return false;
+                }
+            }
+
+            return CheckSubkey(subkey32) || CheckSubkey(subkey64);
+        }
+
+
+
+
+        public int IsApplicationInitializationEnabled()
+        {
+            try
+            {
+                string scriptPath1 = @"Scripts\CheckApplicationInit.ps1";
+                Process process1 = new Process();
+                ProcessStartInfo processInfo1 = new ProcessStartInfo();
+                processInfo1.FileName = "powershell.exe";
+                processInfo1.Arguments = "-ExecutionPolicy Bypass -File " + scriptPath1;
+                processInfo1.UseShellExecute = false;
+                processInfo1.RedirectStandardOutput = true; // Enable redirection of stdout
+                processInfo1.RedirectStandardError = true;  // Enable redirection of stderr
+                processInfo1.CreateNoWindow = true;
+                process1.StartInfo = processInfo1;
+                process1.Start();
+                process1.WaitForExit();
+
+                string output1 = process1.StandardOutput.ReadToEnd().Trim();
+                string errors1 = process1.StandardError.ReadToEnd().Trim();
+
+                if (!string.IsNullOrEmpty(errors1))
+                {
+                    MessageBox.Show("Error: " + errors1, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return 2;
+                }
+                else
+                {
+                    return 1;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 2;
+            }
+        }
+
+        public bool IsAspNetCoreEnvironmentProduction()
+        {
+            string environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+            return string.Equals(environment, "Production", StringComparison.OrdinalIgnoreCase);
+        }
+
+
+        public bool AreVisualCRuntimesInstalled()
+        {
+            return IsRuntimeInstalled("2012") &&
+                   IsRuntimeInstalled("2013") &&
+                   IsRuntimeInstalled("2015-2019");
+        }
+
+        private bool IsRuntimeInstalled(string version)
+        {
+            string[] possibleKeys = {
+        $@"SOFTWARE\Classes\Installer\Dependencies\VC,redist.x64,amd64,{version}",
+        $@"SOFTWARE\Classes\Installer\Dependencies\VC,redist.x86,x86,{version}",
+        $@"SOFTWARE\Microsoft\VisualStudio\{version}"
+    };
+
+            foreach (string keyPath in possibleKeys)
+            {
+                using (RegistryKey key = Registry.LocalMachine.OpenSubKey(keyPath))
+                {
+                    if (key != null)
+                    {
+                        // Check if the key exists or specific values that confirm installation
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
     }
 }
 

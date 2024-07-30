@@ -167,3 +167,22 @@ C:\Intel\Project\myRepository\myRepository\obj\Debug\TSWindow.1E31C778.Up2Date
 C:\Intel\Project\myRepository\myRepository\obj\Debug\TSWindowsFormsApp1.exe
 C:\Intel\Project\myRepository\myRepository\obj\Debug\TSWindowsFormsApp1.pdb
 C:\Intel\Project\myRepository\myRepository\bin\Debug\TSWindowsFormsApp1.pdb
+C:\Om\Tech Support\Tech Support Tools\bin\Debug\TSWindowsFormsApp1.exe.config
+C:\Om\Tech Support\Tech Support Tools\bin\Debug\TSWindowsFormsApp1.exe.manifest
+C:\Om\Tech Support\Tech Support Tools\bin\Debug\TSWindowsFormsApp1.application
+C:\Om\Tech Support\Tech Support Tools\bin\Debug\TSWindowsFormsApp1.exe
+C:\Om\Tech Support\Tech Support Tools\bin\Debug\TSWindowsFormsApp1.pdb
+C:\Om\Tech Support\Tech Support Tools\bin\Debug\Microsoft.Management.Infrastructure.dll
+C:\Om\Tech Support\Tech Support Tools\bin\Debug\System.Management.Automation.dll
+C:\Om\Tech Support\Tech Support Tools\obj\Debug\TSWindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Om\Tech Support\Tech Support Tools\obj\Debug\TSWindowsFormsApp1.Form1.resources
+C:\Om\Tech Support\Tech Support Tools\obj\Debug\TSWindowsFormsApp1.PasswordForm.resources
+C:\Om\Tech Support\Tech Support Tools\obj\Debug\TSWindowsFormsApp1.Properties.Resources.resources
+C:\Om\Tech Support\Tech Support Tools\obj\Debug\TSWindowsFormsApp1.csproj.GenerateResource.cache
+C:\Om\Tech Support\Tech Support Tools\obj\Debug\TSWindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Om\Tech Support\Tech Support Tools\obj\Debug\TSWindowsFormsApp1.exe.manifest
+C:\Om\Tech Support\Tech Support Tools\obj\Debug\TSWindowsFormsApp1.application
+C:\Om\Tech Support\Tech Support Tools\obj\Debug\TSWindow.1E31C778.Up2Date
+C:\Om\Tech Support\Tech Support Tools\obj\Debug\TSWindowsFormsApp1.exe
+C:\Om\Tech Support\Tech Support Tools\obj\Debug\TSWindowsFormsApp1.pdb
+C:\Om\Tech Support\Tech Support Tools\bin\Debug\Microsoft.Web.Administration.dll

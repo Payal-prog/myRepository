@@ -61,7 +61,19 @@
             this.prntLbl = new System.Windows.Forms.Label();
             this.serverLogsBtn = new System.Windows.Forms.Button();
             this.deployerLogBtn = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Check = new System.Windows.Forms.TabPage();
+            this.listBoxRequirements = new System.Windows.Forms.CheckedListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.buttonCheckServer = new System.Windows.Forms.Button();
+            this.dropDownVendor = new System.Windows.Forms.ComboBox();
+            this.labelCompatibilityTitle = new System.Windows.Forms.Label();
+            this.labelStatus = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.Check.SuspendLayout();
             this.SuspendLayout();
             // 
             // createvmButton
@@ -72,7 +84,7 @@
             this.createvmButton.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createvmButton.ForeColor = System.Drawing.Color.Black;
             this.createvmButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.createvmButton.Location = new System.Drawing.Point(16, 313);
+            this.createvmButton.Location = new System.Drawing.Point(9, 301);
             this.createvmButton.Name = "createvmButton";
             this.createvmButton.Size = new System.Drawing.Size(202, 30);
             this.createvmButton.TabIndex = 1;
@@ -93,7 +105,7 @@
             this.createswButton.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createswButton.ForeColor = System.Drawing.Color.Black;
             this.createswButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.createswButton.Location = new System.Drawing.Point(16, 276);
+            this.createswButton.Location = new System.Drawing.Point(9, 264);
             this.createswButton.Name = "createswButton";
             this.createswButton.Size = new System.Drawing.Size(202, 30);
             this.createswButton.TabIndex = 2;
@@ -112,7 +124,7 @@
             this.serverlabel.BackColor = System.Drawing.Color.Transparent;
             this.serverlabel.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.serverlabel.ForeColor = System.Drawing.Color.Crimson;
-            this.serverlabel.Location = new System.Drawing.Point(16, 212);
+            this.serverlabel.Location = new System.Drawing.Point(9, 200);
             this.serverlabel.Name = "serverlabel";
             this.serverlabel.Size = new System.Drawing.Size(78, 25);
             this.serverlabel.TabIndex = 7;
@@ -126,7 +138,7 @@
             this.vpnAdptrBtn2.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vpnAdptrBtn2.ForeColor = System.Drawing.Color.Black;
             this.vpnAdptrBtn2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.vpnAdptrBtn2.Location = new System.Drawing.Point(16, 349);
+            this.vpnAdptrBtn2.Location = new System.Drawing.Point(9, 337);
             this.vpnAdptrBtn2.Name = "vpnAdptrBtn2";
             this.vpnAdptrBtn2.Size = new System.Drawing.Size(202, 30);
             this.vpnAdptrBtn2.TabIndex = 4;
@@ -148,7 +160,7 @@
             this.enableHyperVbtn.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enableHyperVbtn.ForeColor = System.Drawing.Color.Black;
             this.enableHyperVbtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.enableHyperVbtn.Location = new System.Drawing.Point(16, 240);
+            this.enableHyperVbtn.Location = new System.Drawing.Point(9, 228);
             this.enableHyperVbtn.Name = "enableHyperVbtn";
             this.enableHyperVbtn.Size = new System.Drawing.Size(202, 30);
             this.enableHyperVbtn.TabIndex = 0;
@@ -179,7 +191,7 @@
             this.updateServerIpButton.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateServerIpButton.ForeColor = System.Drawing.Color.Black;
             this.updateServerIpButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.updateServerIpButton.Location = new System.Drawing.Point(16, 385);
+            this.updateServerIpButton.Location = new System.Drawing.Point(9, 373);
             this.updateServerIpButton.Name = "updateServerIpButton";
             this.updateServerIpButton.Size = new System.Drawing.Size(202, 30);
             this.updateServerIpButton.TabIndex = 5;
@@ -198,7 +210,7 @@
             this.terminalLbl.BackColor = System.Drawing.Color.Transparent;
             this.terminalLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.terminalLbl.ForeColor = System.Drawing.Color.Crimson;
-            this.terminalLbl.Location = new System.Drawing.Point(350, 212);
+            this.terminalLbl.Location = new System.Drawing.Point(343, 200);
             this.terminalLbl.Name = "terminalLbl";
             this.terminalLbl.Size = new System.Drawing.Size(105, 25);
             this.terminalLbl.TabIndex = 20;
@@ -213,7 +225,7 @@
             this.renameBtn.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.renameBtn.ForeColor = System.Drawing.Color.Black;
             this.renameBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.renameBtn.Location = new System.Drawing.Point(350, 240);
+            this.renameBtn.Location = new System.Drawing.Point(343, 228);
             this.renameBtn.Name = "renameBtn";
             this.renameBtn.Size = new System.Drawing.Size(202, 30);
             this.renameBtn.TabIndex = 21;
@@ -235,7 +247,7 @@
             this.updatePgsLoaderBtn.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updatePgsLoaderBtn.ForeColor = System.Drawing.Color.Black;
             this.updatePgsLoaderBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.updatePgsLoaderBtn.Location = new System.Drawing.Point(350, 276);
+            this.updatePgsLoaderBtn.Location = new System.Drawing.Point(343, 264);
             this.updatePgsLoaderBtn.Name = "updatePgsLoaderBtn";
             this.updatePgsLoaderBtn.Size = new System.Drawing.Size(202, 30);
             this.updatePgsLoaderBtn.TabIndex = 22;
@@ -257,7 +269,7 @@
             this.openhwFileBtn.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.openhwFileBtn.ForeColor = System.Drawing.Color.Black;
             this.openhwFileBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.openhwFileBtn.Location = new System.Drawing.Point(350, 313);
+            this.openhwFileBtn.Location = new System.Drawing.Point(343, 301);
             this.openhwFileBtn.Name = "openhwFileBtn";
             this.openhwFileBtn.Size = new System.Drawing.Size(202, 30);
             this.openhwFileBtn.TabIndex = 25;
@@ -279,7 +291,7 @@
             this.testPrinterBtn.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.testPrinterBtn.ForeColor = System.Drawing.Color.Black;
             this.testPrinterBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.testPrinterBtn.Location = new System.Drawing.Point(350, 421);
+            this.testPrinterBtn.Location = new System.Drawing.Point(343, 409);
             this.testPrinterBtn.Name = "testPrinterBtn";
             this.testPrinterBtn.Size = new System.Drawing.Size(202, 30);
             this.testPrinterBtn.TabIndex = 23;
@@ -301,7 +313,7 @@
             this.testBvBtn.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.testBvBtn.ForeColor = System.Drawing.Color.Black;
             this.testBvBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.testBvBtn.Location = new System.Drawing.Point(350, 385);
+            this.testBvBtn.Location = new System.Drawing.Point(343, 373);
             this.testBvBtn.Name = "testBvBtn";
             this.testBvBtn.Size = new System.Drawing.Size(202, 30);
             this.testBvBtn.TabIndex = 24;
@@ -323,7 +335,7 @@
             this.copyLogsBtn.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.copyLogsBtn.ForeColor = System.Drawing.Color.Black;
             this.copyLogsBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.copyLogsBtn.Location = new System.Drawing.Point(350, 349);
+            this.copyLogsBtn.Location = new System.Drawing.Point(343, 337);
             this.copyLogsBtn.Name = "copyLogsBtn";
             this.copyLogsBtn.Size = new System.Drawing.Size(202, 30);
             this.copyLogsBtn.TabIndex = 26;
@@ -345,7 +357,7 @@
             this.downldBtn.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.downldBtn.ForeColor = System.Drawing.Color.Black;
             this.downldBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.downldBtn.Location = new System.Drawing.Point(350, 457);
+            this.downldBtn.Location = new System.Drawing.Point(343, 445);
             this.downldBtn.Name = "downldBtn";
             this.downldBtn.Size = new System.Drawing.Size(202, 30);
             this.downldBtn.TabIndex = 27;
@@ -359,7 +371,7 @@
             // 
             this.progressBar.BackColor = System.Drawing.Color.CadetBlue;
             this.progressBar.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.progressBar.Location = new System.Drawing.Point(12, 616);
+            this.progressBar.Location = new System.Drawing.Point(6, 602);
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(427, 23);
             this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
@@ -369,7 +381,7 @@
             // 
             this.progPercentLbl.AutoSize = true;
             this.progPercentLbl.ForeColor = System.Drawing.Color.SteelBlue;
-            this.progPercentLbl.Location = new System.Drawing.Point(12, 580);
+            this.progPercentLbl.Location = new System.Drawing.Point(5, 566);
             this.progPercentLbl.Name = "progPercentLbl";
             this.progPercentLbl.Size = new System.Drawing.Size(165, 23);
             this.progPercentLbl.TabIndex = 32;
@@ -380,7 +392,7 @@
             this.hypervLbl.AutoSize = true;
             this.hypervLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hypervLbl.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.hypervLbl.Location = new System.Drawing.Point(18, 180);
+            this.hypervLbl.Location = new System.Drawing.Point(11, 168);
             this.hypervLbl.Name = "hypervLbl";
             this.hypervLbl.Size = new System.Drawing.Size(78, 20);
             this.hypervLbl.TabIndex = 33;
@@ -391,7 +403,7 @@
             this.serveripLbl.AutoSize = true;
             this.serveripLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.serveripLbl.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.serveripLbl.Location = new System.Drawing.Point(342, 150);
+            this.serveripLbl.Location = new System.Drawing.Point(335, 138);
             this.serveripLbl.Name = "serveripLbl";
             this.serveripLbl.Size = new System.Drawing.Size(83, 20);
             this.serveripLbl.TabIndex = 34;
@@ -402,7 +414,7 @@
             this.vpnLbl.AutoSize = true;
             this.vpnLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vpnLbl.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.vpnLbl.Location = new System.Drawing.Point(342, 120);
+            this.vpnLbl.Location = new System.Drawing.Point(335, 108);
             this.vpnLbl.Name = "vpnLbl";
             this.vpnLbl.Size = new System.Drawing.Size(52, 20);
             this.vpnLbl.TabIndex = 35;
@@ -413,7 +425,7 @@
             this.compnameLbl.AutoSize = true;
             this.compnameLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.compnameLbl.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.compnameLbl.Location = new System.Drawing.Point(18, 120);
+            this.compnameLbl.Location = new System.Drawing.Point(11, 108);
             this.compnameLbl.Name = "compnameLbl";
             this.compnameLbl.Size = new System.Drawing.Size(134, 20);
             this.compnameLbl.TabIndex = 38;
@@ -424,7 +436,7 @@
             this.ipaddrLbl.AutoSize = true;
             this.ipaddrLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ipaddrLbl.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.ipaddrLbl.Location = new System.Drawing.Point(18, 150);
+            this.ipaddrLbl.Location = new System.Drawing.Point(11, 138);
             this.ipaddrLbl.Name = "ipaddrLbl";
             this.ipaddrLbl.Size = new System.Drawing.Size(92, 20);
             this.ipaddrLbl.TabIndex = 39;
@@ -435,7 +447,7 @@
             this.dxdiagLbl.AutoSize = true;
             this.dxdiagLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dxdiagLbl.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.dxdiagLbl.Location = new System.Drawing.Point(18, 60);
+            this.dxdiagLbl.Location = new System.Drawing.Point(11, 48);
             this.dxdiagLbl.Name = "dxdiagLbl";
             this.dxdiagLbl.Size = new System.Drawing.Size(65, 20);
             this.dxdiagLbl.TabIndex = 41;
@@ -446,7 +458,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(402, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(425, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(138, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -462,7 +474,7 @@
             this.quitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.quitBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quitBtn.ForeColor = System.Drawing.Color.Teal;
-            this.quitBtn.Location = new System.Drawing.Point(504, 519);
+            this.quitBtn.Location = new System.Drawing.Point(527, 510);
             this.quitBtn.Name = "quitBtn";
             this.quitBtn.Padding = new System.Windows.Forms.Padding(100);
             this.quitBtn.Size = new System.Drawing.Size(36, 29);
@@ -482,7 +494,7 @@
             this.logoffButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logoffButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoffButton.ForeColor = System.Drawing.Color.Teal;
-            this.logoffButton.Location = new System.Drawing.Point(504, 589);
+            this.logoffButton.Location = new System.Drawing.Point(527, 596);
             this.logoffButton.Name = "logoffButton";
             this.logoffButton.Size = new System.Drawing.Size(36, 29);
             this.logoffButton.TabIndex = 6;
@@ -500,7 +512,7 @@
             this.restartButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.restartButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.restartButton.ForeColor = System.Drawing.Color.Teal;
-            this.restartButton.Location = new System.Drawing.Point(504, 554);
+            this.restartButton.Location = new System.Drawing.Point(527, 554);
             this.restartButton.Name = "restartButton";
             this.restartButton.Size = new System.Drawing.Size(36, 29);
             this.restartButton.TabIndex = 7;
@@ -515,7 +527,7 @@
             this.graphicsLbl.AutoSize = true;
             this.graphicsLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.graphicsLbl.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.graphicsLbl.Location = new System.Drawing.Point(18, 90);
+            this.graphicsLbl.Location = new System.Drawing.Point(11, 78);
             this.graphicsLbl.Name = "graphicsLbl";
             this.graphicsLbl.Size = new System.Drawing.Size(80, 20);
             this.graphicsLbl.TabIndex = 44;
@@ -526,7 +538,7 @@
             this.billAcptrLbl.AutoSize = true;
             this.billAcptrLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.billAcptrLbl.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.billAcptrLbl.Location = new System.Drawing.Point(342, 90);
+            this.billAcptrLbl.Location = new System.Drawing.Point(335, 78);
             this.billAcptrLbl.Name = "billAcptrLbl";
             this.billAcptrLbl.Size = new System.Drawing.Size(107, 20);
             this.billAcptrLbl.TabIndex = 46;
@@ -537,7 +549,7 @@
             this.prntLbl.AutoSize = true;
             this.prntLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prntLbl.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.prntLbl.Location = new System.Drawing.Point(342, 60);
+            this.prntLbl.Location = new System.Drawing.Point(335, 48);
             this.prntLbl.Name = "prntLbl";
             this.prntLbl.Size = new System.Drawing.Size(68, 20);
             this.prntLbl.TabIndex = 47;
@@ -551,7 +563,7 @@
             this.serverLogsBtn.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.serverLogsBtn.ForeColor = System.Drawing.Color.Black;
             this.serverLogsBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.serverLogsBtn.Location = new System.Drawing.Point(16, 421);
+            this.serverLogsBtn.Location = new System.Drawing.Point(9, 409);
             this.serverLogsBtn.Name = "serverLogsBtn";
             this.serverLogsBtn.Size = new System.Drawing.Size(202, 30);
             this.serverLogsBtn.TabIndex = 48;
@@ -573,7 +585,7 @@
             this.deployerLogBtn.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deployerLogBtn.ForeColor = System.Drawing.Color.Black;
             this.deployerLogBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.deployerLogBtn.Location = new System.Drawing.Point(16, 457);
+            this.deployerLogBtn.Location = new System.Drawing.Point(9, 445);
             this.deployerLogBtn.Name = "deployerLogBtn";
             this.deployerLogBtn.Size = new System.Drawing.Size(202, 30);
             this.deployerLogBtn.TabIndex = 49;
@@ -583,6 +595,144 @@
             this.deployerLogBtn.UseVisualStyleBackColor = false;
             this.deployerLogBtn.Click += new System.EventHandler(this.deployerLogBtn_Click);
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.Check);
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(583, 671);
+            this.tabControl1.TabIndex = 50;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.tabPage1.Controls.Add(this.progressBar);
+            this.tabPage1.Controls.Add(this.logoffButton);
+            this.tabPage1.Controls.Add(this.quitBtn);
+            this.tabPage1.Controls.Add(this.restartButton);
+            this.tabPage1.Controls.Add(this.progPercentLbl);
+            this.tabPage1.Controls.Add(this.deployerLogBtn);
+            this.tabPage1.Controls.Add(this.pictureBox1);
+            this.tabPage1.Controls.Add(this.serverLogsBtn);
+            this.tabPage1.Controls.Add(this.prntLbl);
+            this.tabPage1.Controls.Add(this.createvmButton);
+            this.tabPage1.Controls.Add(this.billAcptrLbl);
+            this.tabPage1.Controls.Add(this.createswButton);
+            this.tabPage1.Controls.Add(this.graphicsLbl);
+            this.tabPage1.Controls.Add(this.serverlabel);
+            this.tabPage1.Controls.Add(this.dxdiagLbl);
+            this.tabPage1.Controls.Add(this.vpnAdptrBtn2);
+            this.tabPage1.Controls.Add(this.ipaddrLbl);
+            this.tabPage1.Controls.Add(this.enableHyperVbtn);
+            this.tabPage1.Controls.Add(this.compnameLbl);
+            this.tabPage1.Controls.Add(this.updateServerIpButton);
+            this.tabPage1.Controls.Add(this.vpnLbl);
+            this.tabPage1.Controls.Add(this.terminalLbl);
+            this.tabPage1.Controls.Add(this.serveripLbl);
+            this.tabPage1.Controls.Add(this.renameBtn);
+            this.tabPage1.Controls.Add(this.hypervLbl);
+            this.tabPage1.Controls.Add(this.updatePgsLoaderBtn);
+            this.tabPage1.Controls.Add(this.testPrinterBtn);
+            this.tabPage1.Controls.Add(this.testBvBtn);
+            this.tabPage1.Controls.Add(this.downldBtn);
+            this.tabPage1.Controls.Add(this.openhwFileBtn);
+            this.tabPage1.Controls.Add(this.copyLogsBtn);
+            this.tabPage1.Location = new System.Drawing.Point(4, 32);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(575, 635);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "HomePage";
+            // 
+            // Check
+            // 
+            this.Check.Controls.Add(this.labelStatus);
+            this.Check.Controls.Add(this.listBoxRequirements);
+            this.Check.Controls.Add(this.label1);
+            this.Check.Controls.Add(this.buttonCheckServer);
+            this.Check.Controls.Add(this.dropDownVendor);
+            this.Check.Controls.Add(this.labelCompatibilityTitle);
+            this.Check.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Check.Location = new System.Drawing.Point(4, 32);
+            this.Check.Margin = new System.Windows.Forms.Padding(0);
+            this.Check.Name = "Check";
+            this.Check.Padding = new System.Windows.Forms.Padding(3);
+            this.Check.Size = new System.Drawing.Size(575, 635);
+            this.Check.TabIndex = 1;
+            this.Check.Text = "Compatibility";
+            this.Check.UseVisualStyleBackColor = true;
+            this.Check.Click += new System.EventHandler(this.Check_Click);
+            // 
+            // listBoxRequirements
+            // 
+            this.listBoxRequirements.FormattingEnabled = true;
+            this.listBoxRequirements.Location = new System.Drawing.Point(19, 309);
+            this.listBoxRequirements.Name = "listBoxRequirements";
+            this.listBoxRequirements.Size = new System.Drawing.Size(513, 193);
+            this.listBoxRequirements.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(42, 118);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 25);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Vendor";
+            // 
+            // buttonCheckServer
+            // 
+            this.buttonCheckServer.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonCheckServer.FlatAppearance.BorderSize = 0;
+            this.buttonCheckServer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCheckServer.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCheckServer.ForeColor = System.Drawing.Color.Black;
+            this.buttonCheckServer.Location = new System.Drawing.Point(296, 115);
+            this.buttonCheckServer.Name = "buttonCheckServer";
+            this.buttonCheckServer.Size = new System.Drawing.Size(166, 40);
+            this.buttonCheckServer.TabIndex = 3;
+            this.buttonCheckServer.Text = "Check";
+            this.buttonCheckServer.UseVisualStyleBackColor = false;
+            this.buttonCheckServer.Click += new System.EventHandler(this.checkCompatiability);
+            this.buttonCheckServer.MouseEnter += new System.EventHandler(this.buttonCheckServer_MouseEnter_1);
+            this.buttonCheckServer.MouseLeave += new System.EventHandler(this.buttonCheckServer_MouseLeave);
+            // 
+            // dropDownVendor
+            // 
+            this.dropDownVendor.FormattingEnabled = true;
+            this.dropDownVendor.Items.AddRange(new object[] {
+            "V1",
+            "V2"});
+            this.dropDownVendor.Location = new System.Drawing.Point(137, 115);
+            this.dropDownVendor.Name = "dropDownVendor";
+            this.dropDownVendor.Size = new System.Drawing.Size(121, 33);
+            this.dropDownVendor.TabIndex = 2;
+            this.dropDownVendor.SelectedIndexChanged += new System.EventHandler(this.addRequirements);
+            // 
+            // labelCompatibilityTitle
+            // 
+            this.labelCompatibilityTitle.AutoSize = true;
+            this.labelCompatibilityTitle.ForeColor = System.Drawing.Color.Black;
+            this.labelCompatibilityTitle.Location = new System.Drawing.Point(14, 16);
+            this.labelCompatibilityTitle.Name = "labelCompatibilityTitle";
+            this.labelCompatibilityTitle.Size = new System.Drawing.Size(448, 25);
+            this.labelCompatibilityTitle.TabIndex = 0;
+            this.labelCompatibilityTitle.Text = "Check if the machine is capable of hosting a Server";
+            // 
+            // labelStatus
+            // 
+            this.labelStatus.AutoSize = true;
+            this.labelStatus.ForeColor = System.Drawing.Color.Black;
+            this.labelStatus.Location = new System.Drawing.Point(29, 541);
+            this.labelStatus.Name = "labelStatus";
+            this.labelStatus.Size = new System.Drawing.Size(0, 25);
+            this.labelStatus.TabIndex = 6;
+            this.labelStatus.UseMnemonic = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -590,39 +740,9 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(572, 651);
-            this.Controls.Add(this.deployerLogBtn);
-            this.Controls.Add(this.serverLogsBtn);
-            this.Controls.Add(this.prntLbl);
-            this.Controls.Add(this.billAcptrLbl);
-            this.Controls.Add(this.graphicsLbl);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.dxdiagLbl);
-            this.Controls.Add(this.ipaddrLbl);
-            this.Controls.Add(this.compnameLbl);
-            this.Controls.Add(this.vpnLbl);
-            this.Controls.Add(this.serveripLbl);
-            this.Controls.Add(this.hypervLbl);
-            this.Controls.Add(this.progPercentLbl);
-            this.Controls.Add(this.progressBar);
-            this.Controls.Add(this.downldBtn);
-            this.Controls.Add(this.copyLogsBtn);
-            this.Controls.Add(this.openhwFileBtn);
-            this.Controls.Add(this.testBvBtn);
-            this.Controls.Add(this.testPrinterBtn);
-            this.Controls.Add(this.updatePgsLoaderBtn);
-            this.Controls.Add(this.renameBtn);
-            this.Controls.Add(this.terminalLbl);
-            this.Controls.Add(this.updateServerIpButton);
+            this.ClientSize = new System.Drawing.Size(582, 669);
             this.Controls.Add(this.infoLbl);
-            this.Controls.Add(this.quitBtn);
-            this.Controls.Add(this.enableHyperVbtn);
-            this.Controls.Add(this.vpnAdptrBtn2);
-            this.Controls.Add(this.serverlabel);
-            this.Controls.Add(this.createswButton);
-            this.Controls.Add(this.logoffButton);
-            this.Controls.Add(this.createvmButton);
-            this.Controls.Add(this.restartButton);
+            this.Controls.Add(this.tabControl1);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -633,6 +753,11 @@
             this.Text = "Tech Support Tools";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.Check.ResumeLayout(false);
+            this.Check.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -672,6 +797,15 @@
         private System.Windows.Forms.Label prntLbl;
         private System.Windows.Forms.Button serverLogsBtn;
         private System.Windows.Forms.Button deployerLogBtn;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage Check;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Label labelCompatibilityTitle;
+        private System.Windows.Forms.ComboBox dropDownVendor;
+        private System.Windows.Forms.Button buttonCheckServer;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckedListBox listBoxRequirements;
+        private System.Windows.Forms.Label labelStatus;
         //private System.Windows.Forms.Label label3;
     }
 }

@@ -61,19 +61,25 @@
             this.prntLbl = new System.Windows.Forms.Label();
             this.serverLogsBtn = new System.Windows.Forms.Button();
             this.deployerLogBtn = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabDownload = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.Check = new System.Windows.Forms.TabPage();
+            this.labelStatus = new System.Windows.Forms.Label();
             this.listBoxRequirements = new System.Windows.Forms.CheckedListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonCheckServer = new System.Windows.Forms.Button();
             this.dropDownVendor = new System.Windows.Forms.ComboBox();
             this.labelCompatibilityTitle = new System.Windows.Forms.Label();
-            this.labelStatus = new System.Windows.Forms.Label();
+            this.DownloadPackagaes = new System.Windows.Forms.TabPage();
+            this.btnDownload = new System.Windows.Forms.Button();
+            this.listBoxProducts = new System.Windows.Forms.CheckedListBox();
+            this.fetchJson = new System.Windows.Forms.Button();
+            this.comboBoxMarkets = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tabControl1.SuspendLayout();
+            this.tabDownload.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.Check.SuspendLayout();
+            this.DownloadPackagaes.SuspendLayout();
             this.SuspendLayout();
             // 
             // createvmButton
@@ -178,7 +184,7 @@
             this.infoLbl.AutoSize = true;
             this.infoLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.infoLbl.ForeColor = System.Drawing.Color.DarkRed;
-            this.infoLbl.Location = new System.Drawing.Point(18, 456);
+            this.infoLbl.Location = new System.Drawing.Point(11, 489);
             this.infoLbl.Name = "infoLbl";
             this.infoLbl.Size = new System.Drawing.Size(0, 21);
             this.infoLbl.TabIndex = 19;
@@ -595,15 +601,16 @@
             this.deployerLogBtn.UseVisualStyleBackColor = false;
             this.deployerLogBtn.Click += new System.EventHandler(this.deployerLogBtn_Click);
             // 
-            // tabControl1
+            // tabDownload
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.Check);
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(583, 671);
-            this.tabControl1.TabIndex = 50;
+            this.tabDownload.Controls.Add(this.tabPage1);
+            this.tabDownload.Controls.Add(this.Check);
+            this.tabDownload.Controls.Add(this.DownloadPackagaes);
+            this.tabDownload.Location = new System.Drawing.Point(0, 0);
+            this.tabDownload.Name = "tabDownload";
+            this.tabDownload.SelectedIndex = 0;
+            this.tabDownload.Size = new System.Drawing.Size(583, 671);
+            this.tabDownload.TabIndex = 50;
             // 
             // tabPage1
             // 
@@ -611,6 +618,7 @@
             this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.tabPage1.Controls.Add(this.progressBar);
             this.tabPage1.Controls.Add(this.logoffButton);
+            this.tabPage1.Controls.Add(this.infoLbl);
             this.tabPage1.Controls.Add(this.quitBtn);
             this.tabPage1.Controls.Add(this.restartButton);
             this.tabPage1.Controls.Add(this.progPercentLbl);
@@ -665,6 +673,16 @@
             this.Check.Text = "Compatibility";
             this.Check.UseVisualStyleBackColor = true;
             this.Check.Click += new System.EventHandler(this.Check_Click);
+            // 
+            // labelStatus
+            // 
+            this.labelStatus.AutoSize = true;
+            this.labelStatus.ForeColor = System.Drawing.Color.Black;
+            this.labelStatus.Location = new System.Drawing.Point(29, 541);
+            this.labelStatus.Name = "labelStatus";
+            this.labelStatus.Size = new System.Drawing.Size(0, 25);
+            this.labelStatus.TabIndex = 6;
+            this.labelStatus.UseMnemonic = false;
             // 
             // listBoxRequirements
             // 
@@ -723,15 +741,76 @@
             this.labelCompatibilityTitle.TabIndex = 0;
             this.labelCompatibilityTitle.Text = "Check if the machine is capable of hosting a Server";
             // 
-            // labelStatus
+            // DownloadPackagaes
             // 
-            this.labelStatus.AutoSize = true;
-            this.labelStatus.ForeColor = System.Drawing.Color.Black;
-            this.labelStatus.Location = new System.Drawing.Point(29, 541);
-            this.labelStatus.Name = "labelStatus";
-            this.labelStatus.Size = new System.Drawing.Size(0, 25);
-            this.labelStatus.TabIndex = 6;
-            this.labelStatus.UseMnemonic = false;
+            this.DownloadPackagaes.Controls.Add(this.btnDownload);
+            this.DownloadPackagaes.Controls.Add(this.listBoxProducts);
+            this.DownloadPackagaes.Controls.Add(this.fetchJson);
+            this.DownloadPackagaes.Controls.Add(this.comboBoxMarkets);
+            this.DownloadPackagaes.Location = new System.Drawing.Point(4, 32);
+            this.DownloadPackagaes.Name = "DownloadPackagaes";
+            this.DownloadPackagaes.Padding = new System.Windows.Forms.Padding(3);
+            this.DownloadPackagaes.Size = new System.Drawing.Size(575, 635);
+            this.DownloadPackagaes.TabIndex = 2;
+            this.DownloadPackagaes.Text = "Download Packages";
+            this.DownloadPackagaes.UseVisualStyleBackColor = true;
+            // 
+            // btnDownload
+            // 
+            this.btnDownload.BackColor = System.Drawing.SystemColors.Control;
+            this.btnDownload.Enabled = false;
+            this.btnDownload.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.btnDownload.FlatAppearance.BorderSize = 0;
+            this.btnDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDownload.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDownload.ForeColor = System.Drawing.Color.Black;
+            this.btnDownload.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnDownload.Location = new System.Drawing.Point(22, 487);
+            this.btnDownload.Name = "btnDownload";
+            this.btnDownload.Size = new System.Drawing.Size(515, 30);
+            this.btnDownload.TabIndex = 25;
+            this.btnDownload.TabStop = false;
+            this.btnDownload.Text = "Download";
+            this.btnDownload.UseVisualStyleBackColor = false;
+            this.btnDownload.Click += new System.EventHandler(this.btnDownload_Click);
+            // 
+            // listBoxProducts
+            // 
+            this.listBoxProducts.CheckOnClick = true;
+            this.listBoxProducts.FormattingEnabled = true;
+            this.listBoxProducts.Location = new System.Drawing.Point(22, 204);
+            this.listBoxProducts.Name = "listBoxProducts";
+            this.listBoxProducts.Size = new System.Drawing.Size(515, 254);
+            this.listBoxProducts.TabIndex = 24;
+            this.listBoxProducts.SelectedIndexChanged += new System.EventHandler(this.listBoxProducts_SelectedIndexChanged);
+            // 
+            // fetchJson
+            // 
+            this.fetchJson.BackColor = System.Drawing.SystemColors.Control;
+            this.fetchJson.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.fetchJson.FlatAppearance.BorderSize = 0;
+            this.fetchJson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.fetchJson.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fetchJson.ForeColor = System.Drawing.Color.Black;
+            this.fetchJson.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.fetchJson.Location = new System.Drawing.Point(310, 148);
+            this.fetchJson.Name = "fetchJson";
+            this.fetchJson.Size = new System.Drawing.Size(202, 30);
+            this.fetchJson.TabIndex = 22;
+            this.fetchJson.TabStop = false;
+            this.fetchJson.Text = "Fetch JSON";
+            this.fetchJson.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.fetchJson.UseVisualStyleBackColor = false;
+            this.fetchJson.MouseClick += new System.Windows.Forms.MouseEventHandler(this.fetchJson_MouseClick);
+            // 
+            // comboBoxMarkets
+            // 
+            this.comboBoxMarkets.FormattingEnabled = true;
+            this.comboBoxMarkets.Location = new System.Drawing.Point(22, 147);
+            this.comboBoxMarkets.Name = "comboBoxMarkets";
+            this.comboBoxMarkets.Size = new System.Drawing.Size(193, 31);
+            this.comboBoxMarkets.TabIndex = 0;
+            this.comboBoxMarkets.SelectedIndexChanged += new System.EventHandler(this.comboBoxMarkets_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -741,8 +820,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(582, 669);
-            this.Controls.Add(this.infoLbl);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabDownload);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -753,13 +831,13 @@
             this.Text = "Tech Support Tools";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tabControl1.ResumeLayout(false);
+            this.tabDownload.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.Check.ResumeLayout(false);
             this.Check.PerformLayout();
+            this.DownloadPackagaes.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -797,7 +875,7 @@
         private System.Windows.Forms.Label prntLbl;
         private System.Windows.Forms.Button serverLogsBtn;
         private System.Windows.Forms.Button deployerLogBtn;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabDownload;
         private System.Windows.Forms.TabPage Check;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label labelCompatibilityTitle;
@@ -806,6 +884,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckedListBox listBoxRequirements;
         private System.Windows.Forms.Label labelStatus;
+        private System.Windows.Forms.TabPage DownloadPackagaes;
+        private System.Windows.Forms.ComboBox comboBoxMarkets;
+        private System.Windows.Forms.Button fetchJson;
+        private System.Windows.Forms.CheckedListBox listBoxProducts;
+        private System.Windows.Forms.Button btnDownload;
         //private System.Windows.Forms.Label label3;
     }
 }

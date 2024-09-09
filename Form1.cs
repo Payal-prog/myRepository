@@ -37,6 +37,11 @@ using Microsoft.HyperV.PowerShell;
 using Renci.SshNet.Sftp;
 using Microsoft.Web.Administration;
 using System.Xml.Linq;
+using System.Net.Http;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.Net.Http.Headers;
+using File = System.IO.File;
 
 
 namespace TSWindowsFormsApp1
@@ -307,16 +312,24 @@ namespace TSWindowsFormsApp1
         }
 
         //fetches HW from hardware.xml file and updates the labels
+
+        // HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\
+        // System.IO.File.Exists(@"C:\\Game\\config\\hardware.xml")
+
         private void fetchHwType() 
         {
             deviceTypeArr = new string[10];
             typeArr = new string[10];
 
             XmlDocument xmlDoc = new XmlDocument();
+            string Market = System.IO.File.Exists(@"C:\\Game\\config\\hardware.xml") ? "V2" : "V1";
 
-            if(System.IO.File.Exists(@"C:\\Game\\config\\hardware.xml"))
+            string gameFolder = (Market == "V2") ? "Game" : "Sweeps";
+            string pathToHardwareXml = "C://" + gameFolder + "//config//hardware.xml";
+
+            if(System.IO.File.Exists(pathToHardwareXml))
             {
-                xmlDoc.Load(@"C:\\Game\\config\\hardware.xml");
+                xmlDoc.Load(pathToHardwareXml);
                 XmlElement root = xmlDoc.DocumentElement;
                 XmlNodeList portNodes = root.SelectNodes("//PORT");
 
@@ -445,18 +458,22 @@ namespace TSWindowsFormsApp1
                 prntLbl.Text = "Printer : File not found";
             }
         }
-       
+
         /****************************CHANGE FONT AND STYLE FUNCTIONS**************************/
 
         private void changeToOriginalFont(System.Windows.Forms.Button button)
         {
             button.Font = originalFont;
         }
-        
+
         private void changeToEnlargedFont(System.Windows.Forms.Button button)
         {
             button.Font = new Font(originalFont.FontFamily, originalFont.Size + 1, originalFont.Style);
         }
+
+
+
+
 
         public static void ApplyCustomStyle(System.Windows.Forms.Button button)
         {
@@ -536,9 +553,9 @@ namespace TSWindowsFormsApp1
 
         private void updateServerIpButton_MouseLeave(object sender, EventArgs e)
         {
-            changeToOriginalFont(updateServerIpButton);
+
         }
-        
+
         private void renameBtn_MouseEnter(object sender, EventArgs e)
         {
             changeToEnlargedFont(renameBtn);
@@ -1296,7 +1313,11 @@ namespace TSWindowsFormsApp1
             ApplyCustomStyle(openhwFileBtn);
             openhwFileBtn.BackColor = SystemColors.ControlDark;
 
-            string filePath = @"C:\Game\config\hardware.xml";
+            string Market = System.IO.File.Exists(@"C:\\Game\\config\\hardware.xml") ? "V2" : "V1";
+            string gameFolder = (Market == "V2") ? "Game" : "Sweeps";
+            string filePath = "C://" + gameFolder + "//config//hardware.xml";
+
+            
 
             if(System.IO.File.Exists(filePath))
             {
@@ -1311,7 +1332,7 @@ namespace TSWindowsFormsApp1
             }
             else
             {
-                MessageBox.Show("C:\\Game\\config\\hardware.xml file not found. ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(filePath + "file not found. ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             this.ActiveControl = null;
@@ -1380,8 +1401,12 @@ namespace TSWindowsFormsApp1
             testBvBtn.BackColor = SystemColors.ControlDark;
 
             infoLbl.Text = "Testing Bill Acceptor...";
+            string Market = System.IO.File.Exists(@"C:\\Game\\config\\hardware.xml") ? "V2" : "V1";
 
-            string filePath = @"C:\Game\config\hardware.xml";
+            string gameFolder = (Market == "V2") ? "Game" : "Sweeps";
+            string filePath = "C://" + gameFolder + "//config//hardware.xml";
+
+            
 
             if (System.IO.File.Exists(filePath))
             {
@@ -1435,17 +1460,42 @@ namespace TSWindowsFormsApp1
 
                         case "ID003":
                             {
-                                if (System.IO.File.Exists(@"Tools\BV_JCM\ID-003_Basic_Driver_v1.6\ID003 Basic Driver v1.6.exe"))
+                                string promptMessage = "Enter :-\n\n1 to run ID-003 Basic Driver v1.6\n2 to run ID-003 Basic Driver v201 (For Kiosk)";
+                                string choice = Interaction.InputBox(promptMessage, "Choose a simulation tool", "").Trim();
+
+                                if (choice == "1")
                                 {
-                                    infoLbl.Text += "\nRunning ID003 Utility....";
-                                    Process.Start(@"Tools\BV_JCM\ID-003_Basic_Driver_v1.6\ID003 Basic Driver v1.6.exe");
+                                    if (System.IO.File.Exists(@"Tools\BV_JCM\ID-003_Basic_Driver_v1.6\ID003 Basic Driver v1.6.exe"))
+                                    {
+                                        infoLbl.Text += "\nRunning ID003 Utility....";
+                                        Process.Start(@"Tools\BV_JCM\ID-003_Basic_Driver_v1.6\ID003 Basic Driver v1.6.exe");
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Error: ID003 Bill Acceptor drivers/application not found!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    }
+                                    infoLbl.Text = "";
+                                    break;
+                                }
+                                else if (choice == "2")
+                                {
+                                    if (System.IO.File.Exists(@"Tools\BV_JCM\ID-003 Basic Driver v201\ID003 Basic Driver v201.exe"))
+                                    {
+                                        infoLbl.Text += "\nRunning ID003 Utility....";
+                                        Process.Start(@"Tools\BV_JCM\ID-003 Basic Driver v201\ID003 Basic Driver v201.exe");
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Error: ID003 Bill Acceptor drivers/application not found!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    }
+                                    infoLbl.Text = "";
+                                    break;
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Error: ID003 Bill Acceptor drivers/application not found!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    MessageBox.Show("Invalid Choice!! Returning to the main page.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    break;
                                 }
-                                infoLbl.Text = "";
-                                break;
                             }
 
                         default:
@@ -1464,7 +1514,7 @@ namespace TSWindowsFormsApp1
             }
             else
             {
-                MessageBox.Show("C:\\Game\\config\\hardware.xml file not found. ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(filePath+ "file not found. ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
@@ -2177,8 +2227,10 @@ namespace TSWindowsFormsApp1
             }
             catch (ManagementException e)
             {
+                string Message = e.Message;
                 flag = 2;
             }
+            
             return flag;
         }
 
@@ -2345,7 +2397,7 @@ namespace TSWindowsFormsApp1
         {
             try
             {
-                string scriptPath1 = @"Scripts\CheckApplicationInit.ps1";
+                string scriptPath1 = @"Scripts\CheckIISApplicationInit.ps1";
                 Process process1 = new Process();
                 ProcessStartInfo processInfo1 = new ProcessStartInfo();
                 processInfo1.FileName = "powershell.exe";
@@ -2394,26 +2446,212 @@ namespace TSWindowsFormsApp1
 
         private bool IsRuntimeInstalled(string version)
         {
-            string[] possibleKeys = {
-        $@"SOFTWARE\Classes\Installer\Dependencies\VC,redist.x64,amd64,{version}",
-        $@"SOFTWARE\Classes\Installer\Dependencies\VC,redist.x86,x86,{version}",
-        $@"SOFTWARE\Microsoft\VisualStudio\{version}"
-    };
+            string[] keys = {
+            @"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall",
+            @"SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall"
+        };
 
-            foreach (string keyPath in possibleKeys)
+            foreach (string keyPath in keys)
             {
                 using (RegistryKey key = Registry.LocalMachine.OpenSubKey(keyPath))
                 {
-                    if (key != null)
+                    if (key == null) continue;
+
+                    foreach (string subKeyName in key.GetSubKeyNames())
                     {
-                        // Check if the key exists or specific values that confirm installation
-                        return true;
+                        using (RegistryKey subKey = key.OpenSubKey(subKeyName))
+                        {
+                            if (subKey != null)
+                            {
+                                string displayName = subKey.GetValue("DisplayName") as string;
+                                string versionNumber = subKey.GetValue("DisplayVersion") as string;
+                                if (!string.IsNullOrEmpty(displayName) &&
+                                    !string.IsNullOrEmpty(versionNumber))
+                                {
+                                    if (IsMatchingRuntime(displayName, version))
+                                    {
+                                        return true;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
             return false;
         }
 
+        private bool IsMatchingRuntime(string displayName, string targetVersion)
+        {
+            if (displayName.IndexOf("Microsoft Visual C++", StringComparison.OrdinalIgnoreCase) >= 0)
+            {
+                if (targetVersion == "2015-2019")
+                {
+                    // The 2015-2019 runtimes often share a common redistributable name
+                    return displayName.IndexOf("2015-2019", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                           displayName.IndexOf("2017", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                           displayName.IndexOf("2019", StringComparison.OrdinalIgnoreCase) >= 0;
+                }
+                else
+                {
+                    return displayName.IndexOf(targetVersion, StringComparison.OrdinalIgnoreCase) >= 0;
+                }
+            }
+            return false;
+        }
+
+
+        /*********************  FETCH DOWNLOAD JSON  ************************/
+        
+        private async void FetchJson()
+        {
+            
+
+            string url = "https://api.jsonbin.io/v3/b/65a15cbb266cfc3fde76bfce";
+            string apikey = "$2a$10$m05lTBaGjnoT3Q5VsKgkHeIy6GyBFPDNGr4KKUmP3TxZwoGG4/gTe";
+
+            var data = await FetchJsonDataAsync(url, apikey);
+
+            
+
+            PopulateMarkets(data);
+        }
+
+        private async Task<dynamic> FetchJsonDataAsync(string url, string token)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Add("X-Access-Key", token);
+
+                HttpResponseMessage response = await client.GetAsync(url);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    string jsonData = await response.Content.ReadAsStringAsync();
+                    return JsonConvert.DeserializeObject<dynamic>(jsonData);
+                }
+                else
+                {
+                    MessageBox.Show($"Error: {response.StatusCode}");
+                    return null;
+                }
+            }
+        }
+
+        private void PopulateMarkets(dynamic data)
+        {
+            comboBoxMarkets.DisplayMember = "Product";
+            comboBoxMarkets.ValueMember = "Id";
+            comboBoxMarkets.DataSource = data.record[0].Markets;
+        }
+
+        private void comboBoxMarkets_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var selectedMarket = comboBoxMarkets.SelectedItem as dynamic;
+            if (selectedMarket != null)
+            {
+                listBoxProducts.Items.Clear();
+                string blockName = selectedMarket.BlockName;
+                var products = selectedMarket[blockName];
+
+                foreach (var product in products)
+                {
+                    listBoxProducts.Items.Add(product.Name);
+                }
+            }
+        }
+
+        private void fetchJson_MouseClick(object sender, MouseEventArgs e)
+        {
+            FetchJson();
+            
+        }
+
+        private void listBoxProducts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBoxProducts.CheckedItems.Count == 0)
+            {
+                btnDownload.Enabled = false;
+            }
+            else
+            {
+                btnDownload.Enabled = true;
+            }
+        }
+
+        private void btnDownload_Click(object sender, EventArgs e)
+        {
+            var selectedMarket = comboBoxMarkets.SelectedItem as dynamic;
+            var selectedProducts = listBoxProducts.SelectedItems;
+
+            if (selectedMarket != null && selectedProducts.Count > 0)
+            {
+                string blockName = selectedMarket.BlockName;
+                var products = selectedMarket[blockName];
+
+                foreach (var selectedItem in selectedProducts)
+                {
+                    foreach (var product in products)
+                    {
+                        if (product.Name == selectedItem.ToString())
+                        {
+                            string File = product.Name;
+                            string sourceLink = "https://pongstudios-my.sharepoint.com/:u:/p/sdadmin/" + product.Token + "?download=1";
+                            string destination = @"C:\Intel\" + product.FileName;
+
+                            
+                            string script = @"Set-Location 'C:\\Program Files\\Tech Support\\Tech Support Tools\\Scripts'; .\aria2c.exe -d 'C:/Intel' --log 'C:\Intel\Download-logs.log' '" + sourceLink + @"'";
+                            startDownload(script, File);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select at least one product.");
+            }
+        }
+
+        private void startDownload(string script, string FileName)
+        {
+            try
+            {
+                // Define the path to the PowerShell script file
+                string scriptFilePath = "C:/Intel/"+ FileName+".ps1";
+
+                // Write the PowerShell script content to the file
+                File.WriteAllText(scriptFilePath, script);
+
+                // Set up the process start information
+                ProcessStartInfo startInfo = new ProcessStartInfo
+                {
+                    FileName = "powershell.exe",
+                    Arguments = $"-ExecutionPolicy Bypass -File \"{scriptFilePath}\"",
+                    RedirectStandardOutput = true,
+                    RedirectStandardError = true,
+                    UseShellExecute = false,
+                    CreateNoWindow = true
+                };
+                // Start the PowerShell process
+                
+                Process p = new Process();
+                p.StartInfo = startInfo;
+                p.Start();
+                p.WaitForExit();
+
+                if (!string.IsNullOrEmpty(p.StandardError.ReadToEnd()))
+                {
+                    MessageBox.Show(p.StandardError.ReadToEnd().Trim(), "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                File.Delete(scriptFilePath);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+        }
     }
 }
 

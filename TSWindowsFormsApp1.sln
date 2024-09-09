@@ -5,7 +5,7 @@ VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSWindowsFormsApp1", "TSWindowsFormsApp1.csproj", "{B4097E0E-24E1-480D-A2C2-54307065DD0B}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "TechSupportToolsInstaller", "..\TechSupportToolsInstaller\TechSupportToolsInstaller.vdproj", "{902628D1-4E31-466F-8F1D-840B47CDBA1C}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Tech Support Tools Installer", "..\Tech Support Tools Installer\Tech Support Tools Installer.vdproj", "{7FDECA2B-2D0B-418B-925E-ADA30E766A05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +17,10 @@ Global
 		{B4097E0E-24E1-480D-A2C2-54307065DD0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4097E0E-24E1-480D-A2C2-54307065DD0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4097E0E-24E1-480D-A2C2-54307065DD0B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{902628D1-4E31-466F-8F1D-840B47CDBA1C}.Debug|Any CPU.ActiveCfg = Debug
-		{902628D1-4E31-466F-8F1D-840B47CDBA1C}.Release|Any CPU.ActiveCfg = Release
+		{7FDECA2B-2D0B-418B-925E-ADA30E766A05}.Debug|Any CPU.ActiveCfg = Debug
+		{7FDECA2B-2D0B-418B-925E-ADA30E766A05}.Debug|Any CPU.Build.0 = Debug
+		{7FDECA2B-2D0B-418B-925E-ADA30E766A05}.Release|Any CPU.ActiveCfg = Release
+		{7FDECA2B-2D0B-418B-925E-ADA30E766A05}.Release|Any CPU.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

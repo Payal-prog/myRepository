@@ -28,3 +28,39 @@ C:\TSWindowsFormsApp1\bin\Release\TSWindowsFormsApp1.exe.manifest
 C:\TSWindowsFormsApp1\bin\Release\TSWindowsFormsApp1.application
 C:\TSWindowsFormsApp1\obj\Release\TSWindowsFormsApp1.exe.manifest
 C:\TSWindowsFormsApp1\obj\Release\TSWindowsFormsApp1.application
+C:\Om\Tech Support\Tech Support Tools\obj\Release\TSWindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Om\Tech Support\Tech Support Tools\obj\Release\TSWindowsFormsApp1.Form1.resources
+C:\Om\Tech Support\Tech Support Tools\obj\Release\TSWindowsFormsApp1.PasswordForm.resources
+C:\Om\Tech Support\Tech Support Tools\obj\Release\TSWindowsFormsApp1.Properties.Resources.resources
+C:\Om\Tech Support\Tech Support Tools\obj\Release\TSWindowsFormsApp1.csproj.GenerateResource.cache
+C:\Om\Tech Support\Tech Support Tools\obj\Release\TSWindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Om\Tech Support\Tech Support Tools\obj\Release\TSWindowsFormsApp1.exe
+C:\Om\Tech Support\Tech Support Tools\obj\Release\TSWindowsFormsApp1.pdb
+C:\Om\Tech Support\Tech Support Tools\bin\Release\TSWindowsFormsApp1.exe.config
+C:\Om\Tech Support\Tech Support Tools\bin\Release\TSWindowsFormsApp1.exe.manifest
+C:\Om\Tech Support\Tech Support Tools\bin\Release\TSWindowsFormsApp1.application
+C:\Om\Tech Support\Tech Support Tools\bin\Release\TSWindowsFormsApp1.exe
+C:\Om\Tech Support\Tech Support Tools\bin\Release\TSWindowsFormsApp1.pdb
+C:\Om\Tech Support\Tech Support Tools\bin\Release\Microsoft.HyperV.PowerShell.dll
+C:\Om\Tech Support\Tech Support Tools\bin\Release\Microsoft.Management.Infrastructure.dll
+C:\Om\Tech Support\Tech Support Tools\bin\Release\Microsoft.Virtualization.Client.6.3.Management.dll
+C:\Om\Tech Support\Tech Support Tools\bin\Release\Microsoft.Virtualization.Client.Common.dll
+C:\Om\Tech Support\Tech Support Tools\bin\Release\Microsoft.Virtualization.Client.Management.dll
+C:\Om\Tech Support\Tech Support Tools\bin\Release\Microsoft.Virtualization.Client.Settings.dll
+C:\Om\Tech Support\Tech Support Tools\bin\Release\Microsoft.Web.Administration.dll
+C:\Om\Tech Support\Tech Support Tools\bin\Release\Newtonsoft.Json.dll
+C:\Om\Tech Support\Tech Support Tools\bin\Release\Renci.SshNet.dll
+C:\Om\Tech Support\Tech Support Tools\bin\Release\System.Management.Automation.dll
+C:\Om\Tech Support\Tech Support Tools\bin\Release\Microsoft.Virtualization.Client.dll
+C:\Om\Tech Support\Tech Support Tools\bin\Release\Microsoft.Virtualization.Client.Wizards.dll
+C:\Om\Tech Support\Tech Support Tools\bin\Release\Newtonsoft.Json.xml
+C:\Om\Tech Support\Tech Support Tools\bin\Release\Renci.SshNet.xml
+C:\Om\Tech Support\Tech Support Tools\bin\Release\en-US\Microsoft.Virtualization.Client.6.3.Management.resources.dll
+C:\Om\Tech Support\Tech Support Tools\bin\Release\en-US\Microsoft.Virtualization.Client.Common.resources.dll
+C:\Om\Tech Support\Tech Support Tools\bin\Release\en-US\Microsoft.Virtualization.Client.Management.resources.dll
+C:\Om\Tech Support\Tech Support Tools\bin\Release\en-US\Microsoft.Virtualization.Client.Settings.resources.dll
+C:\Om\Tech Support\Tech Support Tools\bin\Release\en-US\Microsoft.Virtualization.Client.resources.dll
+C:\Om\Tech Support\Tech Support Tools\bin\Release\en-US\Microsoft.Virtualization.Client.Wizards.resources.dll
+C:\Om\Tech Support\Tech Support Tools\obj\Release\TSWindowsFormsApp1.exe.manifest
+C:\Om\Tech Support\Tech Support Tools\obj\Release\TSWindowsFormsApp1.application
+C:\Om\Tech Support\Tech Support Tools\obj\Release\TSWindow.1E31C778.Up2Date

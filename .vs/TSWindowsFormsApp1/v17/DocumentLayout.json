@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{B4097E0E-24E1-480D-A2C2-54307065DD0B}|TSWindowsFormsApp1.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4097E0E-24E1-480D-A2C2-54307065DD0B}|TSWindowsFormsApp1.csproj|c:\\om\\tech support\\tech support tools\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{B4097E0E-24E1-480D-A2C2-54307065DD0B}|TSWindowsFormsApp1.csproj|C:\\Om\\Tech Support\\Tech Support Tools\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{B4097E0E-24E1-480D-A2C2-54307065DD0B}|TSWindowsFormsApp1.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -29,10 +29,6 @@
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
@@ -40,9 +36,9 @@
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Om\\Tech Support\\Tech Support Tools\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAEUJAAAAAAAAAAAAwG8JAAAAAAAA",
+              "ViewState": "AQIAAC8KAAAAAAAAAAAAAEEKAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T20:10:30.049Z",
+              "WhenOpened": "2024-08-15T19:18:38.308Z",
               "EditorCaption": ""
             },
             {
@@ -54,7 +50,7 @@
               "ToolTip": "C:\\Om\\Tech Support\\Tech Support Tools\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T20:10:26.222Z",
+              "WhenOpened": "2024-08-15T19:18:35.351Z",
               "EditorCaption": " [Design]"
             }
           ]

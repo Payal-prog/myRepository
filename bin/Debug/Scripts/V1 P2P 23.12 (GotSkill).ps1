@@ -1,0 +1,1 @@
+Scripts\aria2c.exe -d 'C:/Intel' https://pongstudios-my.sharepoint.com/:u:/p/sdadmin/EcnG0J1FkSdPhGXuNJubVKYB8WfUrLGC3C2MAynEyUIJSg?download=1

